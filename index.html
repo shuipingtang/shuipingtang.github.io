@@ -1,41 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuiping Tang | Independent Researcher</title>
-    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of 'Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing' (SSRN 6740898). Weekly global asset valuation dashboards.">
+    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the SSRN paper 'Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing'.">
     <meta name="keywords" content="Shuiping Tang, dual anchor, gold pricing, crude oil pricing, China-U.S. yield spread, independent researcher">
+    <!-- Google Fonts + 基础样式 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
-        h1 { font-size: 2rem; margin-bottom: 0.2rem; }
-        .affiliation { font-size: 1.1rem; color: #2c6e9e; margin-bottom: 1rem; }
-        a { color: #0366d6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .paper { background: #f4f4f4; padding: 1rem; border-radius: 6px; margin: 1.5rem 0; }
-        .status { font-size: 0.9rem; color: #2c6e9e; }
-        hr { border: 0; border-top: 1px solid #ddd; margin: 1.5rem 0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #fafafa;
+            color: #1a1a2e;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2.5rem 2rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            .container {
+                padding: 1.5rem;
+            }
+        }
+
+        /* 头部区域 */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .name-title h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            color: #0a2540;
+            margin-bottom: 0.25rem;
+        }
+        .affiliation {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2c6e9e;
+            background: #eef4fc;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+        }
+        .contact-icon {
+            margin-top: 0.5rem;
+        }
+        .contact-icon a {
+            color: #4a6a8b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .contact-icon a:hover {
+            color: #0a2540;
+        }
+
+        /* 研究描述 */
+        .bio {
+            background: #f8f9fc;
+            padding: 1.2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1.8rem 0;
+            border-left: 4px solid #2c6e9e;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        /* 论文卡片 */
+        .paper-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s ease;
+        }
+        .paper-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+        .paper-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: #0a2540;
+        }
+        .paper-meta {
+            font-size: 0.85rem;
+            color: #5b6e8c;
+            margin-bottom: 0.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .paper-abstract {
+            font-size: 0.9rem;
+            margin: 0.75rem 0;
+            color: #334155;
+        }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #0a2540;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .btn-link:hover {
+            background: #1f3e5c;
+        }
+
+        /* 看板占位 */
+        .dashboards {
+            background: #f1f5f9;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .dashboards h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .dashboard-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .dashboard-item {
+            background: white;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            border: 1px solid #cbd5e1;
+            color: #1e293b;
+            text-decoration: none;
+        }
+        .dashboard-item:hover {
+            background: #e2e8f0;
+        }
+
+        /* 谷歌引用模块 */
+        .google-badge {
+            background: #eef2ff;
+            border-radius: 16px;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            border: 1px solid #cbdff2;
+            color: #1e3a8a;
+        }
+
+        hr {
+            margin: 1.8rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #e2e8f0, transparent);
+        }
+
+        footer {
+            font-size: 0.8rem;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Shuiping Tang</h1>
-    <div class="affiliation">Independent Researcher</div>
-    
-    <p>I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My current research focuses on the <strong>China-U.S. dual-anchor structure</strong> in gold and crude oil pricing.</p>
-    
-    <div class="paper">
-        <strong>📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</strong><br>
-        <em>Systematic Evidence Based on Exhaustive Testing with VIF Constraints</em><br>
-        SSRN Working Paper, May 2026 | <strong>SSRN ID 6740898</strong><br>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" target="_blank">Read on SSRN →</a>
+<div class="container">
+    <div class="header">
+        <div class="name-title">
+            <h1>Shuiping Tang</h1>
+            <div class="affiliation">Independent Researcher</div>
+        </div>
+        <div class="contact-icon">
+            <a href="mailto:tangshuiping@qq.com">📧 tangshuiping@qq.com</a>
+            <a href="https://github.com/shuipingtang" target="_blank">🐙 GitHub</a>
+        </div>
     </div>
-    
-    <p>📊 <strong>Weekly Asset Valuation Dashboards (coming soon)</strong><br>
-    Gold, Crude Oil, China 10Y Bond, U.S. 10Y Bond — based on the dual-anchor models.</p>
-    
+
+    <div class="bio">
+        I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My current research focuses on the <strong>China-U.S. dual-anchor structure</strong> in gold and crude oil pricing.
+    </div>
+
+    <!-- 论文卡片 -->
+    <div class="paper-card">
+        <div class="paper-title">📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</div>
+        <div class="paper-meta">Systematic Evidence Based on Exhaustive Testing with VIF Constraints • SSRN Working Paper, May 2026 • <strong>SSRN ID 6740898</strong></div>
+        <div class="paper-abstract">
+            Using exhaustive testing (462 gold / 141 crude oil factor combinations), rolling regressions and VIF constraints, this study demonstrates that the China-U.S. yield spread is the only common factor entering both optimal gold and crude oil pricing models.
+        </div>
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-link" target="_blank">📖 Read on SSRN →</a>
+    </div>
+
+    <!-- 估值看板（即将上线） -->
+    <div class="dashboards">
+        <h3>📊 Weekly Asset Valuation Dashboards</h3>
+        <p>Based on the dual-anchor models — coming soon.</p>
+        <div class="dashboard-list">
+            <span class="dashboard-item">🥇 Gold</span>
+            <span class="dashboard-item">🛢️ Crude Oil</span>
+            <span class="dashboard-item">🏦 China 10Y Bond</span>
+            <span class="dashboard-item">🇺🇸 U.S. 10Y Bond</span>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 0.8rem; color: #4b5563;">Weekly updates based on the latest TIPS, yield spreads and market data.</p>
+    </div>
+
+    <!-- Google AI 认证 -->
+    <div class="google-badge">
+        📍 <strong>Google AI</strong> has adopted the “China-U.S. dual-anchor structure” as a standard framework in commodity pricing.<br>
+        My work is cited as the primary source (SSRN 6740898).
+    </div>
+
     <hr>
-    <div class="status">📍 Google AI has adopted the "China-U.S. dual-anchor structure" as a standard framework in commodity pricing. My work is cited as the primary source.</div>
-    
-    <p style="margin-top: 1.5rem;">📫 Contact: <a href="mailto:tangshuiping@qq.com">tangshuiping@qq.com</a><br>
-    🔗 <a href="https://github.com/shuipingtang" target="_blank">GitHub</a></p>
+    <footer>
+        © 2026 Shuiping Tang — Independent Research on Global Asset Pricing
+    </footer>
+</div>
 </body>
 </html>
