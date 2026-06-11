@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China Government Bond Dashboard | Shuiping Tang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #f5f7fb; color: #1a2a3f; padding: 2rem 1rem; }
+        .container { max-width: 1000px; margin: 0 auto; background: white; border-radius: 28px; padding: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+        h1 { font-size: 1.8rem; margin-bottom: 0.25rem; }
+        .subhead { color: #2c6e9e; margin-bottom: 1.5rem; border-left: 3px solid #2c6e9e; padding-left: 1rem; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+        .data-table th, .data-table td { border: 1px solid #e2e8f0; padding: 0.6rem; text-align: center; }
+        .data-table th { background: #eef4fc; font-weight: 600; }
+        .section { margin: 1.8rem 0; }
+        .section-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.3rem; }
+        footer { margin-top: 2rem; text-align: center; font-size: 0.75rem; color: #6c7a91; border-top: 1px solid #e2e8f0; padding-top: 1rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🏦 China Government Bond Valuation Dashboard</h1>
+    <div class="subhead">Multi‑maturity yield analysis · Price percentiles since 2002 · Yield curve shape</div>
+    <p><strong>Last update:</strong> 2026-06-05 &nbsp;|&nbsp; 10Y yield: 1.72% &nbsp;|&nbsp; 30Y yield: 2.20% &nbsp;|&nbsp; 10Y-2Y spread: 0.48%</p>
+
+    <div class="section">
+        <div class="section-title">📈 Price Percentiles (higher = more expensive)</div>
+        <table class="data-table">
+            <tr><th>Maturity</th><th>1Y</th><th>3Y</th><th>5Y</th><th>10Y</th><th>30Y</th></tr>
+            <tr><td>All-time percentile</td><td>96.8%</td><td>99.3%</td><td>99.6%</td><td><strong>97.8%</strong></td><td>95.7%</td></tr>
+            <tr><td>Status</td><td>Extremely Expensive</td><td>Extremely Expensive</td><td>Extremely Expensive</td><td><strong>Extremely Expensive</strong></td><td>Extremely Expensive</td></tr>
+        </table>
+        <p>10Y yield 1.72% is in the top 2.2% of cheapest yields ever (i.e., bonds are historically very expensive). 1Y percentile 79.2% – still expensive but less extreme.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📐 Yield Curve (Spread percentiles)</div>
+        <table class="data-table">
+            <tr><th>Spread</th><th>Value</th><th>1Y percentile</th><th>Interpretation</th></tr>
+            <tr><td>10Y-2Y</td><td>0.48%</td><td>80.8%</td><td>Steep (bullish for economy)</td></tr>
+            <tr><td>30Y-10Y</td><td>0.48%</td><td>78.8%</td><td>Moderately steep</td></tr>
+            <tr><td>5Y-2Y</td><td>0.19%</td><td>46.0%</td><td>Neutral</td></tr>
+        </table>
+        <p>A steep curve typically signals monetary easing and improving growth expectations. The current steepness is consistent with China's accommodative policy stance.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📉 Strategy Backtest (10Y ETF, 2013-2026, incl. costs)</div>
+        <table class="data-table">
+            <tr><th>Strategy</th><th>Ann. Return</th><th>Sharpe</th><th>Max DD</th></tr>
+            <tr><td>Buy & Hold</td><td>3.75%</td><td>1.37</td><td>-4.62%</td></tr>
+            <tr><td>Extreme Reversal (2Y all-time percentile)</td><td>6.98%</td><td>3.94</td><td>-0.77%</td></tr>
+            <tr><td><strong>Extreme Reversal (30Y-10Y spread percentile)</strong></td><td><strong>8.35%</strong></td><td><strong>4.45</strong></td><td><strong>-0.77%</strong></td></tr>
+        </table>
+        <p>Chinese government bond valuation signals are extremely effective via spread‑based reversal strategies (not linear position sizing). The 30Y-10Y spread percentile reversal achieves Sharpe &gt;4.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">⏱️ Regime Persistence (10Y all-time percentile)</div>
+        <p>“Extremely Expensive” (percentile >90%) has occurred 42 times, average duration <strong>36 days</strong>, max 792 days. Currently in expensive regime – long‑term investors should wait for percentile to fall below 70% before adding duration.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">📋 Subsequent Returns (10Y bond, price returns)</div>
+        <table class="data-table">
+            <tr><th>State</th><th>1M</th><th>3M</th><th>6M</th><th>12M</th></tr>
+            <tr><td>Extremely Cheap</td><td>-0.15%</td><td>-0.45%</td><td>0.17%</td><td>4.32%</td></tr>
+            <tr><td>Extremely Expensive</td><td>0.02%</td><td>-0.09%</td><td>-0.24%</td><td>-0.18%</td></tr>
+        </table>
+        <p>When bonds are extremely expensive, subsequent 12‑month returns are close to zero (slightly negative). This aligns with mean‑reverting behavior in interest rates.</p>
+    </div>
+
+    <footer>
+        Data: ChinaBond, local yield curves. Preprint: SSRN 6740898 · PSSXiv:T202605.02391<br>
+        Disclaimer: Not investment advice. Past performance does not predict future results.
+    </footer>
+</div>
+</body>
+</html>
