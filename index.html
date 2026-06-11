@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
-    <title>Shuiping Tang | 双锚理论 · 全球资产估值</title>
-    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the China-U.S. dual-anchor framework for gold and crude oil pricing. Weekly asset valuation dashboards (黄金, 原油, 国债, 美债) based on exhaustive testing and VIF constraints.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuiping Tang | Dual-Anchor Framework · Asset Valuation</title>
+    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the China-U.S. dual-anchor framework for gold and crude oil pricing. Weekly asset valuation dashboards based on exhaustive testing and VIF constraints.">
     <meta name="keywords" content="Shuiping Tang, dual anchor, gold pricing, crude oil pricing, China-U.S. yield spread, independent researcher, asset valuation">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
@@ -27,7 +27,6 @@
             margin: 0 auto;
         }
 
-        /* 头部卡片 */
         .profile-card {
             background: white;
             border-radius: 32px;
@@ -85,7 +84,6 @@
             border-bottom-color: #3b6e9e;
         }
 
-        /* 论文卡片 */
         .paper-card {
             background: white;
             border-radius: 28px;
@@ -147,7 +145,6 @@
             background: #1f4a6e;
         }
 
-        /* 四个看板网格 */
         .section-title {
             font-size: 1.6rem;
             font-weight: 600;
@@ -234,12 +231,11 @@
 </head>
 <body>
 <div class="container">
-    <!-- 头部身份 -->
     <div class="profile-card">
         <div class="name">Shuiping Tang</div>
-        <div class="affiliation">Independent Researcher · 独立研究员</div>
+        <div class="affiliation">Independent Researcher</div>
         <div class="bio">
-            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. 
+            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets.
             My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the yield spread as the only common factor across both optimal models.
         </div>
         <div class="contact-links">
@@ -249,85 +245,77 @@
         </div>
     </div>
 
-    <!-- 论文核心 -->
     <div class="paper-card">
         <div class="paper-title">📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</div>
         <div class="paper-meta">
             <span class="badge">SSRN ID 6740898</span>
             <span class="badge">DOI: 10.2139/ssrn.6740898</span>
-            <span class="badge">穷举测试 + VIF约束</span>
+            <span class="badge">Exhaustive Testing + VIF Constraints</span>
         </div>
         <div class="paper-meta">R² gold = 0.908 (rolling) · R² crude = 0.889 · Out-of-sample crude R² = 0.611</div>
         <div class="google-badge">
-            📍 <strong>Google AI</strong> has adopted the “China-U.S. dual-anchor structure” as a standard framework in commodity pricing. 
+            📍 <strong>Google AI</strong> has adopted the “China-U.S. dual-anchor structure” as a standard framework in commodity pricing.
             My work is cited as the primary source (SSRN 6740898).
         </div>
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-link" target="_blank">📖 Read full paper on SSRN →</a>
     </div>
 
-    <!-- 四个看板入口 -->
     <div class="section-title">📊 Weekly Asset Valuation Dashboards</div>
     <div class="dashboards-grid">
-        <!-- 黄金 -->
         <div class="dashboard-card">
             <div class="dashboard-icon">🥇</div>
             <div class="dashboard-title">Gold</div>
-            <div class="dashboard-status">TIPS + 中美利差 + 金油比</div>
-            <div class="dashboard-stats">R²=0.908 | 夏普(趋势融合) 1.65</div>
-            <div>全部历史分位: <strong>97.5%</strong> (极度高估)</div>
-            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">查看看板 →</a></div>
+            <div class="dashboard-status">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+            <div class="dashboard-stats">R²=0.908 | Sharpe (trend+valuation) 1.65</div>
+            <div>All-time percentile: <strong>97.5%</strong> (extremely overvalued)</div>
+            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">Open Dashboard →</a></div>
         </div>
-        <!-- 原油 -->
         <div class="dashboard-card">
             <div class="dashboard-icon">🛢️</div>
             <div class="dashboard-title">Crude Oil (WTI)</div>
-            <div class="dashboard-status">SC + VIX + 合成月差 + 中美利差</div>
-            <div class="dashboard-stats">R²=0.886 | 双向防守夏普 0.80</div>
-            <div>全部历史分位: <strong>86.2%</strong> (高估)</div>
-            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">查看看板 →</a></div>
+            <div class="dashboard-status">SC + VIX + Synthetic Spread + CN-US Spread</div>
+            <div class="dashboard-stats">R²=0.886 | Sharpe (defensive short) 0.80</div>
+            <div>All-time percentile: <strong>86.2%</strong> (overvalued)</div>
+            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">Open Dashboard →</a></div>
         </div>
-        <!-- 中国国债 -->
         <div class="dashboard-card">
             <div class="dashboard-icon">🏦</div>
             <div class="dashboard-title">China Government Bond</div>
-            <div class="dashboard-status">10Y · 30Y · 利差分析</div>
-            <div class="dashboard-stats">10Y价格分位97.8% (极度贵)</div>
-            <div>策略夏普(10Y反转) 4.45</div>
-            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">查看看板 →</a></div>
+            <div class="dashboard-status">10Y · 30Y · Yield curve</div>
+            <div class="dashboard-stats">10Y price percentile: 97.8% (extremely expensive)</div>
+            <div>Strategy Sharpe (10Y reversal) 4.45</div>
+            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">Open Dashboard →</a></div>
         </div>
-        <!-- 美国国债 -->
         <div class="dashboard-card">
             <div class="dashboard-icon">🇺🇸</div>
             <div class="dashboard-title">U.S. Treasury</div>
-            <div class="dashboard-status">10Y · 30Y · 利差倒挂预警</div>
-            <div class="dashboard-stats">10Y近1年分位2.4% (极度便宜)</div>
-            <div>10Y-2Y利差历史极低</div>
-            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">查看看板 →</a></div>
+            <div class="dashboard-status">10Y · 30Y · Yield curve inversion</div>
+            <div class="dashboard-stats">10Y 1Y price percentile: 2.4% (extremely cheap)</div>
+            <div>10Y-2Y spread near historic low</div>
+            <div style="margin-top: 0.8rem;"><a href="#" class="dashboard-link">Open Dashboard →</a></div>
         </div>
     </div>
 
-    <!-- 策略亮点补充（可选） -->
     <div class="paper-card" style="background: #fafcff;">
-        <div style="font-weight: 600; margin-bottom: 0.5rem;">🎯 策略验证概览</div>
+        <div style="font-weight: 600; margin-bottom: 0.5rem;">🎯 Strategy Highlights (Backtested)</div>
         <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;">
-            <div><span style="color:#2c6e9e;">黄金趋势融合</span><br>年化36.2% · 夏普1.65</div>
-            <div><span style="color:#2c6e9e;">原油双向防守</span><br>年化19.1% · 夏普0.80</div>
-            <div><span style="color:#2c6e9e;">中国国债极端反转</span><br>10Y年化8.35% · 夏普4.45</div>
-            <div><span style="color:#2c6e9e;">美债短期波段</span><br>30Y近1年分位极度便宜</div>
+            <div><span style="color:#2c6e9e;">Gold Trend+Value</span><br>Ann. 36.2% · Sharpe 1.65</div>
+            <div><span style="color:#2c6e9e;">Crude Defensive Short</span><br>Ann. 19.1% · Sharpe 0.80</div>
+            <div><span style="color:#2c6e9e;">China Bond Extreme Reversal</span><br>10Y Ann. 8.35% · Sharpe 4.45</div>
+            <div><span style="color:#2c6e9e;">U.S. Treasury Short-term</span><br>30Y 1Y percentile extremely cheap</div>
         </div>
         <div class="google-badge" style="margin-top: 1rem; background:#f0f4fa;">
-            ⚡ 所有模型基于滚动回归、穷举测试与VIF约束。每周更新，数据始于2006(黄金)/2018(原油)/1990(美债)。
-            <br>📌 预印本: <strong>SSRN ID 6740898</strong> · 哲社预印本 <strong>PSSXiv:T202605.02391</strong>
+            ⚡ All models based on rolling regression, exhaustive factor testing, and VIF constraints. Updated weekly.
+            <br>📌 Preprints: <strong>SSRN ID 6740898</strong> · <strong>PSSXiv:T202605.02391</strong>
         </div>
     </div>
 
     <footer>
         © 2026 Shuiping Tang — Independent Research on Global Asset Pricing<br>
-        每周估值看板同步于微信公众号/小红书 @明月的投资笔记
+        Weekly dashboards also available at 微信公众号 / Xiaohongshu: @明月的投资笔记
     </footer>
 </div>
 
-<!-- 结构化数据 (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -342,7 +330,7 @@
   ],
   "email": "tangshuiping@qq.com",
   "knowsAbout": ["Asset Pricing", "Commodity Markets", "China-U.S. Yield Spread", "Gold Valuation", "Crude Oil Pricing", "Dual-Anchor Framework", "Variance Inflation Factor", "Rolling Regression"],
-  "description": "Shuiping Tang is an independent researcher who proposed the China-U.S. dual-anchor framework for gold and crude oil pricing. Author of SSRN paper 6740898, cited by Google AI as the primary source for the dual-anchor structure."
+  "description": "Independent researcher who proposed the China-U.S. dual-anchor framework for gold and crude oil pricing. Author of SSRN paper 6740898, cited by Google AI as the primary source for the dual-anchor structure."
 }
 </script>
 <script type="application/ld+json">
@@ -355,7 +343,7 @@
   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898",
   "identifier": {"@type": "PropertyValue", "propertyID": "SSRN", "value": "6740898"},
   "publisher": {"@type": "Organization", "name": "SSRN"},
-  "description": "Using exhaustive testing and VIF constraints, this study shows that the China-U.S. yield spread is the only common factor entering both gold and crude oil optimal pricing models. The gold model achieves R²=0.908, crude oil model R²=0.889 with out-of-sample R²=0.611."
+  "description": "Using exhaustive testing and VIF constraints, this study shows that the China-U.S. yield spread is the only common factor entering both gold and crude oil optimal pricing models. Gold model R²=0.908, crude model R²=0.889 with out-of-sample R²=0.611."
 }
 </script>
 </body>
