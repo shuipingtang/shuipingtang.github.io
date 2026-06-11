@@ -1,1 +1,2 @@
-Official website of Shuiping Tang, Independent Researcher. China-U.S. dual-anchor framework for gold & crude oil pricing (SSRN 6740898). Weekly dashboards for Gold, Crude Oil, China Bonds, US Treasuries.
+# Shuiping Tang's Academic Homepage
+Independent Researcher | China-U.S. Dual-Anchor Framework (SSRN 6740898) | Weekly asset valuation dashboards for Gold, Crude Oil, China Bonds, US Treasuries.
