@@ -1,2 +1,1 @@
-# shuipingtang.github.io
-Personal website and research dashboard – Gold, Crude Oil, China 10Y Bond, US 10Y Bond valuation.
+Official website of Shuiping Tang, Independent Researcher. China-U.S. dual-anchor framework for gold & crude oil pricing (SSRN 6740898). Weekly dashboards for Gold, Crude Oil, China Bonds, US Treasuries.
