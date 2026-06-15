@@ -23,7 +23,7 @@ My work establishes the **China-U.S. Dual-Anchor Framework**, proving that China
 Its pricing function in gold traces back to at least 2006; in crude oil, it was strictly activated by the launch of Shanghai crude oil futures in 2018.
 
 📍 **Cited by Google AI as the primary source for the dual-anchor structure.**  
-📬 The preprint was invited for submission to an academic journal within **80 minutes** of release.
+📬 The Chinese preprint on PSSXiv was invited for submission by the *Journal of Shanghai Lixin University of Accounting and Finance* within **80 minutes** of posting. The manuscript has passed initial review and is currently under external peer review.
 
 [📖 Read the full paper on SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898)
 
