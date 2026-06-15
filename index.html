@@ -5,64 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuiping Tang | Dual-Anchor Framework · Asset Valuation</title>
     <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the China-U.S. dual-anchor framework for gold and crude oil pricing. Weekly asset valuation dashboards based on exhaustive testing and VIF constraints.">
-    <meta name="keywords" content="Shuiping Tang, dual anchor, gold pricing, crude oil pricing, China-U.S. yield spread, independent researcher, asset valuation">
+    <meta name="keywords" content="Shuiping Tang, dual anchor, gold pricing, crude oil pricing, China-U.S. yield spread, Shanghai crude oil futures, independent researcher, asset valuation">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: #f5f7fb; color: #1a2a3f; line-height: 1.5; padding: 2rem 1.5rem; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .profile-card { background: white; border-radius: 32px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.03); border: 1px solid #e9edf2; }
-        .name { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; color: #0f2b3d; margin-bottom: 0.25rem; }
-        .affiliation { font-size: 1.1rem; font-weight: 500; color: #2c6e9e; background: #eef4fc; display: inline-block; padding: 0.2rem 1rem; border-radius: 30px; margin-bottom: 1rem; }
-        .bio { font-size: 1rem; color: #2c3e50; max-width: 800px; margin-bottom: 1rem; }
-        .contact-links { display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1rem 0 0.5rem; }
-        .contact-links a { color: #3b6e9e; text-decoration: none; font-weight: 500; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.3rem; border-bottom: 1px solid transparent; transition: border 0.2s; }
+        body { font-family: 'Inter', sans-serif; background: #f5f7fb; color: #1a2a3f; line-height: 1.6; padding: 2rem 1.5rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        /* 语言切换 */
+        .lang-bar { text-align: right; margin-bottom: 1.2rem; }
+        .lang-bar a { display: inline-block; padding: 0.35rem 1rem; margin-left: 0.4rem; border-radius: 24px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; background: #eef4fc; color: #2c6e9e; }
+        .lang-bar a.active { background: #2c6e9e; color: white; }
+        .lang-bar a:hover:not(.active) { background: #dce8f4; }
+        
+        /* 卡片通用 */
+        .card { background: white; border-radius: 28px; padding: 1.8rem 2rem; margin-bottom: 1.8rem; border: 1px solid #e9edf2; box-shadow: 0 4px 16px rgba(0,0,0,0.02); }
+        .card:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.05); transition: box-shadow 0.2s; }
+        
+        /* 头部信息 */
+        .name { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; color: #0f2b3d; margin-bottom: 0.2rem; }
+        .affiliation { font-size: 1rem; font-weight: 500; color: #2c6e9e; background: #eef4fc; display: inline-block; padding: 0.2rem 1rem; border-radius: 30px; margin-bottom: 1rem; }
+        .bio { font-size: 0.95rem; color: #2c3e50; max-width: 850px; margin-bottom: 1rem; }
+        .contact-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+        .contact-links a { color: #3b6e9e; text-decoration: none; font-weight: 500; font-size: 0.85rem; border-bottom: 1px solid transparent; transition: border 0.2s; }
         .contact-links a:hover { border-bottom-color: #3b6e9e; }
-        .paper-card { background: white; border-radius: 28px; padding: 1.5rem 1.8rem; margin-bottom: 2rem; border: 1px solid #e9edf2; box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: box-shadow 0.2s; }
-        .paper-card:hover { box-shadow: 0 12px 24px rgba(0,0,0,0.05); }
-        .paper-title { font-size: 1.35rem; font-weight: 700; color: #0f2b3d; margin-bottom: 0.5rem; }
-        .paper-meta { font-size: 0.85rem; color: #5b6e8c; margin-bottom: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .badge { background: #e9ecef; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500; color: #2c3e50; }
-        .google-badge { background: #eef2ff; border-left: 4px solid #2c6e9e; padding: 0.8rem 1rem; border-radius: 16px; font-size: 0.85rem; margin: 1rem 0 0.2rem; color: #1e3a5f; }
-        .btn-link { display: inline-flex; align-items: center; gap: 0.5rem; background: #0f2b3d; color: white; padding: 0.5rem 1.2rem; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 0.8rem; transition: background 0.2s; }
-        .btn-link:hover { background: #1f4a6e; }
-        .section-title { font-size: 1.6rem; font-weight: 600; margin: 2rem 0 1rem; letter-spacing: -0.3px; color: #0f2b3d; }
-        .dashboards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-        .dashboard-card { background: white; border-radius: 24px; padding: 1.2rem; border: 1px solid #e2e8f0; transition: transform 0.1s, box-shadow 0.2s; }
-        .dashboard-card:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-        .dashboard-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-        .dashboard-title { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.3rem; }
-        .dashboard-status { font-size: 0.85rem; color: #2c6e9e; background: #eef4fc; display: inline-block; padding: 0.2rem 0.7rem; border-radius: 30px; margin: 0.5rem 0; }
-        .dashboard-stats { font-size: 0.85rem; color: #4a627a; margin: 0.7rem 0; }
-        .dashboard-link { text-decoration: none; font-weight: 500; font-size: 0.85rem; color: #0f2b3d; border-bottom: 1px solid #bdc4d0; }
-        .dashboard-link:hover { color: #2c6e9e; }
-        .lang-switch { text-align: right; margin-bottom: 1rem; }
-        .lang-switch a { margin: 0 0.3rem; padding: 0.2rem 0.8rem; border-radius: 20px; text-decoration: none; background: #eef4fc; color: #2c6e9e; font-weight: 500; font-size: 0.85rem; }
-        .lang-switch a.active { background: #2c6e9e; color: white; }
-        hr { margin: 1.8rem 0; border: 0; height: 1px; background: linear-gradient(to right, #e2e8f0, transparent); }
-        footer { text-align: center; font-size: 0.8rem; color: #6c7a91; margin-top: 2rem; padding-top: 1rem; }
+        
+        /* 论文卡片 */
+        .paper-title { font-size: 1.3rem; font-weight: 700; color: #0f2b3d; margin-bottom: 0.5rem; }
+        .paper-meta { font-size: 0.8rem; color: #5b6e8c; margin-bottom: 0.7rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .badge { background: #e9ecef; padding: 0.2rem 0.65rem; border-radius: 16px; font-size: 0.7rem; font-weight: 500; color: #2c3e50; white-space: nowrap; }
+        .highlight-box { background: #eef2ff; border-left: 4px solid #2c6e9e; padding: 0.8rem 1rem; border-radius: 14px; font-size: 0.85rem; margin-top: 0.8rem; color: #1e3a5f; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 0.4rem; background: #0f2b3d; color: white; padding: 0.5rem 1.2rem; border-radius: 40px; text-decoration: none; font-weight: 500; font-size: 0.85rem; margin-top: 0.8rem; transition: background 0.2s; }
+        .btn-primary:hover { background: #1f4a6e; }
+        
+        /* 摘要 */
+        .abstract { font-size: 0.88rem; color: #3a4a5e; line-height: 1.65; }
+        .abstract em { font-style: normal; font-weight: 600; color: #2c6e9e; }
+        
+        /* 看板卡片 */
+        .section-title { font-size: 1.4rem; font-weight: 600; margin: 2rem 0 1rem; letter-spacing: -0.3px; color: #0f2b3d; }
+        .dashboards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; margin-bottom: 2rem; }
+        .dash-card { background: white; border-radius: 24px; padding: 1.2rem; border: 1px solid #e2e8f0; transition: transform 0.15s, box-shadow 0.2s; }
+        .dash-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(0,0,0,0.06); }
+        .dash-icon { font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .dash-name { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.2rem; color: #0f2b3d; }
+        .dash-meta { font-size: 0.78rem; color: #5b6e8c; margin-bottom: 0.5rem; }
+        .dash-link { display: inline-block; margin-top: 0.4rem; font-size: 0.82rem; font-weight: 500; color: #2c6e9e; text-decoration: none; border-bottom: 1px solid #c0d0e0; }
+        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
+        .dash-links-group { display: flex; gap: 0.8rem; align-items: center; margin-top: 0.5rem; }
+        
+        /* 页脚 */
+        footer { text-align: center; font-size: 0.75rem; color: #6c7a91; margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid #e2e8f0; }
+        
         @media (max-width: 680px) {
             body { padding: 1rem; }
-            .profile-card { padding: 1.5rem; }
+            .card { padding: 1.2rem 1.5rem; }
             .name { font-size: 1.8rem; }
+            .dashboards-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <div class="lang-switch">
+
+    <!-- 语言切换 -->
+    <div class="lang-bar">
         <a href="#" class="active" onclick="switchLang('en')">English</a>
         <a href="#" onclick="switchLang('zh')">中文</a>
     </div>
 
-    <div class="profile-card">
+    <!-- 个人简介 -->
+    <div class="card">
         <div class="name">Shuiping Tang</div>
         <div class="affiliation">Independent Researcher</div>
-        <div class="bio" id="bio-en" style="display:block;">
-            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the yield spread as the only common factor across both optimal models.
+        <div class="bio lang-en">
+            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the China-U.S. yield spread as the only common factor across both optimal pricing models.
         </div>
-        <div class="bio" id="bio-zh" style="display:none;">
-            我研究全球商品定价、宏观金融以及中国在国际资产市场中可量化的角色。我的研究建立了黄金与原油的<strong>中美双锚框架</strong>，中美利差是唯一同时进入两个最优模型的共同因子。
+        <div class="bio lang-zh" style="display:none;">
+            我研究全球商品定价、宏观金融以及中国在国际资产市场中可量化的角色。我的研究建立了黄金与原油的<strong>中美双锚框架</strong>，中美利差是唯一同时进入两个最优模型的共同定价因子。
         </div>
         <div class="contact-links">
             <a href="mailto:tangshuiping@qq.com">📧 tangshuiping@qq.com</a>
@@ -73,116 +93,160 @@
         </div>
     </div>
 
-    <div class="paper-card">
-        <div class="paper-title" id="paper-title-en" style="display:block;">📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</div>
-        <div class="paper-title" id="paper-title-zh" style="display:none;">📄 双重锚定：中美因素共同决定全球黄金与原油定价</div>
+    <!-- 论文卡片 -->
+    <div class="card">
+        <div class="paper-title lang-en">📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</div>
+        <div class="paper-title lang-zh" style="display:none;">📄 双锚：中美因子共同决定全球黄金与原油定价</div>
         <div class="paper-meta">
             <span class="badge">SSRN ID 6740898</span>
             <span class="badge">DOI: 10.2139/ssrn.6740898</span>
             <span class="badge">Exhaustive Testing + VIF Constraints</span>
+            <span class="badge">Rolling Regression</span>
         </div>
-        <div class="paper-meta">R² gold = 0.908 (rolling) · R² crude = 0.889 · Out-of-sample crude R² = 0.611</div>
-        <div class="google-badge" id="google-badge-en" style="display:block;">
-            📍 <strong>Google AI</strong> has adopted the “China-U.S. dual-anchor structure” as a standard framework in commodity pricing. My work is cited as the primary source (SSRN 6740898).
+        <div class="paper-meta lang-en">
+            Gold R² = 0.908 (rolling) · Crude R² = 0.889 · Out-of-sample crude R² = 0.611
         </div>
-        <div class="google-badge" id="google-badge-zh" style="display:none;">
-            📍 <strong>Google AI</strong> 已将“中美双锚结构”采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。
+        <div class="paper-meta lang-zh" style="display:none;">
+            黄金 R² = 0.908（滚动回归）· 原油 R² = 0.889 · 样本外原油 R² = 0.611
         </div>
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-link" target="_blank">📖 Read full paper on SSRN →</a>
+
+        <!-- 英文摘要 -->
+        <div class="abstract lang-en">
+            This study employs a <em>rolling regression framework with VIF constraints</em> to exhaustively test 462 factor combinations for gold and 141 for crude oil. The optimal <em>China-U.S. Dual-Anchor Three-Factor Gold Valuation Model</em> (TIPS real yield + China-U.S. yield spread + gold-oil ratio) achieves a rolling R² of 0.908, with all VIFs below 5. The optimal <em>China-U.S. Dual-Anchor Four-Factor Crude Oil Valuation Model</em> (Shanghai crude oil futures SC + VIX + synthetic time spread + China-U.S. yield spread) achieves a full-sample R² of 0.889. The <em>China-U.S. yield spread is the only common factor</em> entering both optimal models. Its pricing function in gold traces back to at least 2006; in crude oil, it was strictly activated by the 2018 launch of Shanghai crude oil futures, evidenced by a systematic coefficient sign reversal from +7.51 to −10.48. The SC factor maintains a 100% positive sign across all rolling sub-periods with zero sign reversals. Valuation signals systematically improve risk-adjusted returns, with the optimal gold strategy achieving a Sharpe ratio of 1.66 and the optimal crude oil strategy achieving a Sharpe ratio of 0.86. The global commodity pricing regime has evolved from a single-anchor to a China-U.S. dual-anchor structure.
+        </div>
+
+        <!-- 中文摘要 -->
+        <div class="abstract lang-zh" style="display:none;">
+            本研究采用<em>滚动回归与VIF约束的穷举测试框架</em>，在黄金市场测试462种因子组合，在原油市场测试141种因子组合。最优<em>中美双锚三因子黄金估值模型</em>（TIPS实际利率 + 中美利差 + 金油比）滚动R²达0.908，全部VIF低于5。最优<em>中美双锚四因子原油估值模型</em>（上海原油期货SC + VIX + 合成月差 + 中美利差）全样本R²为0.889。<em>中美利差是唯一同时进入两个最优模型的共同因子</em>——其在黄金的定价功能可追溯至2006年以前；在原油上，其定价功能严格由2018年上海原油期货上市所激活（系数由上市前的+7.51系统性翻转为上市后的−10.48）。SC因子在所有滚动子区间中保持100%正号，零次符号切换。估值信号系统性地改善了风险调整后收益，黄金最优策略夏普比率1.66，原油最优策略夏普比率0.86。全球大宗商品定价体系已从单一锚定向中美双锚格局演进。
+        </div>
+
+        <div class="highlight-box lang-en">
+            📍 <strong>Google AI</strong> has adopted the "China-U.S. dual-anchor structure" as a standard framework in commodity pricing. My work is cited as the primary source (SSRN 6740898).
+        </div>
+        <div class="highlight-box lang-zh" style="display:none;">
+            📍 <strong>Google AI</strong> 已将"中美双锚结构"采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。
+        </div>
+
+        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
     </div>
 
-    <div class="section-title" id="dashboard-title-en" style="display:block;">📊 Weekly Asset Valuation Dashboards</div>
-    <div class="section-title" id="dashboard-title-zh" style="display:none;">📊 每周资产估值看板</div>
+    <!-- 模型核心指标 -->
+    <div class="card">
+        <div class="section-title" style="margin-top:0;">🎯 Core Findings</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; font-size:0.85rem;">
+            <div>
+                <strong style="color:#2c6e9e;">🥇 Gold Optimal Model</strong><br>
+                <span style="font-size:0.8rem;">TIPS + CN-US Spread + Gold-Oil Ratio</span><br>
+                Rolling R² = <strong>0.908</strong> · Static R² = 0.814<br>
+                All VIFs < 5 · Sharpe 1.66
+            </div>
+            <div>
+                <strong style="color:#2c6e9e;">🛢️ Crude Oil Optimal Model</strong><br>
+                <span style="font-size:0.8rem;">SC + VIX + Synth. Spread + CN-US Spread</span><br>
+                R² = <strong>0.889</strong> · Out-of-sample R² = 0.611<br>
+                SC 100% positive sign, zero reversals
+            </div>
+            <div>
+                <strong style="color:#2c6e9e;">🔗 Cross-Market Common Factor</strong><br>
+                <span style="font-size:0.8rem;">China-U.S. 10-Year Yield Spread</span><br>
+                Only factor in both gold & crude oil optimal models<br>
+                Gold: traceable to 2006 · Crude: activated by SC (2018)
+            </div>
+        </div>
+    </div>
+
+    <!-- 看板入口 -->
+    <div class="section-title lang-en">📊 Weekly Asset Valuation Dashboards</div>
+    <div class="section-title lang-zh" style="display:none;">📊 每周资产估值看板</div>
+    <p style="font-size:0.85rem; color:#5b6e8c; margin-bottom:1rem;" class="lang-en">
+        The following dashboards are generated by the dual-anchor models and updated weekly. Click to view the latest valuation percentiles, strategy signals, and model diagnostics.
+    </p>
+    <p style="font-size:0.85rem; color:#5b6e8c; margin-bottom:1rem;" class="lang-zh" style="display:none;">
+        以下看板由双锚模型生成，每周更新。点击查看最新估值分位、策略信号和模型诊断。
+    </p>
 
     <div class="dashboards-grid">
         <!-- 黄金 -->
-        <div class="dashboard-card">
-            <div class="dashboard-icon">🥇</div>
-            <div class="dashboard-title" id="gold-title-en" style="display:block;">Gold</div>
-            <div class="dashboard-title" id="gold-title-zh" style="display:none;">黄金</div>
-            <div class="dashboard-status">TIPS + CN-US Spread + Gold-Oil Ratio</div>
-            <div class="dashboard-stats">R²=0.908 | Sharpe (trend+valuation) 1.65</div>
-            <div style="margin-top:0.8rem;">
-                <a href="gold_en.html" class="dashboard-link" id="gold-link-en" style="display:inline;">Open Dashboard →</a>
-                <a href="gold_cn.html" class="dashboard-link" id="gold-link-zh" style="display:none;">打开看板 →</a>
+        <div class="dash-card">
+            <div class="dash-icon">🥇</div>
+            <div class="dash-name lang-en">Gold</div>
+            <div class="dash-name lang-zh" style="display:none;">黄金</div>
+            <div class="dash-meta">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+            <div class="dash-links-group">
+                <a href="gold_en.html" class="dash-link lang-en">EN →</a>
+                <a href="gold_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
+                <a href="gold_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
             </div>
         </div>
         <!-- 原油 -->
-        <div class="dashboard-card">
-            <div class="dashboard-icon">🛢️</div>
-            <div class="dashboard-title" id="crude-title-en" style="display:block;">Crude Oil (WTI)</div>
-            <div class="dashboard-title" id="crude-title-zh" style="display:none;">原油 (WTI)</div>
-            <div class="dashboard-status">SC + VIX + Synthetic Spread + CN-US Spread</div>
-            <div class="dashboard-stats">R²=0.886 | Sharpe (defensive short) 0.80</div>
-            <div style="margin-top:0.8rem;">
-                <a href="crude-oil_en.html" class="dashboard-link" id="crude-link-en" style="display:inline;">Open Dashboard →</a>
-                <a href="crude-oil_cn.html" class="dashboard-link" id="crude-link-zh" style="display:none;">打开看板 →</a>
+        <div class="dash-card">
+            <div class="dash-icon">🛢️</div>
+            <div class="dash-name lang-en">Crude Oil (WTI)</div>
+            <div class="dash-name lang-zh" style="display:none;">原油 (WTI)</div>
+            <div class="dash-meta">SC + VIX + Synth. Spread + CN-US Spread</div>
+            <div class="dash-links-group">
+                <a href="crude-oil_en.html" class="dash-link lang-en">EN →</a>
+                <a href="crude-oil_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
+                <a href="crude-oil_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
             </div>
         </div>
-        <!-- 中债 -->
-        <div class="dashboard-card">
-            <div class="dashboard-icon">🏦</div>
-            <div class="dashboard-title" id="bond-cn-title-en" style="display:block;">China Government Bond</div>
-            <div class="dashboard-title" id="bond-cn-title-zh" style="display:none;">中国国债</div>
-            <div class="dashboard-status">10Y · 30Y · Yield curve</div>
-            <div class="dashboard-stats">10Y price percentile: 97.8% (extremely expensive)</div>
-            <div>Strategy Sharpe (10Y reversal) 4.45</div>
-            <div style="margin-top:0.8rem;">
-                <a href="bonds-cn_en.html" class="dashboard-link" id="bond-cn-link-en" style="display:inline;">Open Dashboard →</a>
-                <a href="bonds-cn_cn.html" class="dashboard-link" id="bond-cn-link-zh" style="display:none;">打开看板 →</a>
+        <!-- 中国国债 -->
+        <div class="dash-card">
+            <div class="dash-icon">🏦</div>
+            <div class="dash-name lang-en">China Government Bond</div>
+            <div class="dash-name lang-zh" style="display:none;">中国国债</div>
+            <div class="dash-meta">10Y · 30Y · Yield Curve · Spreads</div>
+            <div class="dash-links-group">
+                <a href="bonds-cn_en.html" class="dash-link lang-en">EN →</a>
+                <a href="bonds-cn_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
+                <a href="bonds-cn_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
             </div>
         </div>
-        <!-- 美债 -->
-        <div class="dashboard-card">
-            <div class="dashboard-icon">🇺🇸</div>
-            <div class="dashboard-title" id="bond-us-title-en" style="display:block;">U.S. Treasury</div>
-            <div class="dashboard-title" id="bond-us-title-zh" style="display:none;">美国国债</div>
-            <div class="dashboard-status">10Y · 30Y · Yield curve inversion</div>
-            <div class="dashboard-stats">10Y 1Y price percentile: 2.4% (extremely cheap)</div>
-            <div>10Y-2Y spread near historic low</div>
-            <div style="margin-top:0.8rem;">
-                <a href="bonds-us_en.html" class="dashboard-link" id="bond-us-link-en" style="display:inline;">Open Dashboard →</a>
-                <a href="bonds-us_cn.html" class="dashboard-link" id="bond-us-link-zh" style="display:none;">打开看板 →</a>
+        <!-- 美国国债 -->
+        <div class="dash-card">
+            <div class="dash-icon">🇺🇸</div>
+            <div class="dash-name lang-en">U.S. Treasury</div>
+            <div class="dash-name lang-zh" style="display:none;">美国国债</div>
+            <div class="dash-meta">10Y · 30Y · Yield Curve Inversion</div>
+            <div class="dash-links-group">
+                <a href="bonds-us_en.html" class="dash-link lang-en">EN →</a>
+                <a href="bonds-us_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
+                <a href="bonds-us_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
             </div>
-        </div>
-    </div>
-
-    <div class="paper-card" style="background:#fafcff;">
-        <div style="font-weight:600; margin-bottom:0.5rem;" id="strategy-title-en" style="display:block;">🎯 Strategy Highlights (Backtested)</div>
-        <div style="font-weight:600; margin-bottom:0.5rem;" id="strategy-title-zh" style="display:none;">🎯 策略亮点（回测）</div>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:space-between;">
-            <div><span style="color:#2c6e9e;">Gold Trend+Value</span><br>Ann. 36.2% · Sharpe 1.65</div>
-            <div><span style="color:#2c6e9e;">Crude Defensive Short</span><br>Ann. 19.1% · Sharpe 0.80</div>
-            <div><span style="color:#2c6e9e;">China Bond Extreme Reversal</span><br>10Y Ann. 8.35% · Sharpe 4.45</div>
-            <div><span style="color:#2c6e9e;">U.S. Treasury Short-term</span><br>30Y 1Y percentile extremely cheap</div>
-        </div>
-        <div class="google-badge" style="margin-top:1rem; background:#f0f4fa;">
-            ⚡ All models based on rolling regression, exhaustive factor testing, and VIF constraints. Updated weekly.
-            <br>📌 Preprints: <strong>SSRN ID 6740898</strong> · <strong>PSSXiv:T202605.02391</strong>
         </div>
     </div>
 
     <footer>
         © 2026 Shuiping Tang — Independent Research on Global Asset Pricing<br>
+        Preprints: SSRN ID 6740898 · PSSXiv:T202605.02391<br>
         Weekly dashboards also available at 微信公众号 / Xiaohongshu: @明月的投资笔记
     </footer>
 </div>
 
+<!-- 语言切换脚本 -->
 <script>
 function switchLang(lang) {
     // 切换所有双语元素
-    var enElems = document.querySelectorAll('[id$="-en"]');
-    var zhElems = document.querySelectorAll('[id$="-zh"]');
-    enElems.forEach(el => el.style.display = (lang === 'en' ? 'block' : 'none'));
-    zhElems.forEach(el => el.style.display = (lang === 'zh' ? 'block' : 'none'));
+    var enElems = document.querySelectorAll('.lang-en');
+    var zhElems = document.querySelectorAll('.lang-zh');
+    if (lang === 'en') {
+        enElems.forEach(function(el) { el.style.display = ''; });
+        zhElems.forEach(function(el) { el.style.display = 'none'; });
+    } else {
+        enElems.forEach(function(el) { el.style.display = 'none'; });
+        zhElems.forEach(function(el) { el.style.display = ''; });
+    }
     // 更新语言切换按钮
-    document.querySelectorAll('.lang-switch a').forEach(a => a.classList.remove('active'));
-    document.querySelectorAll('.lang-switch a').forEach(a => {
-        if (a.innerText.includes(lang === 'en' ? 'English' : '中文')) a.classList.add('active');
+    document.querySelectorAll('.lang-bar a').forEach(function(a) { a.classList.remove('active'); });
+    document.querySelectorAll('.lang-bar a').forEach(function(a) {
+        if ((lang === 'en' && a.innerText.includes('English')) || (lang === 'zh' && a.innerText.includes('中文'))) {
+            a.classList.add('active');
+        }
     });
 }
 </script>
 
+<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -198,10 +262,7 @@ function switchLang(lang) {
   ],
   "email": "tangshuiping@qq.com",
   "jobTitle": "Independent Researcher",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Independent"
-  },
+  "worksFor": { "@type": "Organization", "name": "Independent" },
   "knowsAbout": ["Gold pricing", "Crude oil pricing", "China-U.S. yield spread", "Asset pricing", "Commodity markets"]
 }
 </script>
@@ -210,11 +271,11 @@ function switchLang(lang) {
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "headline": "Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing — Systematic Evidence Based on Exhaustive Testing with VIF Constraints",
-  "author": {"@type": "Person", "name": "Shuiping Tang"},
+  "author": { "@type": "Person", "name": "Shuiping Tang" },
   "datePublished": "2026-05-09",
   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898",
-  "identifier": {"@type": "PropertyValue", "propertyID": "SSRN", "value": "6740898"},
-  "publisher": {"@type": "Organization", "name": "SSRN"},
+  "identifier": { "@type": "PropertyValue", "propertyID": "SSRN", "value": "6740898" },
+  "publisher": { "@type": "Organization", "name": "SSRN" },
   "description": "Using exhaustive testing and VIF constraints, this study shows that the China-U.S. yield spread is the only common factor entering both gold and crude oil optimal pricing models. Gold model R²=0.908, crude model R²=0.889 with out-of-sample R²=0.611."
 }
 </script>
