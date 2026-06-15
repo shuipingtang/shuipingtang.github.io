@@ -11,13 +11,13 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #f5f7fb 0%, #eef2f7 100%);
+            background: linear-gradient(160deg, #f0f4fa 0%, #e8ecf4 30%, #f5f7fb 100%);
             color: #1a2a3f;
             line-height: 1.6;
             padding: 2rem 1.5rem;
             min-height: 100vh;
         }
-        .container { max-width: 1100px; margin: 0 auto; }
+        .container { max-width: 1200px; margin: 0 auto; }
         
         /* 语言切换 */
         .lang-bar {
@@ -26,36 +26,36 @@
         }
         .lang-bar a {
             display: inline-block;
-            padding: 0.4rem 1.1rem;
+            padding: 0.45rem 1.2rem;
             margin-left: 0.5rem;
             border-radius: 24px;
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
-            transition: all 0.2s;
-            background: rgba(255,255,255,0.9);
+            transition: all 0.25s;
+            background: white;
             color: #2c6e9e;
             cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
         .lang-bar a.active {
-            background: #2c6e9e;
+            background: #0f2b3d;
             color: white;
-            box-shadow: 0 4px 12px rgba(44,110,158,0.3);
+            box-shadow: 0 4px 16px rgba(15,43,61,0.3);
         }
         .lang-bar a:hover:not(.active) {
-            background: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background: #f0f4fc;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
         }
         
         /* 卡片通用 */
         .card {
             background: white;
-            border-radius: 32px;
+            border-radius: 28px;
             padding: 2rem 2.2rem;
             margin-bottom: 2rem;
             border: 1px solid rgba(0,0,0,0.04);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.05);
             transition: box-shadow 0.3s, transform 0.3s;
         }
         .card:hover {
@@ -75,9 +75,9 @@
             font-size: 1rem;
             font-weight: 500;
             color: #2c6e9e;
-            background: linear-gradient(135deg, #eef4fc, #e8f0fa);
+            background: linear-gradient(135deg, #eef4fc, #e0ecf8);
             display: inline-block;
-            padding: 0.25rem 1.2rem;
+            padding: 0.3rem 1.3rem;
             border-radius: 30px;
             margin-bottom: 1.2rem;
             letter-spacing: 0.3px;
@@ -179,51 +179,72 @@
             color: #2c6e9e;
         }
         
-        /* 看板 */
+        /* 看板区域（前置） */
+        .dash-section {
+            margin-bottom: 2rem;
+        }
         .section-title {
             font-size: 1.5rem;
             font-weight: 600;
-            margin: 2rem 0 1rem;
+            margin: 0 0 1rem 0;
             letter-spacing: -0.3px;
             color: #0f2b3d;
         }
+        .dash-subtitle {
+            font-size: 0.88rem;
+            color: #5b6e8c;
+            margin-bottom: 1.4rem;
+        }
         .dashboards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 1000px) {
+            .dashboards-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .dashboards-grid { grid-template-columns: 1fr; }
         }
         .dash-card {
             background: white;
             border-radius: 24px;
-            padding: 1.4rem 1.6rem;
+            padding: 1.4rem 1.5rem;
             border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
         }
         .dash-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: rgba(44,110,158,0.2);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.09);
+            border-color: rgba(44,110,158,0.25);
         }
         .dash-icon {
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
         .dash-name {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
             margin-bottom: 0.3rem;
             color: #0f2b3d;
         }
         .dash-meta {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: #5b6e8c;
             margin-bottom: 0.8rem;
         }
+        .dash-links-group {
+            display: flex;
+            gap: 0.8rem;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 0.5rem;
+        }
         .dash-link {
-            display: inline-block;
-            margin-top: 0.3rem;
             font-size: 0.85rem;
             font-weight: 500;
             color: #2c6e9e;
@@ -235,11 +256,19 @@
             color: #0f2b3d;
             border-color: #2c6e9e;
         }
-        .dash-links-group {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            margin-top: 0.5rem;
+        
+        /* Core Findings */
+        .findings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+            font-size: 0.88rem;
+        }
+        @media (max-width: 1000px) {
+            .findings-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .findings-grid { grid-template-columns: 1fr; }
         }
         
         /* 页脚 */
@@ -250,13 +279,6 @@
             margin-top: 3rem;
             padding-top: 1.5rem;
             border-top: 1px solid #e2e8f0;
-        }
-        
-        @media (max-width: 680px) {
-            body { padding: 1rem; }
-            .card { padding: 1.5rem 1.8rem; }
-            .name { font-size: 1.9rem; }
-            .dashboards-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -285,6 +307,96 @@
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" target="_blank">📄 SSRN</a>
             <a href="https://orcid.org/0009-0007-1209-981X" target="_blank">🔗 ORCID</a>
             <a href="https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ" target="_blank">🎓 Google Scholar</a>
+        </div>
+    </div>
+
+    <!-- 📊 每日资产估值看板（前置） -->
+    <div class="dash-section">
+        <div class="section-title lang-en">📊 Daily Asset Valuation Dashboards</div>
+        <div class="section-title lang-zh">📊 每日资产估值看板</div>
+        <p class="dash-subtitle lang-en">
+            The following dashboards are generated by the dual-anchor models and updated <strong>daily</strong>. Click to view the latest valuation percentiles, strategy signals, and model diagnostics.
+        </p>
+        <p class="dash-subtitle lang-zh">
+            以下看板由双锚模型生成，<strong>每日自动更新</strong>。点击查看最新估值分位、策略信号和模型诊断。
+        </p>
+
+        <div class="dashboards-grid">
+            <!-- 黄金 -->
+            <div class="dash-card">
+                <div class="dash-icon">🥇</div>
+                <div class="dash-name lang-en">Gold</div>
+                <div class="dash-name lang-zh">黄金</div>
+                <div class="dash-meta">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+                <div class="dash-links-group">
+                    <a href="gold_en.html" class="dash-link">EN →</a>
+                    <a href="gold_cn.html" class="dash-link">中文 →</a>
+                </div>
+            </div>
+            <!-- 原油 -->
+            <div class="dash-card">
+                <div class="dash-icon">🛢️</div>
+                <div class="dash-name lang-en">Crude Oil (WTI)</div>
+                <div class="dash-name lang-zh">原油 (WTI)</div>
+                <div class="dash-meta">SC + VIX + Synth. Spread + CN-US Spread</div>
+                <div class="dash-links-group">
+                    <a href="crude-oil_en.html" class="dash-link">EN →</a>
+                    <a href="crude-oil_cn.html" class="dash-link">中文 →</a>
+                </div>
+            </div>
+            <!-- 中国国债 -->
+            <div class="dash-card">
+                <div class="dash-icon">🏦</div>
+                <div class="dash-name lang-en">China Govt Bond</div>
+                <div class="dash-name lang-zh">中国国债</div>
+                <div class="dash-meta">10Y · 30Y · Yield Curve · Spreads</div>
+                <div class="dash-links-group">
+                    <a href="bonds-cn_en.html" class="dash-link">EN →</a>
+                    <a href="bonds-cn_cn.html" class="dash-link">中文 →</a>
+                </div>
+            </div>
+            <!-- 美国国债 -->
+            <div class="dash-card">
+                <div class="dash-icon">💵</div>
+                <div class="dash-name lang-en">U.S. Treasury</div>
+                <div class="dash-name lang-zh">美国国债</div>
+                <div class="dash-meta">10Y · 30Y · Yield Curve Inversion</div>
+                <div class="dash-links-group">
+                    <a href="bonds-us_en.html" class="dash-link">EN →</a>
+                    <a href="bonds-us_cn.html" class="dash-link">中文 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎯 Core Findings（已补齐美债+中英文翻译） -->
+    <div class="card">
+        <div class="section-title" style="margin-top:0;">🎯 Core Findings</div>
+        <div class="findings-grid">
+            <div>
+                <strong style="color:#2c6e9e;">🥇 Gold Optimal Model</strong><br>
+                <span style="font-size:0.8rem;">TIPS + CN-US Spread + Gold-Oil Ratio</span><br>
+                Rolling R² = <strong>0.908</strong> · Static R² = 0.814<br>
+                All VIFs < 5 · Sharpe 1.66
+            </div>
+            <div>
+                <strong style="color:#2c6e9e;">🛢️ Crude Oil Optimal Model</strong><br>
+                <span style="font-size:0.8rem;">SC + VIX + Synth. Spread + CN-US Spread</span><br>
+                R² = <strong>0.889</strong> · Out-of-sample R² = 0.611<br>
+                SC 100% positive sign, zero reversals
+            </div>
+            <div>
+                <strong style="color:#2c6e9e;">🏦 China Govt Bond</strong><br>
+                <span style="font-size:0.8rem;">Multi-maturity yield curve</span><br>
+                10Y Price Percentile: 97.8% (Extremely Expensive)<br>
+                Reversal Strategy Sharpe: 4.45
+            </div>
+            <div>
+                <strong style="color:#2c6e9e;">💵 U.S. Treasury</strong><br>
+                <span style="font-size:0.8rem;">10Y · 30Y · Yield Curve Inversion</span><br>
+                10Y 1Y Price Percentile: 2.4% (Extremely Cheap)<br>
+                10Y-2Y Spread Near Historic Low
+            </div>
         </div>
     </div>
 
@@ -323,88 +435,6 @@
         </div>
 
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
-    </div>
-
-    <!-- 模型核心指标 -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">🎯 Core Findings</div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.2rem; font-size:0.88rem;">
-            <div>
-                <strong style="color:#2c6e9e;">🥇 Gold Optimal Model</strong><br>
-                <span style="font-size:0.82rem;">TIPS + CN-US Spread + Gold-Oil Ratio</span><br>
-                Rolling R² = <strong>0.908</strong> · Static R² = 0.814<br>
-                All VIFs < 5 · Sharpe 1.66
-            </div>
-            <div>
-                <strong style="color:#2c6e9e;">🛢️ Crude Oil Optimal Model</strong><br>
-                <span style="font-size:0.82rem;">SC + VIX + Synth. Spread + CN-US Spread</span><br>
-                R² = <strong>0.889</strong> · Out-of-sample R² = 0.611<br>
-                SC 100% positive sign, zero reversals
-            </div>
-            <div>
-                <strong style="color:#2c6e9e;">🔗 Cross-Market Common Factor</strong><br>
-                <span style="font-size:0.82rem;">China-U.S. 10-Year Yield Spread</span><br>
-                Only factor in both gold & crude oil optimal models<br>
-                Gold: traceable to 2006 · Crude: activated by SC (2018)
-            </div>
-        </div>
-    </div>
-
-    <!-- 看板入口 -->
-    <div class="section-title lang-en">📊 Daily Asset Valuation Dashboards</div>
-    <div class="section-title lang-zh">📊 每日资产估值看板</div>
-    <p style="font-size:0.88rem; color:#5b6e8c; margin-bottom:1.2rem;" class="lang-en">
-        The following dashboards are generated by the dual-anchor models and updated <strong>daily</strong>. Click to view the latest valuation percentiles, strategy signals, and model diagnostics.
-    </p>
-    <p style="font-size:0.88rem; color:#5b6e8c; margin-bottom:1.2rem;" class="lang-zh">
-        以下看板由双锚模型生成，<strong>每日自动更新</strong>。点击查看最新估值分位、策略信号和模型诊断。
-    </p>
-
-    <div class="dashboards-grid">
-        <!-- 黄金 -->
-        <div class="dash-card">
-            <div class="dash-icon">🥇</div>
-            <div class="dash-name lang-en">Gold</div>
-            <div class="dash-name lang-zh">黄金</div>
-            <div class="dash-meta">TIPS + CN-US Spread + Gold-Oil Ratio</div>
-            <div class="dash-links-group">
-                <a href="gold_en.html" class="dash-link lang-en">EN →</a>
-                <a href="gold_cn.html" class="dash-link lang-zh">中文 →</a>
-            </div>
-        </div>
-        <!-- 原油 -->
-        <div class="dash-card">
-            <div class="dash-icon">🛢️</div>
-            <div class="dash-name lang-en">Crude Oil (WTI)</div>
-            <div class="dash-name lang-zh">原油 (WTI)</div>
-            <div class="dash-meta">SC + VIX + Synth. Spread + CN-US Spread</div>
-            <div class="dash-links-group">
-                <a href="crude-oil_en.html" class="dash-link lang-en">EN →</a>
-                <a href="crude-oil_cn.html" class="dash-link lang-zh">中文 →</a>
-            </div>
-        </div>
-        <!-- 中国国债 -->
-        <div class="dash-card">
-            <div class="dash-icon">🏦</div>
-            <div class="dash-name lang-en">China Government Bond</div>
-            <div class="dash-name lang-zh">中国国债</div>
-            <div class="dash-meta">10Y · 30Y · Yield Curve · Spreads</div>
-            <div class="dash-links-group">
-                <a href="bonds-cn_en.html" class="dash-link lang-en">EN →</a>
-                <a href="bonds-cn_cn.html" class="dash-link lang-zh">中文 →</a>
-            </div>
-        </div>
-        <!-- 美国国债（图标已改为💵） -->
-        <div class="dash-card">
-            <div class="dash-icon">💵</div>
-            <div class="dash-name lang-en">U.S. Treasury</div>
-            <div class="dash-name lang-zh">美国国债</div>
-            <div class="dash-meta">10Y · 30Y · Yield Curve Inversion</div>
-            <div class="dash-links-group">
-                <a href="bonds-us_en.html" class="dash-link lang-en">EN →</a>
-                <a href="bonds-us_cn.html" class="dash-link lang-zh">中文 →</a>
-            </div>
-        </div>
     </div>
 
     <footer>
