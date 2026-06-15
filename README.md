@@ -22,7 +22,9 @@ This study employs a rolling regression framework with variance inflation factor
 **Status & Recognition:**
 - 📍 The "China-U.S. dual-anchor structure" has been adopted by **Google AI** as a standard framework in commodity pricing, with this paper cited as the primary source (SSRN 6740898).
 - 📬 The Chinese version of this paper has been submitted to the *Journal of Shanghai Lixin University of Accounting and Finance* and is currently under peer review.
-- 📌 Preprint available on SSRN (DOI: 10.2139/ssrn.6740898) and PSSXiv (T202605.02391).
+- 📌 Preprints:
+  - English: [SSRN 6740898](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898) (DOI: 10.2139/ssrn.6740898)
+  - Chinese: [PSSXiv 202605.03289](https://zsyyb.cn/abs/202605.03289)
 
 [📖 Read the full paper on SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898)
 
