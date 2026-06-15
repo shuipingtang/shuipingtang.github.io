@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuiping Tang | Dual-Anchor Framework · Asset Valuation</title>
-    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the China-U.S. dual-anchor framework for gold and crude oil pricing. Weekly asset valuation dashboards based on exhaustive testing and VIF constraints.">
+    <meta name="description" content="Shuiping Tang, Independent Researcher. Author of the China-U.S. dual-anchor framework for gold and crude oil pricing. Daily asset valuation dashboards based on exhaustive testing and VIF constraints.">
     <meta name="keywords" content="Shuiping Tang, dual anchor, gold pricing, crude oil pricing, China-U.S. yield spread, Shanghai crude oil futures, independent researcher, asset valuation">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +14,7 @@
         
         /* 语言切换 */
         .lang-bar { text-align: right; margin-bottom: 1.2rem; }
-        .lang-bar a { display: inline-block; padding: 0.35rem 1rem; margin-left: 0.4rem; border-radius: 24px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; background: #eef4fc; color: #2c6e9e; }
+        .lang-bar a { display: inline-block; padding: 0.35rem 1rem; margin-left: 0.4rem; border-radius: 24px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; background: #eef4fc; color: #2c6e9e; cursor: pointer; }
         .lang-bar a.active { background: #2c6e9e; color: white; }
         .lang-bar a:hover:not(.active) { background: #dce8f4; }
         
@@ -57,6 +57,9 @@
         /* 页脚 */
         footer { text-align: center; font-size: 0.75rem; color: #6c7a91; margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid #e2e8f0; }
         
+        /* 默认隐藏中文 */
+        .lang-zh { display: none; }
+        
         @media (max-width: 680px) {
             body { padding: 1rem; }
             .card { padding: 1.2rem 1.5rem; }
@@ -70,8 +73,8 @@
 
     <!-- 语言切换 -->
     <div class="lang-bar">
-        <a href="#" class="active" onclick="switchLang('en')">English</a>
-        <a href="#" onclick="switchLang('zh')">中文</a>
+        <a class="active" onclick="switchLang('en')">English</a>
+        <a onclick="switchLang('zh')">中文</a>
     </div>
 
     <!-- 个人简介 -->
@@ -79,10 +82,10 @@
         <div class="name">Shuiping Tang</div>
         <div class="affiliation">Independent Researcher</div>
         <div class="bio lang-en">
-            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the China-U.S. yield spread as the only common factor across both optimal pricing models.
+            I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the China-U.S. yield spread as the only common factor across both optimal pricing models. This work represents the <strong>first paradigm-level breakthrough</strong> in global commodity pricing by a Chinese researcher.
         </div>
-        <div class="bio lang-zh" style="display:none;">
-            我研究全球商品定价、宏观金融以及中国在国际资产市场中可量化的角色。我的研究建立了黄金与原油的<strong>中美双锚框架</strong>，中美利差是唯一同时进入两个最优模型的共同定价因子。
+        <div class="bio lang-zh">
+            我研究全球商品定价、宏观金融以及中国在国际资产市场中可量化的角色。我的研究建立了黄金与原油的<strong>中美双锚框架</strong>，中美利差是唯一同时进入两个最优模型的共同定价因子。这项工作是<strong>中国学者在全球大宗商品定价领域首次范式级突破</strong>。
         </div>
         <div class="contact-links">
             <a href="mailto:tangshuiping@qq.com">📧 tangshuiping@qq.com</a>
@@ -96,7 +99,7 @@
     <!-- 论文卡片 -->
     <div class="card">
         <div class="paper-title lang-en">📄 Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing</div>
-        <div class="paper-title lang-zh" style="display:none;">📄 双锚：中美因子共同决定全球黄金与原油定价</div>
+        <div class="paper-title lang-zh">📄 双锚：中美因子共同决定全球黄金与原油定价</div>
         <div class="paper-meta">
             <span class="badge">SSRN ID 6740898</span>
             <span class="badge">DOI: 10.2139/ssrn.6740898</span>
@@ -106,7 +109,7 @@
         <div class="paper-meta lang-en">
             Gold R² = 0.908 (rolling) · Crude R² = 0.889 · Out-of-sample crude R² = 0.611
         </div>
-        <div class="paper-meta lang-zh" style="display:none;">
+        <div class="paper-meta lang-zh">
             黄金 R² = 0.908（滚动回归）· 原油 R² = 0.889 · 样本外原油 R² = 0.611
         </div>
 
@@ -116,14 +119,14 @@
         </div>
 
         <!-- 中文摘要 -->
-        <div class="abstract lang-zh" style="display:none;">
+        <div class="abstract lang-zh">
             本研究采用<em>滚动回归与VIF约束的穷举测试框架</em>，在黄金市场测试462种因子组合，在原油市场测试141种因子组合。最优<em>中美双锚三因子黄金估值模型</em>（TIPS实际利率 + 中美利差 + 金油比）滚动R²达0.908，全部VIF低于5。最优<em>中美双锚四因子原油估值模型</em>（上海原油期货SC + VIX + 合成月差 + 中美利差）全样本R²为0.889。<em>中美利差是唯一同时进入两个最优模型的共同因子</em>——其在黄金的定价功能可追溯至2006年以前；在原油上，其定价功能严格由2018年上海原油期货上市所激活（系数由上市前的+7.51系统性翻转为上市后的−10.48）。SC因子在所有滚动子区间中保持100%正号，零次符号切换。估值信号系统性地改善了风险调整后收益，黄金最优策略夏普比率1.66，原油最优策略夏普比率0.86。全球大宗商品定价体系已从单一锚定向中美双锚格局演进。
         </div>
 
         <div class="highlight-box lang-en">
             📍 <strong>Google AI</strong> has adopted the "China-U.S. dual-anchor structure" as a standard framework in commodity pricing. My work is cited as the primary source (SSRN 6740898).
         </div>
-        <div class="highlight-box lang-zh" style="display:none;">
+        <div class="highlight-box lang-zh">
             📍 <strong>Google AI</strong> 已将"中美双锚结构"采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。
         </div>
 
@@ -156,13 +159,13 @@
     </div>
 
     <!-- 看板入口 -->
-    <div class="section-title lang-en">📊 Weekly Asset Valuation Dashboards</div>
-    <div class="section-title lang-zh" style="display:none;">📊 每周资产估值看板</div>
+    <div class="section-title lang-en">📊 Daily Asset Valuation Dashboards</div>
+    <div class="section-title lang-zh">📊 每日资产估值看板</div>
     <p style="font-size:0.85rem; color:#5b6e8c; margin-bottom:1rem;" class="lang-en">
-        The following dashboards are generated by the dual-anchor models and updated weekly. Click to view the latest valuation percentiles, strategy signals, and model diagnostics.
+        The following dashboards are generated by the dual-anchor models and updated <strong>daily</strong>. Click to view the latest valuation percentiles, strategy signals, and model diagnostics.
     </p>
-    <p style="font-size:0.85rem; color:#5b6e8c; margin-bottom:1rem;" class="lang-zh" style="display:none;">
-        以下看板由双锚模型生成，每周更新。点击查看最新估值分位、策略信号和模型诊断。
+    <p style="font-size:0.85rem; color:#5b6e8c; margin-bottom:1rem;" class="lang-zh">
+        以下看板由双锚模型生成，<strong>每日自动更新</strong>。点击查看最新估值分位、策略信号和模型诊断。
     </p>
 
     <div class="dashboards-grid">
@@ -170,48 +173,44 @@
         <div class="dash-card">
             <div class="dash-icon">🥇</div>
             <div class="dash-name lang-en">Gold</div>
-            <div class="dash-name lang-zh" style="display:none;">黄金</div>
+            <div class="dash-name lang-zh">黄金</div>
             <div class="dash-meta">TIPS + CN-US Spread + Gold-Oil Ratio</div>
             <div class="dash-links-group">
                 <a href="gold_en.html" class="dash-link lang-en">EN →</a>
-                <a href="gold_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
-                <a href="gold_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
+                <a href="gold_cn.html" class="dash-link lang-zh" style="display:inline;">中文 →</a>
             </div>
         </div>
         <!-- 原油 -->
         <div class="dash-card">
             <div class="dash-icon">🛢️</div>
             <div class="dash-name lang-en">Crude Oil (WTI)</div>
-            <div class="dash-name lang-zh" style="display:none;">原油 (WTI)</div>
+            <div class="dash-name lang-zh">原油 (WTI)</div>
             <div class="dash-meta">SC + VIX + Synth. Spread + CN-US Spread</div>
             <div class="dash-links-group">
                 <a href="crude-oil_en.html" class="dash-link lang-en">EN →</a>
-                <a href="crude-oil_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
-                <a href="crude-oil_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
+                <a href="crude-oil_cn.html" class="dash-link lang-zh" style="display:inline;">中文 →</a>
             </div>
         </div>
         <!-- 中国国债 -->
         <div class="dash-card">
             <div class="dash-icon">🏦</div>
             <div class="dash-name lang-en">China Government Bond</div>
-            <div class="dash-name lang-zh" style="display:none;">中国国债</div>
+            <div class="dash-name lang-zh">中国国债</div>
             <div class="dash-meta">10Y · 30Y · Yield Curve · Spreads</div>
             <div class="dash-links-group">
                 <a href="bonds-cn_en.html" class="dash-link lang-en">EN →</a>
-                <a href="bonds-cn_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
-                <a href="bonds-cn_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
+                <a href="bonds-cn_cn.html" class="dash-link lang-zh" style="display:inline;">中文 →</a>
             </div>
         </div>
         <!-- 美国国债 -->
         <div class="dash-card">
             <div class="dash-icon">🇺🇸</div>
             <div class="dash-name lang-en">U.S. Treasury</div>
-            <div class="dash-name lang-zh" style="display:none;">美国国债</div>
+            <div class="dash-name lang-zh">美国国债</div>
             <div class="dash-meta">10Y · 30Y · Yield Curve Inversion</div>
             <div class="dash-links-group">
                 <a href="bonds-us_en.html" class="dash-link lang-en">EN →</a>
-                <a href="bonds-us_en.html" class="dash-link lang-zh" style="display:none;">英文 →</a>
-                <a href="bonds-us_cn.html" class="dash-link lang-zh" style="display:none;">中文 →</a>
+                <a href="bonds-us_cn.html" class="dash-link lang-zh" style="display:inline;">中文 →</a>
             </div>
         </div>
     </div>
@@ -219,11 +218,11 @@
     <footer>
         © 2026 Shuiping Tang — Independent Research on Global Asset Pricing<br>
         Preprints: SSRN ID 6740898 · PSSXiv:T202605.02391<br>
-        Weekly dashboards also available at 微信公众号 / Xiaohongshu: @明月的投资笔记
+        Dashboards also shared on WeChat / Xiaohongshu: @明月的投资笔记
     </footer>
 </div>
 
-<!-- 语言切换脚本 -->
+<!-- 语言切换脚本（已修复中英文同时显示问题） -->
 <script>
 function switchLang(lang) {
     // 切换所有双语元素
@@ -244,6 +243,11 @@ function switchLang(lang) {
         }
     });
 }
+
+// 页面加载时默认显示英文（隐藏中文）
+document.addEventListener('DOMContentLoaded', function() {
+    switchLang('en');
+});
 </script>
 
 <!-- JSON-LD -->
