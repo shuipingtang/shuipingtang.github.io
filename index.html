@@ -132,6 +132,11 @@
             white-space: nowrap;
             letter-spacing: 0.2px;
         }
+        .badge a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .badge a:hover { text-decoration: underline; }
         .highlight-box {
             background: #f8faff;
             border-left: 4px solid #2c6e9e;
@@ -156,6 +161,7 @@
             margin-top: 1rem;
             transition: background 0.2s, transform 0.2s;
             box-shadow: 0 4px 12px rgba(15,43,61,0.2);
+            margin-right: 0.5rem;
         }
         .btn-primary:hover {
             background: #1f4a6e;
@@ -174,9 +180,7 @@
             color: #2c6e9e;
         }
         
-        .dash-section {
-            margin-bottom: 2rem;
-        }
+        .dash-section { margin-bottom: 2rem; }
         .section-title {
             font-size: 1.5rem;
             font-weight: 600;
@@ -216,40 +220,15 @@
             box-shadow: 0 16px 36px rgba(0,0,0,0.09);
             border-color: rgba(44,110,158,0.25);
         }
-        .dash-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .dash-name {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-            color: #0f2b3d;
-        }
-        .dash-meta {
-            font-size: 0.78rem;
-            color: #5b6e8c;
-            margin-bottom: 0.8rem;
-        }
-        .dash-links-group {
-            display: flex;
-            gap: 0.8rem;
-            align-items: center;
-            margin-top: auto;
-            padding-top: 0.5rem;
-        }
+        .dash-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .dash-name { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.3rem; color: #0f2b3d; }
+        .dash-meta { font-size: 0.78rem; color: #5b6e8c; margin-bottom: 0.8rem; }
+        .dash-links-group { display: flex; gap: 0.8rem; align-items: center; margin-top: auto; padding-top: 0.5rem; }
         .dash-link {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #2c6e9e;
-            text-decoration: none;
-            border-bottom: 1px solid #d0dae8;
-            transition: color 0.2s, border-color 0.2s;
+            font-size: 0.85rem; font-weight: 500; color: #2c6e9e; text-decoration: none;
+            border-bottom: 1px solid #d0dae8; transition: color 0.2s, border-color 0.2s;
         }
-        .dash-link:hover {
-            color: #0f2b3d;
-            border-color: #2c6e9e;
-        }
+        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
         
         .findings-grid {
             display: grid;
@@ -257,13 +236,8 @@
             gap: 1.2rem;
             font-size: 0.88rem;
         }
-        .findings-grid strong {
-            color: #2c6e9e;
-        }
-        .findings-grid .sub {
-            font-size: 0.8rem;
-            color: #5b6e8c;
-        }
+        .findings-grid strong { color: #2c6e9e; }
+        .findings-grid .sub { font-size: 0.8rem; color: #5b6e8c; }
         @media (max-width: 1000px) {
             .findings-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -272,12 +246,8 @@
         }
         
         footer {
-            text-align: center;
-            font-size: 0.78rem;
-            color: #6c7a91;
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e2e8f0;
+            text-align: center; font-size: 0.78rem; color: #6c7a91;
+            margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
@@ -293,7 +263,8 @@
     <!-- 个人简介 -->
     <div class="card">
         <div class="name">Shuiping Tang</div>
-        <div class="affiliation">Independent Researcher</div>
+        <div class="affiliation lang-en">Independent Researcher</div>
+        <div class="affiliation lang-zh">独立研究者</div>
         <div class="bio lang-en">
             I study global commodity pricing, macro-finance, and the quantifiable role of China in international asset markets. My research establishes the <strong>China-U.S. dual-anchor framework</strong> for gold and crude oil, with the China-U.S. yield spread as the only common factor across both optimal pricing models. This work represents the <strong>first paradigm-level breakthrough</strong> in global commodity pricing by a Chinese researcher.
         </div>
@@ -309,7 +280,7 @@
         </div>
     </div>
 
-    <!-- 📊 每日资产估值看板（前置） -->
+    <!-- 📊 每日资产估值看板 -->
     <div class="dash-section">
         <div class="section-title lang-en">📊 Daily Asset Valuation Dashboards</div>
         <div class="section-title lang-zh">📊 每日资产估值看板</div>
@@ -319,9 +290,7 @@
         <p class="dash-subtitle lang-zh">
             以下看板由双锚模型生成，<strong>每日自动更新</strong>。点击查看最新估值分位、策略信号和模型诊断。
         </p>
-
         <div class="dashboards-grid">
-            <!-- 黄金 -->
             <div class="dash-card">
                 <div class="dash-icon">🥇</div>
                 <div class="dash-name lang-en">Gold</div>
@@ -332,7 +301,6 @@
                     <a href="gold_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
-            <!-- 原油 -->
             <div class="dash-card">
                 <div class="dash-icon">🛢️</div>
                 <div class="dash-name lang-en">Crude Oil (WTI)</div>
@@ -343,7 +311,6 @@
                     <a href="crude-oil_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
-            <!-- 中国国债 -->
             <div class="dash-card">
                 <div class="dash-icon">🏦</div>
                 <div class="dash-name lang-en">China Govt Bond</div>
@@ -354,7 +321,6 @@
                     <a href="bonds-cn_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
-            <!-- 美国国债 -->
             <div class="dash-card">
                 <div class="dash-icon">💵</div>
                 <div class="dash-name lang-en">U.S. Treasury</div>
@@ -368,11 +334,10 @@
         </div>
     </div>
 
-    <!-- 🎯 Core Findings（全部中英文对照） -->
+    <!-- 🎯 Core Findings -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🎯 Core Findings</div>
         <div class="findings-grid">
-            <!-- 黄金 -->
             <div>
                 <strong>🥇 <span class="lang-en">Gold Optimal Model</span><span class="lang-zh">黄金最优模型</span></strong><br>
                 <span class="sub">TIPS + CN-US Spread + Gold-Oil Ratio</span><br>
@@ -381,7 +346,6 @@
                 <span class="lang-en">All VIFs < 5 · Sharpe 1.66</span>
                 <span class="lang-zh">全部VIF < 5 · 夏普比率 1.66</span>
             </div>
-            <!-- 原油 -->
             <div>
                 <strong>🛢️ <span class="lang-en">Crude Oil Optimal Model</span><span class="lang-zh">原油最优模型</span></strong><br>
                 <span class="sub">SC + VIX + Synth. Spread + CN-US Spread</span><br>
@@ -390,7 +354,6 @@
                 <span class="lang-en">SC 100% positive sign, zero reversals</span>
                 <span class="lang-zh">SC 100%正号，零次符号切换</span>
             </div>
-            <!-- 中国国债 -->
             <div>
                 <strong>🏦 <span class="lang-en">China Govt Bond</span><span class="lang-zh">中国国债</span></strong><br>
                 <span class="sub lang-en">Multi-maturity yield curve</span>
@@ -400,7 +363,6 @@
                 <span class="lang-en">Reversal Strategy Sharpe: 4.45</span>
                 <span class="lang-zh">反转策略夏普比率: 4.45</span>
             </div>
-            <!-- 美国国债 -->
             <div>
                 <strong>💵 <span class="lang-en">U.S. Treasury</span><span class="lang-zh">美国国债</span></strong><br>
                 <span class="sub lang-en">10Y · 30Y · Yield Curve Inversion</span>
@@ -420,6 +382,7 @@
         <div class="paper-meta">
             <span class="badge">SSRN ID 6740898</span>
             <span class="badge">DOI: 10.2139/ssrn.6740898</span>
+            <span class="badge"><a href="https://zsyyb.cn/abs/202605.03289" target="_blank">PSSXiv: 202605.03289</a></span>
             <span class="badge">Exhaustive Testing + VIF Constraints</span>
             <span class="badge">Rolling Regression</span>
         </div>
@@ -430,12 +393,10 @@
             黄金 R² = 0.908（滚动回归）· 原油 R² = 0.889 · 样本外原油 R² = 0.611
         </div>
 
-        <!-- 英文摘要 -->
         <div class="abstract lang-en">
             This study employs a <em>rolling regression framework with VIF constraints</em> to exhaustively test 462 factor combinations for gold and 141 for crude oil. The optimal <em>China-U.S. Dual-Anchor Three-Factor Gold Valuation Model</em> (TIPS real yield + China-U.S. yield spread + gold-oil ratio) achieves a rolling R² of 0.908, with all VIFs below 5. The optimal <em>China-U.S. Dual-Anchor Four-Factor Crude Oil Valuation Model</em> (Shanghai crude oil futures SC + VIX + synthetic time spread + China-U.S. yield spread) achieves a full-sample R² of 0.889. The <em>China-U.S. yield spread is the only common factor</em> entering both optimal models. Its pricing function in gold traces back to at least 2006; in crude oil, it was strictly activated by the 2018 launch of Shanghai crude oil futures, evidenced by a systematic coefficient sign reversal from +7.51 to −10.48. The SC factor maintains a 100% positive sign across all rolling sub-periods with zero sign reversals. Valuation signals systematically improve risk-adjusted returns, with the optimal gold strategy achieving a Sharpe ratio of 1.66 and the optimal crude oil strategy achieving a Sharpe ratio of 0.86. The global commodity pricing regime has evolved from a single-anchor to a China-U.S. dual-anchor structure.
         </div>
 
-        <!-- 中文摘要 -->
         <div class="abstract lang-zh">
             本研究采用<em>滚动回归与VIF约束的穷举测试框架</em>，在黄金市场测试462种因子组合，在原油市场测试141种因子组合。最优<em>中美双锚三因子黄金估值模型</em>（TIPS实际利率 + 中美利差 + 金油比）滚动R²达0.908，全部VIF低于5。最优<em>中美双锚四因子原油估值模型</em>（上海原油期货SC + VIX + 合成月差 + 中美利差）全样本R²为0.889。<em>中美利差是唯一同时进入两个最优模型的共同因子</em>——其在黄金的定价功能可追溯至2006年以前；在原油上，其定价功能严格由2018年上海原油期货上市所激活（系数由上市前的+7.51系统性翻转为上市后的−10.48）。SC因子在所有滚动子区间中保持100%正号，零次符号切换。估值信号系统性地改善了风险调整后收益，黄金最优策略夏普比率1.66，原油最优策略夏普比率0.86。全球大宗商品定价体系已从单一锚定向中美双锚格局演进。
         </div>
@@ -447,22 +408,27 @@
             📍 <strong>Google AI</strong> 已将"中美双锚结构"采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。<a href="google-ai.html">[查看证据 →]</a>
         </div>
 
-        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
+        <!-- 按钮：英文版只显示SSRN，中文版显示SSRN和哲社预印本 -->
+        <div class="lang-en">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
+        </div>
+        <div class="lang-zh">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 在SSRN阅读全文 →</a>
+            <a href="https://zsyyb.cn/abs/202605.03289" class="btn-primary" target="_blank">📖 在哲社预印本阅读 →</a>
+        </div>
     </div>
 
     <footer>
         © 2026 Shuiping Tang — Independent Research on Global Asset Pricing<br>
-        Preprints: SSRN ID 6740898 · PSSXiv:T202605.02391<br>
+        Preprints: SSRN ID 6740898 · PSSXiv: 202605.03289<br>
         Dashboards also shared on WeChat / Xiaohongshu: @明月的投资笔记
     </footer>
 </div>
 
-<!-- 语言切换脚本 -->
 <script>
 function switchLang(lang) {
     var enElems = document.querySelectorAll('.lang-en');
     var zhElems = document.querySelectorAll('.lang-zh');
-    
     if (lang === 'en') {
         enElems.forEach(function(el) { el.style.display = ''; });
         zhElems.forEach(function(el) { el.style.display = 'none'; });
@@ -470,7 +436,6 @@ function switchLang(lang) {
         enElems.forEach(function(el) { el.style.display = 'none'; });
         zhElems.forEach(function(el) { el.style.display = ''; });
     }
-    
     document.querySelectorAll('.lang-bar a').forEach(function(a) { a.classList.remove('active'); });
     document.querySelectorAll('.lang-bar a').forEach(function(a) {
         if ((lang === 'en' && a.innerText.includes('English')) || (lang === 'zh' && a.innerText.includes('中文'))) {
@@ -478,13 +443,9 @@ function switchLang(lang) {
         }
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    switchLang('en');
-});
+document.addEventListener('DOMContentLoaded', function() { switchLang('en'); });
 </script>
 
-<!-- JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
