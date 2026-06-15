@@ -4,7 +4,7 @@
 
 # 👋 Hi, I'm **Shuiping Tang** (汤水平)
 
-I'm an **Independent Researcher** focused on global commodity pricing and macro-finance. My work establishes the **China-U.S. dual-anchor framework** for gold and crude oil pricing — the first systematic evidence that China's macro-financial variables are independent pricing factors alongside traditional U.S. variables.
+I'm an **Independent Researcher** focused on global commodity pricing and macro-finance. My work establishes the **China-U.S. dual-anchor framework** for gold and crude oil pricing — the **first systematic empirical demonstration** that China-linked macro-financial variables are independent pricing factors in global commodity markets.
 
 <br>
 
@@ -39,7 +39,7 @@ Based on the dual-anchor models, these dashboards are updated **daily** via auto
 | **🥇 Gold** | TIPS + CN-US Spread + Gold-Oil Ratio | [EN](https://shuipingtang.github.io/gold_en.html) · [中文](https://shuipingtang.github.io/gold_cn.html) |
 | **🛢️ Crude Oil (WTI)** | SC + VIX + Synth. Spread + CN-US Spread | [EN](https://shuipingtang.github.io/crude-oil_en.html) · [中文](https://shuipingtang.github.io/crude-oil_cn.html) |
 | **🏦 China Govt Bond** | Multi-maturity yield curve & spreads | [EN](https://shuipingtang.github.io/bonds-cn_en.html) · [中文](https://shuipingtang.github.io/bonds-cn_cn.html) |
-| **💵 U.S. Treasury** | 10Y, 30Y, yield curve inversion | [EN](https://shuipingtang.github.io/bonds-us_en.html) · [中文](https://shuipingtang.github.io/bonds-us_cn.html) |
+| **💵 U.S. Treasury** | 10Y, 30Y, term structure & spreads | [EN](https://shuipingtang.github.io/bonds-us_en.html) · [中文](https://shuipingtang.github.io/bonds-us_cn.html) |
 
 [🌐 Visit the Homepage](https://shuipingtang.github.io)
 
