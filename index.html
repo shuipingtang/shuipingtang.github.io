@@ -262,7 +262,8 @@
 
     <!-- 个人简介 -->
     <div class="card">
-        <div class="name">Shuiping Tang</div>
+        <div class="name lang-en">Shuiping Tang</div>
+        <div class="name lang-zh">汤水平</div>
         <div class="affiliation lang-en">Independent Researcher</div>
         <div class="affiliation lang-zh">独立研究者</div>
         <div class="bio lang-en">
@@ -291,41 +292,49 @@
             以下看板由双锚模型生成，<strong>每日自动更新</strong>。点击查看最新估值分位、策略信号和模型诊断。
         </p>
         <div class="dashboards-grid">
+            <!-- 黄金 -->
             <div class="dash-card">
                 <div class="dash-icon">🥇</div>
                 <div class="dash-name lang-en">Gold</div>
                 <div class="dash-name lang-zh">黄金</div>
-                <div class="dash-meta">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+                <div class="dash-meta lang-en">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+                <div class="dash-meta lang-zh">TIPS + 中美利差 + 金油比</div>
                 <div class="dash-links-group">
                     <a href="gold_en.html" class="dash-link">EN →</a>
                     <a href="gold_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
+            <!-- 原油 -->
             <div class="dash-card">
                 <div class="dash-icon">🛢️</div>
                 <div class="dash-name lang-en">Crude Oil (WTI)</div>
                 <div class="dash-name lang-zh">原油 (WTI)</div>
-                <div class="dash-meta">SC + VIX + Synth. Spread + CN-US Spread</div>
+                <div class="dash-meta lang-en">SC + VIX + Synth. Spread + CN-US Spread</div>
+                <div class="dash-meta lang-zh">上海原油 + VIX + 合成月差 + 中美利差</div>
                 <div class="dash-links-group">
                     <a href="crude-oil_en.html" class="dash-link">EN →</a>
                     <a href="crude-oil_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
+            <!-- 中国国债 -->
             <div class="dash-card">
                 <div class="dash-icon">🏦</div>
                 <div class="dash-name lang-en">China Govt Bond</div>
                 <div class="dash-name lang-zh">中国国债</div>
-                <div class="dash-meta">10Y · 30Y · Yield Curve · Spreads</div>
+                <div class="dash-meta lang-en">10Y · 30Y · Yield Curve · Spreads</div>
+                <div class="dash-meta lang-zh">10年期 · 30年期 · 收益率曲线 · 利差</div>
                 <div class="dash-links-group">
                     <a href="bonds-cn_en.html" class="dash-link">EN →</a>
                     <a href="bonds-cn_cn.html" class="dash-link">中文 →</a>
                 </div>
             </div>
+            <!-- 美国国债（去掉了 Inversion） -->
             <div class="dash-card">
                 <div class="dash-icon">💵</div>
                 <div class="dash-name lang-en">U.S. Treasury</div>
                 <div class="dash-name lang-zh">美国国债</div>
-                <div class="dash-meta">10Y · 30Y · Yield Curve Inversion</div>
+                <div class="dash-meta lang-en">10Y · 30Y · Term Structure & Spreads</div>
+                <div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构与利差</div>
                 <div class="dash-links-group">
                     <a href="bonds-us_en.html" class="dash-link">EN →</a>
                     <a href="bonds-us_cn.html" class="dash-link">中文 →</a>
@@ -365,8 +374,8 @@
             </div>
             <div>
                 <strong>💵 <span class="lang-en">U.S. Treasury</span><span class="lang-zh">美国国债</span></strong><br>
-                <span class="sub lang-en">10Y · 30Y · Yield Curve Inversion</span>
-                <span class="sub lang-zh">10年期 · 30年期 · 收益率曲线倒挂</span><br>
+                <span class="sub lang-en">10Y · 30Y · Term Structure & Spreads</span>
+                <span class="sub lang-zh">10年期 · 30年期 · 期限结构与利差</span><br>
                 <span class="lang-en">10Y 1Y Price Percentile: 2.4% (Extremely Cheap)</span>
                 <span class="lang-zh">10年期1年价格分位: 2.4%（极度低估）</span><br>
                 <span class="lang-en">10Y-2Y Spread Near Historic Low</span>
@@ -413,15 +422,20 @@
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
         </div>
         <div class="lang-zh">
-            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 在SSRN阅读全文 →</a>
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 在 SSRN 阅读全文 →</a>
             <a href="https://zsyyb.cn/abs/202605.03289" class="btn-primary" target="_blank">📖 在哲社预印本阅读 →</a>
         </div>
     </div>
 
-    <footer>
+    <footer class="lang-en">
         © 2026 Shuiping Tang — Independent Research on Global Asset Pricing<br>
         Preprints: SSRN ID 6740898 · PSSXiv: 202605.03289<br>
         Dashboards also shared on WeChat / Xiaohongshu: @明月的投资笔记
+    </footer>
+    <footer class="lang-zh">
+        © 2026 汤水平 — 全球资产定价独立研究<br>
+        预印本：SSRN ID 6740898 · PSSXiv: 202605.03289<br>
+        看板同步发布于微信公众号 / 小红书：@明月的投资笔记
     </footer>
 </div>
 
