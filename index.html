@@ -57,8 +57,7 @@
         /* 页脚 */
         footer { text-align: center; font-size: 0.75rem; color: #6c7a91; margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid #e2e8f0; }
         
-        /* 默认隐藏中文 */
-        .lang-zh { display: none; }
+        /* 不预先隐藏任何语言，交给JS控制 */
         
         @media (max-width: 680px) {
             body { padding: 1rem; }
@@ -124,10 +123,10 @@
         </div>
 
         <div class="highlight-box lang-en">
-            📍 <strong>Google AI</strong> has adopted the "China-U.S. dual-anchor structure" as a standard framework in commodity pricing. My work is cited as the primary source (SSRN 6740898).
+            📍 <strong>Google AI</strong> has adopted the "China-U.S. dual-anchor structure" as a standard framework in commodity pricing. My work is cited as the primary source (SSRN 6740898). <a href="google-ai.html">[View evidence →]</a>
         </div>
         <div class="highlight-box lang-zh">
-            📍 <strong>Google AI</strong> 已将"中美双锚结构"采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。
+            📍 <strong>Google AI</strong> 已将"中美双锚结构"采纳为商品定价的标准框架。我的研究被列为主要来源（SSRN 6740898）。<a href="google-ai.html">[查看证据 →]</a>
         </div>
 
         <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6740898" class="btn-primary" target="_blank">📖 Read Full Paper on SSRN →</a>
@@ -222,12 +221,12 @@
     </footer>
 </div>
 
-<!-- 语言切换脚本（已修复中英文同时显示问题） -->
+<!-- 语言切换脚本（已修复，完全由JS控制） -->
 <script>
 function switchLang(lang) {
-    // 切换所有双语元素
     var enElems = document.querySelectorAll('.lang-en');
     var zhElems = document.querySelectorAll('.lang-zh');
+    
     if (lang === 'en') {
         enElems.forEach(function(el) { el.style.display = ''; });
         zhElems.forEach(function(el) { el.style.display = 'none'; });
@@ -235,7 +234,8 @@ function switchLang(lang) {
         enElems.forEach(function(el) { el.style.display = 'none'; });
         zhElems.forEach(function(el) { el.style.display = ''; });
     }
-    // 更新语言切换按钮
+    
+    // 更新语言切换按钮状态
     document.querySelectorAll('.lang-bar a').forEach(function(a) { a.classList.remove('active'); });
     document.querySelectorAll('.lang-bar a').forEach(function(a) {
         if ((lang === 'en' && a.innerText.includes('English')) || (lang === 'zh' && a.innerText.includes('中文'))) {
@@ -244,13 +244,13 @@ function switchLang(lang) {
     });
 }
 
-// 页面加载时默认显示英文（隐藏中文）
+// 页面加载时立即执行，默认英文，并确保中文元素被隐藏（通过设置内联样式）
 document.addEventListener('DOMContentLoaded', function() {
     switchLang('en');
 });
 </script>
 
-<!-- JSON-LD -->
+<!-- JSON-LD，学术结构化数据，保持不变 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
