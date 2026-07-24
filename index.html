@@ -117,6 +117,39 @@
         }
         .section-title:first-child { margin-top: 0; }
 
+        .dashboards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 1000px) { .dashboards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .dashboards-grid { grid-template-columns: 1fr; } }
+        .dash-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1rem 1.2rem;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .dash-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+            border-color: rgba(44,110,158,0.25);
+        }
+        .dash-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+        .dash-name { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; color: #0f2b3d; }
+        .dash-meta { font-size: 0.75rem; color: #5b6e8c; margin-bottom: 0.6rem; line-height: 1.3; }
+        .dash-links-group { display: flex; gap: 0.6rem; align-items: center; margin-top: auto; }
+        .dash-link {
+            font-size: 0.8rem; font-weight: 500; color: #2c6e9e; text-decoration: none;
+            border-bottom: 1px solid #d0dae8; transition: color 0.2s, border-color 0.2s;
+        }
+        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
+
         .os-components {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -153,9 +186,29 @@
             border-left: 4px solid #2c6e9e;
             font-size: 0.88rem;
             line-height: 1.55;
+            position: relative;
         }
         .disc-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .disc-card .sub { font-size: 0.8rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
+        .disc-card .doi-links {
+            margin-top: 0.6rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+        .disc-card .doi-links a {
+            font-size: 0.7rem;
+            background: #e8f0f8;
+            padding: 0.15rem 0.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1f4a6e;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .disc-card .doi-links a:hover {
+            background: #d0e0f0;
+        }
 
         .highlight-box {
             background: #f8faff;
@@ -167,67 +220,6 @@
             color: #1e3a5f;
             line-height: 1.6;
         }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #0f2b3d;
-            color: white;
-            padding: 0.6rem 1.4rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.88rem;
-            margin-top: 1rem;
-            transition: background 0.2s, transform 0.2s;
-            box-shadow: 0 4px 12px rgba(15,43,61,0.2);
-            margin-right: 0.5rem;
-        }
-        .btn-primary:hover {
-            background: #1f4a6e;
-            transform: translateY(-1px);
-            box-shadow: 0 8px 20px rgba(15,43,61,0.3);
-        }
-
-        .dash-section { margin-bottom: 2rem; }
-        .dash-subtitle {
-            font-size: 0.88rem;
-            color: #5b6e8c;
-            margin-bottom: 1.4rem;
-        }
-        .dashboards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-        @media (max-width: 1000px) { .dashboards-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .dashboards-grid { grid-template-columns: 1fr; } }
-        .dash-card {
-            background: white;
-            border-radius: 24px;
-            padding: 1.4rem 1.5rem;
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
-        }
-        .dash-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 36px rgba(0,0,0,0.09);
-            border-color: rgba(44,110,158,0.25);
-        }
-        .dash-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-        .dash-name { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.3rem; color: #0f2b3d; }
-        .dash-meta { font-size: 0.78rem; color: #5b6e8c; margin-bottom: 0.8rem; }
-        .dash-links-group { display: flex; gap: 0.8rem; align-items: center; margin-top: auto; padding-top: 0.5rem; }
-        .dash-link {
-            font-size: 0.85rem; font-weight: 500; color: #2c6e9e; text-decoration: none;
-            border-bottom: 1px solid #d0dae8; transition: color 0.2s, border-color 0.2s;
-        }
-        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
 
         .findings-grid {
             display: grid;
@@ -258,14 +250,12 @@
         <div class="name lang-zh">汤水平 (Tang, Shuiping)</div>
         <div class="affiliation lang-en">Independent Researcher · Scientific Discovery Operating System</div>
         <div class="affiliation lang-zh">独立研究者 · 科学发现操作系统</div>
-
         <div class="bio lang-en">
-            My research has established a <strong>Scientific Discovery Operating System</strong>—a proceduralized, cross-disciplinary, impersonal framework for extracting reliable laws from objective data. This system comprises four components: the <strong>Factor Hierarchy Law</strong> (ontology: how the world organizes), the <strong>Testability Principle</strong> (epistemology: what counts as reliable), the <strong>Testability Norms</strong> (procedure: six functional dimensions), and the <strong>MRSD Algorithm</strong> (implementation: input data, output regime matrices). This system has been independently verified across <strong>six disciplines</strong>: finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics. I have also completed the <strong>paradigm demotion</strong> of century-old axioms—universality, gauge field theory, the periodic law, and the nuclear shell model—showing they are all projections of regime switching under specific limiting conditions.
+            My research has established a <strong>Scientific Discovery Operating System</strong>—a proceduralized, cross-disciplinary, impersonal framework for extracting reliable laws from objective data. This system comprises four components: the <strong>Factor Hierarchy Law</strong>, the <strong>Testability Principle</strong>, the <strong>Testability Norms</strong>, and the <strong>MRSD Algorithm</strong>. Verified across <strong>six independent disciplines</strong>: finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics.
         </div>
         <div class="bio lang-zh">
-            我的研究构建了一套<strong>科学发现操作系统</strong>——一个程序化的、跨学科普适的、非人格化的框架，用于从客观数据中提取可靠规律。该系统包含四个组件：<strong>因子层级定律</strong>（本体论：世界如何组织）、<strong>可检验性原则</strong>（认识论：怎样才算可靠）、<strong>可检验性规范</strong>（操作程序：六个功能维度）和<strong>MRSD算法</strong>（实现引擎：输入数据，输出体制矩阵）。这套系统已在<strong>金融学、天文学、统计物理、粒子物理、化学与核物理六大独立学科</strong>中获得独立验证。我还完成了对普适性、规范场论、周期律与核壳模型等百年公理的<strong>范式降维</strong>——证明了它们都是体制切换在特定极限条件下的近似投影。
+            我的研究构建了一套<strong>科学发现操作系统</strong>——一个程序化的、跨学科普适的、非人格化的框架，用于从客观数据中提取可靠规律。该系统包含四个组件：<strong>因子层级定律</strong>、<strong>可检验性原则</strong>、<strong>可检验性规范</strong>和<strong>MRSD算法</strong>。已在<strong>六大独立学科</strong>中获得验证：金融学、天文学、统计物理、粒子物理、化学与核物理。
         </div>
-
         <div class="contact-links">
             <a href="mailto:tangshuiping@qq.com">📧 tangshuiping@qq.com</a>
             <a href="https://github.com/shuipingtang" target="_blank">🐙 GitHub</a>
@@ -276,180 +266,192 @@
         </div>
     </div>
 
-    <!-- 操作系统四组件 -->
+    <!-- 📊 每日资产估值看板 (放在操作系统上方，更紧凑) -->
     <div class="card">
-        <div class="section-title lang-en">🧩 Scientific Discovery Operating System</div>
-        <div class="section-title lang-zh">🧩 科学发现操作系统</div>
+        <div class="section-title" style="margin-top:0;">📊 <span class="lang-en">Daily Asset Valuation Dashboards</span><span class="lang-zh">每日资产估值看板</span></div>
+        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">Generated by dual-anchor models and updated <strong>daily</strong>.</p>
+        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-zh">由双锚模型生成，<strong>每日自动更新</strong>。</p>
+        <div class="dashboards-grid">
+            <div class="dash-card">
+                <div class="dash-icon">🥇</div>
+                <div class="dash-name lang-en">Gold</div><div class="dash-name lang-zh">黄金</div>
+                <div class="dash-meta lang-en">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+                <div class="dash-meta lang-zh">TIPS + 中美利差 + 金油比</div>
+                <div class="dash-links-group"><a href="gold_en.html" class="dash-link">EN →</a><a href="gold_cn.html" class="dash-link">中文 →</a></div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon">🛢️</div>
+                <div class="dash-name lang-en">Crude Oil (WTI)</div><div class="dash-name lang-zh">原油 (WTI)</div>
+                <div class="dash-meta lang-en">SC + VIX + Synth. Spread + CN-US Spread</div>
+                <div class="dash-meta lang-zh">上海原油 + VIX + 合成月差 + 中美利差</div>
+                <div class="dash-links-group"><a href="crude-oil_en.html" class="dash-link">EN →</a><a href="crude-oil_cn.html" class="dash-link">中文 →</a></div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon">🏦</div>
+                <div class="dash-name lang-en">China Govt Bond</div><div class="dash-name lang-zh">中国国债</div>
+                <div class="dash-meta lang-en">10Y · 30Y · Yield Curve · Spreads</div>
+                <div class="dash-meta lang-zh">10年期 · 30年期 · 收益率曲线 · 利差</div>
+                <div class="dash-links-group"><a href="bonds-cn_en.html" class="dash-link">EN →</a><a href="bonds-cn_cn.html" class="dash-link">中文 →</a></div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon">💵</div>
+                <div class="dash-name lang-en">U.S. Treasury</div><div class="dash-name lang-zh">美国国债</div>
+                <div class="dash-meta lang-en">10Y · 30Y · Term Structure & Spreads</div>
+                <div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构与利差</div>
+                <div class="dash-links-group"><a href="bonds-us_en.html" class="dash-link">EN →</a><a href="bonds-us_cn.html" class="dash-link">中文 →</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🧩 科学发现操作系统 -->
+    <div class="card">
+        <div class="section-title" style="margin-top:0;">🧩 <span class="lang-en">Scientific Discovery Operating System</span><span class="lang-zh">科学发现操作系统</span></div>
         <div class="os-components">
             <div class="os-card">
                 <strong>📐 <span class="lang-en">Factor Hierarchy Law</span><span class="lang-zh">因子层级定律</span></strong>
-                <span class="lang-en">Ontology · Regime factors vs execution factors · 6 disciplines</span>
-                <span class="lang-zh">本体论 · 规则因子 vs 执行因子 · 六大独立学科</span>
-                <span class="sub lang-en">What the world is</span>
-                <span class="sub lang-zh">世界如何组织</span>
+                <span class="lang-en">Ontology · Regime vs execution factors</span>
+                <span class="lang-zh">本体论 · 规则因子 vs 执行因子</span>
+                <span class="sub lang-en">What the world is</span><span class="sub lang-zh">世界如何组织</span>
             </div>
             <div class="os-card">
                 <strong>⚖️ <span class="lang-en">Testability Principle</span><span class="lang-zh">可检验性原则</span></strong>
-                <span class="lang-en">Epistemology · Beyond falsifiability · Independent standard</span>
-                <span class="lang-zh">认识论 · 超越可证伪性 · 独立标准</span>
-                <span class="sub lang-en">What counts as reliable</span>
-                <span class="sub lang-zh">怎样才算可靠</span>
+                <span class="lang-en">Epistemology · Beyond falsifiability</span>
+                <span class="lang-zh">认识论 · 超越可证伪性</span>
+                <span class="sub lang-en">What counts as reliable</span><span class="sub lang-zh">怎样才算可靠</span>
             </div>
             <div class="os-card">
                 <strong>🔬 <span class="lang-en">Testability Norms</span><span class="lang-zh">可检验性规范</span></strong>
-                <span class="lang-en">Procedure · 6 functional dimensions · Eternal, tools replaceable</span>
-                <span class="lang-zh">操作程序 · 六功能维度 · 功能永恒，工具可变</span>
-                <span class="sub lang-en">How to verify</span>
-                <span class="sub lang-zh">怎样操作才能实现</span>
+                <span class="lang-en">Procedure · 6 dimensions, tools replaceable</span>
+                <span class="lang-zh">操作程序 · 六功能维度 · 工具可变</span>
+                <span class="sub lang-en">How to verify</span><span class="sub lang-zh">怎样操作才能实现</span>
             </div>
             <div class="os-card">
                 <strong>⚙️ <span class="lang-en">MRSD Algorithm</span><span class="lang-zh">MRSD算法</span></strong>
                 <span class="lang-en">Implementation · Input data → Output regime matrices</span>
                 <span class="lang-zh">实现引擎 · 输入数据 → 输出体制矩阵</span>
-                <span class="sub lang-en">Execution engine</span>
-                <span class="sub lang-zh">执行引擎</span>
+                <span class="sub lang-en">Execution engine</span><span class="sub lang-zh">执行引擎</span>
             </div>
         </div>
         <div class="highlight-box lang-en">
-            This system constitutes the first proceduralized, cross-disciplinary, impersonal operating system for scientific discovery: <strong>objective data in, reliable laws out</strong>. Its establishment was the product of a complete research program spanning 25 preprints and 6 independent disciplines.
+            This system constitutes the first proceduralized, cross-disciplinary, impersonal operating system for scientific discovery: <strong>objective data in, reliable laws out</strong>. Its establishment is the product of a complete research program spanning 25 preprints and 6 independent disciplines.
         </div>
         <div class="highlight-box lang-zh">
             这套系统构成了首个程序化的、跨学科普适的、非人格化的科学发现操作系统：<strong>客观数据输入，可靠规律输出</strong>。它的确立是25篇预印本、六大独立学科完整研究纲领的产物。
         </div>
     </div>
 
-    <!-- 六学科跨学科证据矩阵 -->
+    <!-- 🔬 跨学科证据矩阵 (含Zenodo链接) -->
     <div class="card">
-        <div class="section-title lang-en">🔬 Cross-Disciplinary Evidence Matrix (25 Preprints, 2026)</div>
-        <div class="section-title lang-zh">🔬 跨学科证据矩阵（25篇预印本，2026）</div>
+        <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Cross-Disciplinary Evidence Matrix (25 Preprints, 2026)</span><span class="lang-zh">跨学科证据矩阵（25篇预印本，2026）</span></div>
         <div class="discipline-grid">
+            <!-- 金融学 -->
             <div class="disc-card">
                 <strong>💹 <span class="lang-en">Finance</span><span class="lang-zh">金融学</span></strong>
-                <span class="lang-en">6 papers · Regime factor: China-U.S. yield spread · Structural break at spread≈0</span>
-                <span class="lang-zh">6篇 · 规则因子：中美利差 · 利差≈0处体制切换</span>
+                <span class="lang-en">6 papers · Regime factor: China-U.S. yield spread</span>
+                <span class="lang-zh">6篇 · 规则因子：中美利差</span>
                 <span class="sub">Tang (2026a–2026f)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21091486" target="_blank">1</a>
+                    <a href="https://doi.org/10.5281/zenodo.21096496" target="_blank">2</a>
+                    <a href="https://doi.org/10.5281/zenodo.21096549" target="_blank">3</a>
+                    <a href="https://doi.org/10.5281/zenodo.21098055" target="_blank">4</a>
+                    <a href="https://doi.org/10.5281/zenodo.21099589" target="_blank">5</a>
+                    <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">6</a>
+                </div>
             </div>
+            <!-- 天文学 -->
             <div class="disc-card">
                 <strong>🔭 <span class="lang-en">Astronomy</span><span class="lang-zh">天文学</span></strong>
-                <span class="lang-en">3 papers · Tang Break (4762 K) · 5 independent dimensions verified</span>
-                <span class="lang-zh">3篇 · Tang Break (4762 K) · 五个独立维度验证</span>
+                <span class="lang-en">3 papers · Tang Break (4762 K) · 5 dimensions</span>
+                <span class="lang-zh">3篇 · Tang Break (4762 K) · 五个维度</span>
                 <span class="sub">Tang (2026h–2026j)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21105475" target="_blank">7</a>
+                    <a href="https://doi.org/10.5281/zenodo.21127665" target="_blank">8</a>
+                    <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">9</a>
+                </div>
             </div>
+            <!-- 统计物理 -->
             <div class="disc-card">
                 <strong>📊 <span class="lang-en">Statistical Physics</span><span class="lang-zh">统计物理</span></strong>
-                <span class="lang-en">3 papers · 2D Ising exact duality · 3D Ising double-peak fission · Demotion of universality</span>
-                <span class="lang-zh">3篇 · 2D Ising信息对偶 · 3D Ising双峰裂变 · 普适性降维</span>
+                <span class="lang-en">3 papers · Ising duality · Double-peak fission · Universality demotion</span>
+                <span class="lang-zh">3篇 · Ising信息对偶 · 双峰裂变 · 普适性降维</span>
                 <span class="sub">Tang (2026k–2026m)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21154577" target="_blank">10</a>
+                    <a href="https://doi.org/10.5281/zenodo.21257777" target="_blank">11</a>
+                    <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">12</a>
+                </div>
             </div>
+            <!-- 粒子物理 -->
             <div class="disc-card">
                 <strong>🧲 <span class="lang-en">Particle Physics</span><span class="lang-zh">粒子物理</span></strong>
-                <span class="lang-en">4 papers · Charm/bottom thresholds · SU(3)×SU(2)×U(1) emergence · Gauge field theory demotion</span>
-                <span class="lang-zh">4篇 · 粲/底夸克阈值 · SU(3)×SU(2)×U(1)涌现 · 规范场论降维</span>
+                <span class="lang-en">4 papers · Charm/bottom thresholds · Gauge field theory demotion</span>
+                <span class="lang-zh">4篇 · 粲/底夸克阈值 · 规范场论降维</span>
                 <span class="sub">Tang (2026n–2026q)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21276887" target="_blank">13</a>
+                    <a href="https://doi.org/10.5281/zenodo.21277300" target="_blank">14</a>
+                    <a href="https://doi.org/10.5281/zenodo.21291670" target="_blank">15</a>
+                    <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">16</a>
+                </div>
             </div>
+            <!-- 化学 -->
             <div class="disc-card">
                 <strong>🧪 <span class="lang-en">Chemistry</span><span class="lang-zh">化学</span></strong>
-                <span class="lang-en">3 papers · Ca-La Singularity Theorem · Regime Periodic Table · Periodic law demotion</span>
+                <span class="lang-en">3 papers · Ca-La Singularity · Regime Periodic Table · Periodic law demotion</span>
                 <span class="lang-zh">3篇 · 钙-镧奇异性定理 · 体制周期表 · 周期律降维</span>
                 <span class="sub">Tang (2026s–2026u)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21403322" target="_blank">17</a>
+                    <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">18</a>
+                    <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">19</a>
+                </div>
             </div>
+            <!-- 核物理 -->
             <div class="disc-card">
                 <strong>⚡ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
-                <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift Theorem · Shell model demotion</span>
-                <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移定理 · 壳模型降维</span>
-                <span class="sub">Tang (2026v–2026y)</span>
+                <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift · Shell model demotion</span>
+                <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移 · 壳模型降维</span>
+                <span class="sub">Tang (2026v–2026y) <em>(forthcoming)</em></span>
+                <div class="doi-links">
+                    <span style="font-size:0.7rem;color:#5b6e8c;">Links to be added upon publication</span>
+                </div>
             </div>
         </div>
         <div class="highlight-box lang-en">
-            📐 <strong>Methodology</strong> (2 papers): The Factor Hierarchy Law was formalized as the first emergent <em>law of meta-laws</em>—emerging independently across six disciplines without prior assumptions. <span class="sub">Tang (2026g, 2026r)</span>
-        </div>
-        <div class="highlight-box lang-zh">
-            📐 <strong>方法论</strong>（2篇）：因子层级定律被确立为首个涌现型<em>元规律的规律</em>——在六个学科中独立涌现，不需要任何先验前提。<span class="sub">Tang (2026g, 2026r)</span>
+            📐 <strong>Methodology</strong> (2 papers): The Factor Hierarchy Law was formalized as the first emergent <em>law of meta-laws</em>—emerging independently across six disciplines without prior assumptions.
+            <span class="sub">Tang (2026g, 2026r)</span>
+            <div class="doi-links" style="margin-top:0.4rem;">
+                <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">Methodology I</a>
+                <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">Methodology II</a>
+            </div>
         </div>
     </div>
 
-    <!-- 代表性方法论 -->
+    <!-- ⚙️ 代表性方法论 -->
     <div class="card">
-        <div class="section-title lang-en">⚙️ Representative Methodology</div>
-        <div class="section-title lang-zh">⚙️ 代表性方法论</div>
+        <div class="section-title" style="margin-top:0;">⚙️ <span class="lang-en">Representative Methodology</span><span class="lang-zh">代表性方法论</span></div>
         <div class="findings-grid">
             <div>
                 <strong>🔍 <span class="lang-en">Exhaustive Testing</span><span class="lang-zh">穷举测试</span></strong><br>
-                <span class="lang-en">All candidate factor combinations traversed · VIF<5 hard constraint · BMA</span>
-                <span class="lang-zh">遍历全部候选因子组合 · VIF<5硬约束 · BMA模型平均</span>
+                <span class="lang-en">All combinations · VIF<5 · BMA</span>
+                <span class="lang-zh">全组合遍历 · VIF<5 · BMA</span>
             </div>
             <div>
-                <strong>⚡ <span class="lang-en">Interaction Effect Test</span><span class="lang-zh">交互效应检验</span></strong><br>
-                <span class="lang-en">η = ΔR²_inter / ΔR²_direct · Regime factor core criterion</span>
-                <span class="lang-zh">η = 交互ΔR² / 直接ΔR² · 规则因子核心判据</span>
+                <strong>⚡ <span class="lang-en">Interaction Effect</span><span class="lang-zh">交互效应检验</span></strong><br>
+                <span class="lang-en">η = ΔR²_inter / ΔR²_direct</span>
+                <span class="lang-zh">η = 交互ΔR² / 直接ΔR²</span>
             </div>
             <div>
-                <strong>📐 <span class="lang-en">Multi-Tool Structural Break</span><span class="lang-zh">多工具结构断点</span></strong><br>
-                <span class="lang-en">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · Bayesian · Kernel CPD · HMM</span>
-                <span class="lang-zh">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · 贝叶斯 · 核变点 · HMM</span>
+                <strong>📐 <span class="lang-en">Structural Breaks</span><span class="lang-zh">结构断点检测</span></strong><br>
+                <span class="lang-en">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · HMM</span>
+                <span class="lang-zh">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · HMM</span>
             </div>
             <div>
-                <strong>📊 <span class="lang-en">Multi-Regime State Decoupling</span><span class="lang-zh">多体制状态解耦</span></strong><br>
-                <span class="lang-en">Input data → Structure optimization → Regime division matrix</span>
-                <span class="lang-zh">输入数据 → 结构寻优 → 体制分工矩阵</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 每日资产估值看板 -->
-    <div class="dash-section">
-        <div class="section-title lang-en">📊 Daily Asset Valuation Dashboards</div>
-        <div class="section-title lang-zh">📊 每日资产估值看板</div>
-        <p class="dash-subtitle lang-en">
-            The following dashboards are generated by the dual-anchor models and updated <strong>daily</strong>.
-        </p>
-        <p class="dash-subtitle lang-zh">
-            以下看板由双锚模型生成，<strong>每日自动更新</strong>。
-        </p>
-        <div class="dashboards-grid">
-            <div class="dash-card">
-                <div class="dash-icon">🥇</div>
-                <div class="dash-name lang-en">Gold</div>
-                <div class="dash-name lang-zh">黄金</div>
-                <div class="dash-meta lang-en">TIPS + CN-US Spread + Gold-Oil Ratio</div>
-                <div class="dash-meta lang-zh">TIPS + 中美利差 + 金油比</div>
-                <div class="dash-links-group">
-                    <a href="gold_en.html" class="dash-link">EN →</a>
-                    <a href="gold_cn.html" class="dash-link">中文 →</a>
-                </div>
-            </div>
-            <div class="dash-card">
-                <div class="dash-icon">🛢️</div>
-                <div class="dash-name lang-en">Crude Oil (WTI)</div>
-                <div class="dash-name lang-zh">原油 (WTI)</div>
-                <div class="dash-meta lang-en">SC + VIX + Synth. Spread + CN-US Spread</div>
-                <div class="dash-meta lang-zh">上海原油 + VIX + 合成月差 + 中美利差</div>
-                <div class="dash-links-group">
-                    <a href="crude-oil_en.html" class="dash-link">EN →</a>
-                    <a href="crude-oil_cn.html" class="dash-link">中文 →</a>
-                </div>
-            </div>
-            <div class="dash-card">
-                <div class="dash-icon">🏦</div>
-                <div class="dash-name lang-en">China Govt Bond</div>
-                <div class="dash-name lang-zh">中国国债</div>
-                <div class="dash-meta lang-en">10Y · 30Y · Yield Curve · Spreads</div>
-                <div class="dash-meta lang-zh">10年期 · 30年期 · 收益率曲线 · 利差</div>
-                <div class="dash-links-group">
-                    <a href="bonds-cn_en.html" class="dash-link">EN →</a>
-                    <a href="bonds-cn_cn.html" class="dash-link">中文 →</a>
-                </div>
-            </div>
-            <div class="dash-card">
-                <div class="dash-icon">💵</div>
-                <div class="dash-name lang-en">U.S. Treasury</div>
-                <div class="dash-name lang-zh">美国国债</div>
-                <div class="dash-meta lang-en">10Y · 30Y · Term Structure & Spreads</div>
-                <div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构与利差</div>
-                <div class="dash-links-group">
-                    <a href="bonds-us_en.html" class="dash-link">EN →</a>
-                    <a href="bonds-us_cn.html" class="dash-link">中文 →</a>
-                </div>
+                <strong>📊 <span class="lang-en">MRSD Algorithm</span><span class="lang-zh">MRSD算法</span></strong><br>
+                <span class="lang-en">Data → Structure optimization → Regime matrix</span>
+                <span class="lang-zh">数据 → 结构寻优 → 体制矩阵</span>
             </div>
         </div>
     </div>
