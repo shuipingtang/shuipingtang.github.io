@@ -170,6 +170,26 @@
         .os-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .os-card .sub { font-size: 0.78rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
 
+        .norms-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1rem 0 1.5rem;
+        }
+        @media (max-width: 900px) { .norms-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .norms-grid { grid-template-columns: 1fr; } }
+
+        .norm-card {
+            background: #f8faff;
+            border-radius: 16px;
+            padding: 1rem 1.2rem;
+            border-left: 3px solid #4a8ec2;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        .norm-card strong { color: #0f2b3d; display: block; margin-bottom: 0.2rem; font-size: 0.9rem; }
+        .norm-card .sub { font-size: 0.75rem; color: #5b6e8c; display: block; margin-top: 0.1rem; }
+
         .discipline-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -220,15 +240,6 @@
             color: #1e3a5f;
             line-height: 1.6;
         }
-
-        .methods-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.2rem;
-            font-size: 0.88rem;
-        }
-        @media (max-width: 900px) { .methods-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .methods-grid { grid-template-columns: 1fr; } }
 
         footer {
             text-align: center; font-size: 0.78rem; color: #6c7a91;
@@ -340,11 +351,61 @@
         </div>
     </div>
 
-    <!-- 🔬 跨学科证据矩阵 (含Zenodo链接，按标准引用格式标注) -->
+    <!-- 🔬 可检验性规范的六个功能维度 -->
+    <div class="card">
+        <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Testability Norms · Six Functional Dimensions</span><span class="lang-zh">可检验性规范 · 六个功能维度</span></div>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en"><strong>Core commitment:</strong> Functional dimensions are eternal; implementation tools are replaceable. The current six dimensions represent the validated optimal implementation, not the ultimate truth. Future researchers may expand or refine them.</p>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh"><strong>核心承诺：</strong>功能维度永恒，实现工具可变。当前六个维度是已验证的最优实现，而非终极真理。未来研究者可以且应当尝试扩展或精简。</p>
+        <div class="norms-grid">
+            <div class="norm-card">
+                <strong>🔍 <span class="lang-en">1. Search Completeness</span><span class="lang-zh">搜索完整性</span></strong>
+                <span class="lang-en">All candidate factors must be systematically traversed, without selecting factors based on prior preference.</span>
+                <span class="lang-zh">所有候选因子必须被系统性遍历，不以研究者的先验偏好挑选因子。</span>
+                <span class="sub lang-en">Core · C1 constraint</span><span class="sub lang-zh">核心检验维度 · C1约束</span>
+            </div>
+            <div class="norm-card">
+                <strong>⚡ <span class="lang-en">2. Modulation Relationship</span><span class="lang-zh">调节关系</span></strong>
+                <span class="lang-en">Must test whether candidate regime factors modulate the exposure coefficients of execution factors.</span>
+                <span class="lang-zh">必须检验候选规则因子是否调节执行因子的暴露系数。</span>
+                <span class="sub lang-en">Core · C2 constraint</span><span class="sub lang-zh">核心检验维度 · C2约束</span>
+            </div>
+            <div class="norm-card">
+                <strong>📐 <span class="lang-en">3. Structural Break</span><span class="lang-zh">结构断点</span></strong>
+                <span class="lang-en">Must test for structural differences between sub-samples using at least two independent tools.</span>
+                <span class="lang-zh">至少两种独立工具确认方程在两个体制间的结构性差异。</span>
+                <span class="sub lang-en">Core · C3 constraint</span><span class="sub lang-zh">核心检验维度 · C3约束</span>
+            </div>
+            <div class="norm-card">
+                <strong>⏱️ <span class="lang-en">4. Causal Direction</span><span class="lang-zh">因果方向</span></strong>
+                <span class="lang-en">Must test whether regime factors lead execution factors in time or logic.</span>
+                <span class="lang-zh">必须检验规则因子是否在时间或逻辑上领先于执行因子。</span>
+                <span class="sub lang-en">Core · C4 constraint</span><span class="sub lang-zh">核心检验维度 · C4约束</span>
+            </div>
+            <div class="norm-card">
+                <strong>📋 <span class="lang-en">5. Problem Completeness</span><span class="lang-zh">问题完整性</span></strong>
+                <span class="lang-en">Research questions must be fully covered across all relevant dimensions.</span>
+                <span class="lang-zh">研究问题在全部相关维度上被完整覆盖。</span>
+                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
+            </div>
+            <div class="norm-card">
+                <strong>🔄 <span class="lang-en">6. Process Closure</span><span class="lang-zh">流程闭环性</span></strong>
+                <span class="lang-en">Research process must complete a full Plan-Do-Check-Act cycle with negative controls.</span>
+                <span class="lang-zh">研究流程必须完成计划-执行-检查-行动的完整闭环，强制执行阴性对照。</span>
+                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
+            </div>
+        </div>
+        <div class="highlight-box lang-en">
+            Dimensions 1–4 are <strong>core verification dimensions</strong> that directly participate in regime switching detection. Dimensions 5–6 are <strong>completeness meta-programs</strong> belonging to the tool layer, ensuring the integrity and self-consistency of the discovery process. Their current implementations (e.g., 5W2H, PDCA) can be replaced by equivalent frameworks. Both the dimensions and their implementations are open to future expansion or refinement.
+        </div>
+        <div class="highlight-box lang-zh">
+            维度1–4为<strong>核心检验维度</strong>，直接参与体制切换的检测。维度5–6为<strong>完整性元程序</strong>，属于工具层，确保发现过程的完整性和自洽性。其当前实现（如5W2H、PDCA）可被等价框架替换。六个功能维度的数量和划分本身也可在未来被扩展或精简。
+        </div>
+    </div>
+
+    <!-- 🔬 跨学科证据矩阵 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Cross-Disciplinary Evidence Matrix (22 of 25 Preprints Published, 2026)</span><span class="lang-zh">跨学科证据矩阵（已发布22篇，共25篇预印本，2026）</span></div>
         <div class="discipline-grid">
-            <!-- 金融学 2026a-f -->
             <div class="disc-card">
                 <strong>💹 <span class="lang-en">Finance</span><span class="lang-zh">金融学</span></strong>
                 <span class="lang-en">6 papers · Regime factor: China-U.S. yield spread · Structural break at spread≈0</span>
@@ -359,7 +420,6 @@
                     <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">2026f</a>
                 </div>
             </div>
-            <!-- 天文学 2026h-j -->
             <div class="disc-card">
                 <strong>🔭 <span class="lang-en">Astronomy</span><span class="lang-zh">天文学</span></strong>
                 <span class="lang-en">3 papers · Tang Break (4762 K) · 5 independent dimensions</span>
@@ -371,7 +431,6 @@
                     <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">2026j</a>
                 </div>
             </div>
-            <!-- 统计物理 2026k-m -->
             <div class="disc-card">
                 <strong>📊 <span class="lang-en">Statistical Physics</span><span class="lang-zh">统计物理</span></strong>
                 <span class="lang-en">3 papers · Ising duality · Double-peak fission · Universality demotion</span>
@@ -383,7 +442,6 @@
                     <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">2026m</a>
                 </div>
             </div>
-            <!-- 粒子物理 2026n-q -->
             <div class="disc-card">
                 <strong>🧲 <span class="lang-en">Particle Physics</span><span class="lang-zh">粒子物理</span></strong>
                 <span class="lang-en">4 papers · Charm/bottom thresholds · Gauge field theory demotion</span>
@@ -396,7 +454,6 @@
                     <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">2026q</a>
                 </div>
             </div>
-            <!-- 化学 2026s-u -->
             <div class="disc-card">
                 <strong>🧪 <span class="lang-en">Chemistry</span><span class="lang-zh">化学</span></strong>
                 <span class="lang-en">3 papers · Ca-La Singularity · Regime Periodic Table · Periodic law demotion</span>
@@ -408,62 +465,31 @@
                     <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">2026u</a>
                 </div>
             </div>
-            <!-- 核物理 2026v-y (1 published, 3 forthcoming) -->
             <div class="disc-card">
-                <strong>⚡ <span class="lang-en">Nuclear Physics & OS Engineering</span><span class="lang-zh">核物理与操作系统工程</span></strong>
-                <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift · Shell model demotion · OS mathematical structure</span>
-                <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移 · 壳模型降维 · 操作系统数学结构</span>
-                <span class="sub">Tang (2026v–2026y) — 2026v published, 2026w–2026y forthcoming</span>
+                <strong>⚡ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
+                <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift · Shell model demotion</span>
+                <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移 · 壳模型降维</span>
+                <span class="sub">Tang (2026w–2026z) <em>(forthcoming)</em></span>
                 <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.15048829" target="_blank">2026v</a>
-                    <span style="font-size:0.7rem;color:#5b6e8c;">2026w–2026y: links to be added</span>
+                    <span style="font-size:0.7rem;color:#5b6e8c;">Links to be added upon publication</span>
                 </div>
             </div>
         </div>
-        <!-- 方法论 2026g, 2026r -->
+        <!-- 方法论 -->
         <div class="highlight-box lang-en">
-            📐 <strong>Methodology</strong> (2 papers): The Factor Hierarchy Law was formalized as the first emergent <em>law of meta-laws</em>—emerging independently across six disciplines without prior assumptions.
-            <span class="sub">Tang (2026g, 2026r)</span>
+            📐 <strong>Methodology</strong> (3 papers): Tang (2026g) established the Factor Hierarchy Law and Testability Norms. Tang (2026r) positioned it as the first emergent <em>law of meta-laws</em> and unified the three components into the Scientific Discovery Operating System. Tang (2026v) provides the complete mathematical formalization and engineering architecture of the operating system. <span class="sub">Tang (2026g, 2026r, 2026v)</span>
             <div class="doi-links" style="margin-top:0.4rem;">
                 <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
                 <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
+                <span style="font-size:0.7rem;color:#5b6e8c;">2026v: forthcoming</span>
             </div>
         </div>
         <div class="highlight-box lang-zh">
-            📐 <strong>方法论</strong>（2篇）：因子层级定律被确立为首个涌现型<em>元规律的规律</em>——在六个学科中独立涌现，不需要任何先验前提。
-            <span class="sub">Tang (2026g, 2026r)</span>
+            📐 <strong>方法论</strong>（3篇）：Tang (2026g) 建立了因子层级定律与可检验性规范。Tang (2026r) 将其定位为首个涌现型<em>元规律的规律</em>，并将三者统一为科学发现操作系统。Tang (2026v) 提供了操作系统的完整数学形式化与工程架构。 <span class="sub">Tang (2026g, 2026r, 2026v)</span>
             <div class="doi-links" style="margin-top:0.4rem;">
                 <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
                 <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ⚙️ 方法论工具（补充说明） -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">⚙️ <span class="lang-en">Methodological Toolkit</span><span class="lang-zh">方法论工具</span></div>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en">The four core components above are realized through the following methodological tools, deployed across 25 preprints.</p>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh">上述四个核心组件通过以下方法论工具实现，在25篇预印本中完整部署。</p>
-        <div class="methods-grid">
-            <div>
-                <strong>🔍 <span class="lang-en">Exhaustive Testing</span><span class="lang-zh">穷举测试</span></strong><br>
-                <span class="lang-en">All combinations · VIF<5 · BMA</span>
-                <span class="lang-zh">全组合遍历 · VIF<5 · BMA</span>
-            </div>
-            <div>
-                <strong>⚡ <span class="lang-en">Interaction Effect</span><span class="lang-zh">交互效应检验</span></strong><br>
-                <span class="lang-en">η = ΔR²_inter / ΔR²_direct</span>
-                <span class="lang-zh">η = 交互ΔR² / 直接ΔR²</span>
-            </div>
-            <div>
-                <strong>📐 <span class="lang-en">Structural Breaks</span><span class="lang-zh">结构断点检测</span></strong><br>
-                <span class="lang-en">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · HMM</span>
-                <span class="lang-zh">Chow · Bai-Perron · SupF · CUSUM · MOSUM · PELT · HMM</span>
-            </div>
-            <div>
-                <strong>📊 <span class="lang-en">MRSD Algorithm</span><span class="lang-zh">MRSD算法</span></strong><br>
-                <span class="lang-en">Data → Structure optimization → Regime matrix</span>
-                <span class="lang-zh">数据 → 结构寻优 → 体制矩阵</span>
+                <span style="font-size:0.7rem;color:#5b6e8c;">2026v: 待发布</span>
             </div>
         </div>
     </div>
