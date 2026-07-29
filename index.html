@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuiping Tang | Scientific Discovery Operating System · Factor Hierarchy Law</title>
-    <meta name="description" content="Shuiping Tang (汤水平), Chinese Independent Researcher. Established the Scientific Discovery Operating System, comprising the Factor Hierarchy Law, Testability Principle, Testability Norms, and MRSD Algorithm. Verified across finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics.">
-    <meta name="keywords" content="Shuiping Tang, 汤水平, Chinese Independent Researcher, Scientific Discovery Operating System, Factor Hierarchy Law, Testability Principle, Testability Norms, MRSD Algorithm, regime switching, cross-disciplinary, Tang Break, demotion of universality, shell model demotion">
+    <meta name="description" content="Shuiping Tang (汤水平), Chinese Independent Researcher. Established the Scientific Discovery Operating System, comprising the Factor Hierarchy Law, Testability Principle, Testability Norms, and MRSD Algorithm. Verified across finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics. 26 preprints (2026).">
+    <meta name="keywords" content="Shuiping Tang, 汤水平, Chinese Independent Researcher, Scientific Discovery Operating System, Factor Hierarchy Law, Testability Principle, Testability Norms, MRSD Algorithm, regime switching, regime factors, execution factors, cross-disciplinary, Tang Break, demotion of universality, shell model demotion, gauge field theory demotion, periodic law demotion, quantum-classical hybrid, magic number shift, Ca-La singularity, precursor cascade, double-peak fission, information-theoretic duality, regime periodic table, exhaustive testing, structural break detection, nuclear shell model, independent-particle-motion, transition-zone width, regime-factor purity spectrum">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -93,8 +93,7 @@
             margin-bottom: 1.2rem;
             line-height: 1.7;
         }
-        
-        /* 学术身份标识区 */
+
         .identity-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -103,7 +102,7 @@
         }
         @media (max-width: 900px) { .identity-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .identity-grid { grid-template-columns: 1fr; } }
-        
+
         .identity-card {
             background: #f8faff;
             border-radius: 20px;
@@ -120,47 +119,26 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         }
-        .identity-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-        .identity-text strong {
-            display: block;
-            font-size: 0.95rem;
-            color: #0f2b3d;
-            margin-bottom: 0.2rem;
-        }
-        .identity-text span {
-            font-size: 0.8rem;
-            color: #5b6e8c;
-        }
+        .identity-icon { font-size: 2rem; flex-shrink: 0; }
+        .identity-text strong { display: block; font-size: 0.95rem; color: #0f2b3d; margin-bottom: 0.2rem; }
+        .identity-text span { font-size: 0.8rem; color: #5b6e8c; }
 
         .section-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 1.5rem 0 1rem 0;
-            letter-spacing: -0.3px;
-            color: #0f2b3d;
+            font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 1rem 0;
+            letter-spacing: -0.3px; color: #0f2b3d;
         }
         .section-title:first-child { margin-top: 0; }
 
         .dashboards-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.9rem;
-            margin-bottom: 1.5rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; margin-bottom: 1.5rem;
         }
         @media (max-width: 1000px) { .dashboards-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .dashboards-grid { grid-template-columns: 1fr; } }
         .dash-card {
-            background: white;
-            border-radius: 18px;
-            padding: 1rem 1.2rem;
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            background: white; border-radius: 18px; padding: 1rem 1.2rem;
+            border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 16px rgba(0,0,0,0.04);
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            display: flex;
-            flex-direction: column;
+            display: flex; flex-direction: column;
         }
         .dash-card:hover {
             transform: translateY(-4px);
@@ -178,122 +156,67 @@
         .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
 
         .os-components {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.2rem;
-            margin: 1rem 0 1.5rem;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem;
         }
         @media (max-width: 900px) { .os-components { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .os-components { grid-template-columns: 1fr; } }
-
         .os-card {
-            background: #f8faff;
-            border-radius: 20px;
-            padding: 1.2rem 1.3rem;
-            border-left: 4px solid #2c6e9e;
-            font-size: 0.88rem;
-            line-height: 1.55;
+            background: #f8faff; border-radius: 20px; padding: 1.2rem 1.3rem;
+            border-left: 4px solid #2c6e9e; font-size: 0.88rem; line-height: 1.55;
         }
         .os-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .os-card .sub { font-size: 0.78rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
 
         .norms-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin: 1rem 0 1.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 1.5rem;
         }
         @media (max-width: 900px) { .norms-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .norms-grid { grid-template-columns: 1fr; } }
-
         .norm-card {
-            background: #f8faff;
-            border-radius: 16px;
-            padding: 1rem 1.2rem;
-            border-left: 3px solid #4a8ec2;
-            font-size: 0.85rem;
-            line-height: 1.5;
+            background: #f8faff; border-radius: 16px; padding: 1rem 1.2rem;
+            border-left: 3px solid #4a8ec2; font-size: 0.85rem; line-height: 1.5;
         }
         .norm-card strong { color: #0f2b3d; display: block; margin-bottom: 0.2rem; font-size: 0.9rem; }
         .norm-card .sub { font-size: 0.75rem; color: #5b6e8c; display: block; margin-top: 0.1rem; }
 
         .discipline-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            margin: 1rem 0 1.5rem;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem;
         }
         @media (max-width: 900px) { .discipline-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .discipline-grid { grid-template-columns: 1fr; } }
-
         .disc-card {
-            background: #f8faff;
-            border-radius: 20px;
-            padding: 1.2rem 1.3rem;
-            border-left: 4px solid #2c6e9e;
-            font-size: 0.88rem;
-            line-height: 1.55;
+            background: #f8faff; border-radius: 20px; padding: 1.2rem 1.3rem;
+            border-left: 4px solid #2c6e9e; font-size: 0.88rem; line-height: 1.55;
             position: relative;
         }
         .disc-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .disc-card .sub { font-size: 0.8rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
         .disc-card .doi-links {
-            margin-top: 0.6rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.3rem;
+            margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.3rem;
         }
         .disc-card .doi-links a {
-            font-size: 0.7rem;
-            background: #e8f0f8;
-            padding: 0.15rem 0.5rem;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #1f4a6e;
-            font-weight: 500;
-            transition: background 0.2s;
+            font-size: 0.7rem; background: #e8f0f8; padding: 0.15rem 0.5rem;
+            border-radius: 12px; text-decoration: none; color: #1f4a6e;
+            font-weight: 500; transition: background 0.2s;
         }
-        .disc-card .doi-links a:hover {
-            background: #d0e0f0;
-        }
+        .disc-card .doi-links a:hover { background: #d0e0f0; }
 
         .highlight-box {
-            background: #f8faff;
-            border-left: 4px solid #2c6e9e;
-            padding: 0.9rem 1.2rem;
-            border-radius: 16px;
-            font-size: 0.86rem;
-            margin-top: 1rem;
-            color: #1e3a5f;
-            line-height: 1.6;
+            background: #f8faff; border-left: 4px solid #2c6e9e; padding: 0.9rem 1.2rem;
+            border-radius: 16px; font-size: 0.86rem; margin-top: 1rem;
+            color: #1e3a5f; line-height: 1.6;
         }
 
-        /* 底部论文列表 */
-        .publication-list {
-            font-size: 0.85rem;
-            line-height: 1.8;
-            color: #2c3e50;
-        }
-        .publication-list strong {
-            color: #0f2b3d;
-        }
+        .publication-list { font-size: 0.85rem; line-height: 1.8; color: #2c3e50; }
+        .publication-list strong { color: #0f2b3d; }
         .publication-list a {
-            color: #2c6e9e;
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid transparent;
-            transition: border 0.2s, color 0.2s;
+            color: #2c6e9e; text-decoration: none; font-weight: 500;
+            border-bottom: 1px solid transparent; transition: border 0.2s, color 0.2s;
         }
-        .publication-list a:hover {
-            border-bottom-color: #2c6e9e;
-            color: #1f4a6e;
-        }
+        .publication-list a:hover { border-bottom-color: #2c6e9e; color: #1f4a6e; }
         .pub-category {
-            font-weight: 600;
-            color: #0f2b3d;
-            margin-top: 1rem;
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
+            font-weight: 600; color: #0f2b3d; margin-top: 1rem;
+            margin-bottom: 0.3rem; font-size: 0.9rem;
         }
 
         footer {
@@ -314,7 +237,6 @@
     <div class="card">
         <div class="name lang-en">Shuiping Tang</div>
         <div class="name lang-zh">汤水平 (Shuiping Tang)</div>
-        <!-- 英文版备注中文名 -->
         <div class="name-zh-note lang-en">(汤水平)</div>
         <div class="affiliation lang-en">Chinese Independent Researcher · Scientific Discovery Operating System</div>
         <div class="affiliation lang-zh">中国独立研究者 · 科学发现操作系统</div>
@@ -326,58 +248,40 @@
         </div>
     </div>
 
-    <!-- 🔗 学术身份标识 -->
+    <!-- 学术身份标识 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🔗 <span class="lang-en">Academic Identity &amp; Verified Links</span><span class="lang-zh">学术身份与认证链接</span></div>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">These links serve as the authoritative source for my academic identity and published works. They are embedded with <code>rel="me"</code> attributes for search engine verification.</p>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-zh">以下链接是我学术身份和已发表作品的核心认证来源，包含 <code>rel="me"</code> 属性以供搜索引擎验证。</p>
+        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">These links serve as the authoritative source for my academic identity and published works.</p>
+        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-zh">以下链接是我学术身份和已发表作品的核心认证来源。</p>
         <div class="identity-grid">
             <a href="https://orcid.org/0009-0007-1209-981X" target="_blank" rel="me" class="identity-card">
                 <div class="identity-icon">🔗</div>
-                <div class="identity-text">
-                    <strong>ORCID</strong>
-                    <span>0009-0007-1209-981X</span>
-                </div>
+                <div class="identity-text"><strong>ORCID</strong><span>0009-0007-1209-981X</span></div>
             </a>
             <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="me" class="identity-card">
                 <div class="identity-icon">📦</div>
-                <div class="identity-text">
-                    <strong>Zenodo</strong>
-                    <span>All Preprints</span>
-                </div>
+                <div class="identity-text"><strong>Zenodo</strong><span>All 26 Preprints</span></div>
             </a>
             <a href="https://ssrn.com/author=11510488" target="_blank" rel="me" class="identity-card">
                 <div class="identity-icon">📄</div>
-                <div class="identity-text">
-                    <strong>SSRN</strong>
-                    <span>Author 11510488</span>
-                </div>
+                <div class="identity-text"><strong>SSRN</strong><span>Author 11510488</span></div>
             </a>
             <a href="https://github.com/shuipingtang" target="_blank" rel="me" class="identity-card">
                 <div class="identity-icon">🐙</div>
-                <div class="identity-text">
-                    <strong>GitHub</strong>
-                    <span>shuipingtang</span>
-                </div>
+                <div class="identity-text"><strong>GitHub</strong><span>shuipingtang</span></div>
             </a>
             <a href="https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ" target="_blank" rel="me" class="identity-card">
                 <div class="identity-icon">🎓</div>
-                <div class="identity-text">
-                    <strong>Google Scholar</strong>
-                    <span>6vpOvwMAAAAJ</span>
-                </div>
+                <div class="identity-text"><strong>Google Scholar</strong><span>6vpOvwMAAAAJ</span></div>
             </a>
             <a href="mailto:tangshuiping@qq.com" class="identity-card">
                 <div class="identity-icon">📧</div>
-                <div class="identity-text">
-                    <strong>Email</strong>
-                    <span>tangshuiping@qq.com</span>
-                </div>
+                <div class="identity-text"><strong>Email</strong><span>tangshuiping@qq.com</span></div>
             </a>
         </div>
     </div>
 
-    <!-- 📊 每日资产估值看板 -->
+    <!-- 每日资产估值看板 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">📊 <span class="lang-en">Daily Asset Valuation Dashboards</span><span class="lang-zh">每日资产估值看板</span></div>
         <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">Generated by dual-anchor models and updated <strong>daily</strong>.</p>
@@ -414,7 +318,7 @@
         </div>
     </div>
 
-    <!-- 🧩 核心组件 -->
+    <!-- 核心组件 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🧩 <span class="lang-en">Core Components · Scientific Discovery Operating System</span><span class="lang-zh">核心组件 · 科学发现操作系统</span></div>
         <div class="os-components">
@@ -445,11 +349,11 @@
         </div>
     </div>
 
-    <!-- 🔬 可检验性规范 -->
+    <!-- 可检验性规范 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Testability Norms · Six Functional Dimensions</span><span class="lang-zh">可检验性规范 · 六个功能维度</span></div>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en"><strong>Core commitment:</strong> Functional dimensions are eternal; implementation tools are replaceable. The current six dimensions represent the validated optimal implementation, not the ultimate truth. Future researchers may expand or refine them.</p>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh"><strong>核心承诺：</strong>功能维度永恒，实现工具可变。当前六个维度是已验证的最优实现，而非终极真理。未来研究者可以且应当尝试扩展或精简。</p>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en"><strong>Core commitment:</strong> Functional dimensions are eternal; implementation tools are replaceable.</p>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh"><strong>核心承诺：</strong>功能维度永恒，实现工具可变。</p>
         <div class="norms-grid">
             <div class="norm-card">
                 <strong>🔍 <span class="lang-en">1. Search Completeness</span><span class="lang-zh">搜索完整性</span></strong>
@@ -490,7 +394,7 @@
         </div>
     </div>
 
-    <!-- 🔬 跨学科证据矩阵 -->
+    <!-- 跨学科证据矩阵 -->
     <div class="card">
         <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Cross-Disciplinary Evidence Matrix</span><span class="lang-zh">跨学科证据矩阵</span></div>
         <div class="discipline-grid">
@@ -557,35 +461,38 @@
                 <strong>⚡ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
                 <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift · Shell model demotion</span>
                 <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移 · 壳模型降维</span>
-                <span class="sub">Tang (2026w–2026z) <em>(forthcoming)</em></span>
+                <span class="sub">Tang (2026v–2026y)</span>
                 <div class="doi-links">
-                    <span style="font-size:0.7rem;color:#5b6e8c;">Links to be added upon publication</span>
+                    <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">2026v</a>
+                    <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">2026w</a>
+                    <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">2026x</a>
+                    <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">2026y</a>
                 </div>
             </div>
         </div>
         <div class="highlight-box lang-en">
-            📐 <strong>Methodology</strong> (3 papers): Tang (2026g) established the Factor Hierarchy Law and Testability Norms. Tang (2026r) positioned it as the first emergent <em>law of meta-laws</em>. Tang (2026v) provides the complete mathematical formalization and engineering architecture. <span class="sub">Tang (2026g, 2026r, 2026v)</span>
+            📐 <strong>Methodology &amp; System</strong> (3 papers): Tang (2026g) established the Factor Hierarchy Law and Testability Norms. Tang (2026r) positioned it as the first emergent <em>law of meta-laws</em> and established the Scientific Discovery Operating System. Tang (2026z) provides the complete mathematical formalization and engineering architecture as a technical specification. <span class="sub">Tang (2026g, 2026r, 2026z)</span>
             <div class="doi-links" style="margin-top:0.4rem;">
                 <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
                 <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
-                <span style="font-size:0.7rem;color:#5b6e8c;">2026v: forthcoming</span>
+                <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">2026z</a>
             </div>
         </div>
         <div class="highlight-box lang-zh">
-            📐 <strong>方法论</strong>（3篇）：Tang (2026g) 建立了因子层级定律与可检验性规范。Tang (2026r) 将其定位为首个涌现型<em>元规律的规律</em>。Tang (2026v) 提供了操作系统的完整数学形式化与工程架构。 <span class="sub">Tang (2026g, 2026r, 2026v)</span>
+            📐 <strong>方法论与系统</strong>（3篇）：Tang (2026g) 建立了因子层级定律与可检验性规范。Tang (2026r) 将其定位为首个涌现型<em>元规律的规律</em>，确立了科学发现操作系统。Tang (2026z) 提供了操作系统的完整数学形式化与工程架构技术规范。 <span class="sub">Tang (2026g, 2026r, 2026z)</span>
             <div class="doi-links" style="margin-top:0.4rem;">
                 <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
                 <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
-                <span style="font-size:0.7rem;color:#5b6e8c;">2026v: 待发布</span>
+                <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">2026z</a>
             </div>
         </div>
     </div>
 
-    <!-- 📚 完整论文列表 -->
+    <!-- 完整论文列表 -->
     <div class="card" id="publications">
         <div class="section-title" style="margin-top:0;">📚 <span class="lang-en">Complete List of Preprints</span><span class="lang-zh">完整预印本列表</span></div>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en">This list is provided for search engine indexing and verification. All links point to Zenodo DOI records unless otherwise noted.</p>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh">此列表供搜索引擎索引和验证使用。除特别标注外，所有链接均指向 Zenodo DOI 记录。</p>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en">All 26 preprints (2026) permanently archived on Zenodo with full open data and code. This list is provided for search engine indexing and verification.</p>
+        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh">全部26篇预印本（2026）永久存档于Zenodo，附带完整开放数据和代码。此列表供搜索引擎索引和验证使用。</p>
 
         <div class="publication-list">
             <div class="pub-category lang-en">💹 Finance (6 papers)</div>
@@ -622,28 +529,28 @@
             <div>Tang, S. (2026t). <em>The Regime Periodic Table (II): Regime Identity Cards for 118 Elements.</em> <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">Zenodo</a></div>
             <div>Tang, S. (2026u). <em>From Regime Boundaries to Chemical Gauge Group (III): The Inevitable Emergence of Periodic Law.</em> <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">Zenodo</a></div>
 
-            <div class="pub-category lang-en">⚡ Nuclear Physics (4 papers, forthcoming)</div>
-            <div class="pub-category lang-zh">⚡ 核物理（4篇，待发布）</div>
-            <div>Tang, S. (2026w). <em>Nuclear Shell Regime Audit (I): η>10⁶ Rule Factor Criterion, Magic Number Shift Theorem, and the Discovery of the N=14 Statistical Fracture.</em> (forthcoming)</div>
-            <div>Tang, S. (2026x). <em>Nuclear Shell Regime Audit (II): Regime Switching Network, Transition Zone Width Theorem, and 15% Shell Model Coverage.</em> (forthcoming)</div>
-            <div>Tang, S. (2026y). <em>Nuclear Shell Regime Audit (III): The Demotion of the Shell Model and the Regime Switching Priority Theorem.</em> (forthcoming)</div>
-            <div>Tang, S. (2026z). <em>Nuclear Shell Regime Audit (IV): Interdisciplinary Unification and the Final Demonstration of the "Law of Meta-Laws".</em> (forthcoming)</div>
+            <div class="pub-category lang-en">⚡ Nuclear Physics (4 papers)</div>
+            <div class="pub-category lang-zh">⚡ 核物理（4篇）</div>
+            <div>Tang, S. (2026v). <em>Nuclear Shell Regime Audit (I): The η Hierarchy Structure, Magic Number Shift Theorem, and the Discovery of the N=14 Statistical Rupture.</em> <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">Zenodo</a></div>
+            <div>Tang, S. (2026w). <em>Nuclear Shell Regime Audit (II): Regime-Switch Network, Transition-Zone Width Theorem, and Shell Model Completeness Audit.</em> <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">Zenodo</a></div>
+            <div>Tang, S. (2026x). <em>Nuclear Shell Regime Audit (III): The Triple Demotion of the Nuclear Shell.</em> <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">Zenodo</a></div>
+            <div>Tang, S. (2026y). <em>Nuclear Shell Regime Audit (IV): Theoretical Extensions, Regime-Factor Purity Spectrum, and Cross-Disciplinary Predictions.</em> <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">Zenodo</a></div>
 
-            <div class="pub-category lang-en">📐 Methodology (3 papers)</div>
-            <div class="pub-category lang-zh">📐 方法论（3篇）</div>
+            <div class="pub-category lang-en">📐 Methodology &amp; System (3 papers)</div>
+            <div class="pub-category lang-zh">📐 方法论与系统（3篇）</div>
             <div>Tang, S. (2026g). <em>Testability: Factor Hierarchy Theory and Scientific Methodology for Multi-Factor Complex Systems.</em> <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">Zenodo</a></div>
             <div>Tang, S. (2026r). <em>From the Law of Meta-Laws to an Operating System for Scientific Discovery.</em> <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026v). <em>The Mathematical Structure and Engineering Architecture of the Scientific Discovery Operating System.</em> (forthcoming)</div>
+            <div>Tang, S. (2026z). <em>Technical Specification for the Scientific Discovery Operating System: Mathematical Formalization and Engineering Architecture.</em> <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">Zenodo</a></div>
         </div>
     </div>
 
     <footer class="lang-en">
         © 2026 Shuiping Tang — Chinese Independent Researcher · Scientific Discovery Operating System<br>
-        25 Preprints · 6 Disciplines · Contact: tangshuiping@qq.com
+        26 Preprints · 6 Disciplines · Contact: tangshuiping@qq.com
     </footer>
     <footer class="lang-zh">
         © 2026 汤水平 — 中国独立研究者 · 科学发现操作系统<br>
-        25篇预印本 · 六大独立学科 · 联系方式：tangshuiping@qq.com
+        26篇预印本 · 六大独立学科 · 联系方式：tangshuiping@qq.com
     </footer>
 </div>
 
@@ -695,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
   "nationality": "Chinese",
   "jobTitle": "Independent Researcher",
   "worksFor": { "@type": "Organization", "name": "Independent" },
-  "knowsAbout": ["Scientific Discovery Operating System", "Factor Hierarchy Law", "Testability Principle", "Testability Norms", "MRSD Algorithm", "Regime Switching", "Asset Pricing", "Phase Transitions", "Gauge Field Theory", "Periodic Law", "Nuclear Shell Model", "Statistical Physics", "Particle Physics", "Chemistry", "Nuclear Physics", "Astronomy", "Finance"]
+  "knowsAbout": ["Scientific Discovery Operating System", "Factor Hierarchy Law", "Testability Principle", "Testability Norms", "MRSD Algorithm", "Regime Switching", "Regime Factors", "Execution Factors", "Structural Break Detection", "Exhaustive Testing", "Interaction Effect Testing", "Asset Pricing", "Phase Transitions", "Gauge Field Theory", "Periodic Law", "Nuclear Shell Model", "Statistical Physics", "Particle Physics", "Chemistry", "Nuclear Physics", "Astronomy", "Finance", "Quantum-Classical Hybrid", "Magic Number Shift", "Ca-La Singularity", "Precursor Cascade", "Double-Peak Fission", "Information-Theoretic Duality", "Regime Periodic Table", "Transition-Zone Width", "Regime-Factor Purity Spectrum"]
 }
 </script>
 </body>
