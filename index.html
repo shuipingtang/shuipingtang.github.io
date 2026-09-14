@@ -23,16 +23,17 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .navbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);margin:0 -1.5rem 1.5rem;padding:.7rem 1.5rem;border-bottom:1px solid rgba(0,0,0,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
 .navbar-brand{font-weight:700;color:#0f2b3d;font-size:.92rem}
 .navbar-links{display:flex;gap:.15rem;flex-wrap:wrap}
-.navbar-links a{font-size:.75rem;color:#2c6e9e;text-decoration:none;padding:.3rem .58rem;border-radius:14px;transition:all .2s}
+.navbar-links a{font-size:.74rem;color:#2c6e9e;text-decoration:none;padding:.3rem .55rem;border-radius:14px;transition:all .2s}
 .navbar-links a:hover{background:#eef4fc;color:#0f2b3d}
 .lang-bar{display:flex;gap:.3rem}
-.lang-bar a{display:inline-block;padding:.32rem .85rem;border-radius:18px;text-decoration:none;font-size:.76rem;font-weight:500;background:#f0f4fa;color:#2c6e9e;cursor:pointer}
-.lang-bar a.active{background:#0f2b3d;color:#fff}
+.lang-bar button{display:inline-block;padding:.32rem .85rem;border-radius:18px;font-size:.76rem;font-weight:500;background:#f0f4fa;color:#2c6e9e;cursor:pointer;border:none;font-family:inherit;transition:all .2s}
+.lang-bar button.active{background:#0f2b3d;color:#fff}
 
 /* CARDS */
 .card{background:#fff;border-radius:26px;padding:2rem 2.2rem;margin-bottom:1.8rem;border:1px solid rgba(0,0,0,.04);box-shadow:0 8px 32px rgba(0,0,0,.05)}
 .section-title{font-size:1.45rem;font-weight:600;margin:0 0 .6rem;color:#0f2b3d}
 .section-sub{font-size:.86rem;color:#5b6e8c;margin-bottom:1.2rem}
+.section-sub strong{color:#0f2b3d}
 
 /* HERO */
 .hero{padding:2.2rem 2.4rem 2rem}
@@ -77,13 +78,14 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .entry-card{display:flex;align-items:flex-start;gap:1.1rem;background:linear-gradient(135deg,#f8faff 0%,#eef4fc 100%);border-radius:18px;padding:1.25rem 1.5rem;border-left:5px solid #2c6e9e;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
 .entry-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .entry-card.main-entry{border-left-color:#d4a017;background:linear-gradient(135deg,#fffbf0 0%,#fdf5e0 100%)}
+.entry-card.phil-entry{border-left-color:#6a4fa3;background:linear-gradient(135deg,#faf7ff 0%,#f3edfc 100%)}
 .entry-icon{font-size:1.9rem;flex-shrink:0;margin-top:.1rem}
 .entry-body{flex:1}
 .entry-type{font-size:.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#2c6e9e;margin-bottom:.3rem}
 .entry-title-zh{font-size:.98rem;font-weight:700;color:#0f2b3d;margin-bottom:.2rem;line-height:1.45}
 .entry-title-en{font-size:.82rem;font-weight:500;color:#3a4a5f;margin-bottom:.45rem;line-height:1.45;font-style:italic}
 .entry-desc{font-size:.82rem;color:#4a5b70;line-height:1.6;margin-bottom:.4rem}
-.entry-doi{font-size:.72rem;color:#5b6e8c;font-family:'Courier New',monospace}
+.entry-doi{font-size:.72rem;color:#5b6e8c;font-family:'Courier New',monospace;display:inline-flex;align-items:center;gap:.3rem;margin-top:.35rem;padding:.25rem .55rem;background:rgba(255,255,255,.75);border-radius:8px;font-weight:600}
 
 /* THREE NAMES */
 .three-names{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -109,8 +111,13 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .os-card.layer-3{background:#f3f6fb;border-left-color:#4a8ec2}
 .os-card.layer-4{background:#f6f8fb;border-left-color:#6ba3cd}
 .os-card .layer-badge{position:absolute;top:.7rem;right:.9rem;font-size:.62rem;font-weight:700;color:#2c6e9e;background:rgba(255,255,255,.75);padding:.1rem .4rem;border-radius:9px}
-.os-card strong{color:#0f2b3d;display:block;margin-bottom:.25rem;font-size:.88rem}
+.os-card strong{color:#0f2b3d;display:block;margin-bottom:.25rem;font-size:.88rem;line-height:1.35}
 .os-card .sub{font-size:.74rem;color:#5b6e8c;display:block;margin-top:.15rem}
+
+/* ENGINE CARD */
+.engine-card{background:linear-gradient(135deg,#f8faff 0%,#eef4fc 100%);border-radius:18px;padding:1.15rem 1.4rem;border-left:5px solid #0f2b3d;font-size:.85rem;line-height:1.65;margin-top:1rem}
+.engine-card strong{color:#0f2b3d;display:block;margin-bottom:.35rem;font-size:.92rem;line-height:1.4}
+.engine-card span{display:block;margin-top:.35rem;color:#4a5b70}
 
 /* CONTRIBUTIONS */
 .contribution-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
@@ -145,7 +152,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 @media(max-width:900px){.norms-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.norms-grid{grid-template-columns:1fr}}
 .norm-card{background:#f8faff;border-radius:15px;padding:.9rem 1.1rem;border-left:3px solid #4a8ec2;font-size:.84rem;line-height:1.55}
-.norm-card strong{color:#0f2b3d;display:block;margin-bottom:.2rem;font-size:.88rem}
+.norm-card strong{color:#0f2b3d;display:block;margin-bottom:.2rem;font-size:.88rem;line-height:1.35}
 .norm-card .sub{font-size:.72rem;color:#5b6e8c;display:block;margin-top:.1rem}
 
 /* DASHBOARDS */
@@ -170,7 +177,6 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .pub-link:hover{color:#0f2b3d}
 .status-tag{display:inline-block;font-size:.62rem;font-weight:700;padding:.12rem .45rem;border-radius:8px;vertical-align:middle;line-height:1.4}
 .status-tag.reviewed{background:#2e9e6b;color:#fff}
-.status-tag.pending{background:#fff3cd;color:#8a6d00}
 .status-tag.preprint{background:#e8f0f8;color:#5b6e8c}
 .status-tag.survey{background:#dceaf8;color:#1f5f9e}
 .status-tag.master{background:linear-gradient(135deg,#d4a017,#b8860b);color:#fff}
@@ -198,10 +204,11 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 <a href="#math"><span class="lang-en">Math</span><span class="lang-zh">数学</span></a>
 <a href="#philosophy"><span class="lang-en">Philosophy</span><span class="lang-zh">哲学</span></a>
 <a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文</span></a>
+<a href="#dashboards"><span class="lang-en">Live Apps</span><span class="lang-zh">实时应用</span></a>
 </div>
 <div class="lang-bar">
-<a data-lang="en" class="active" onclick="switchLang('en')">EN</a>
-<a data-lang="zh" onclick="switchLang('zh')">中文</a>
+<button data-lang="en" class="active" onclick="switchLang('en')" aria-label="Switch to English">EN</button>
+<button data-lang="zh" onclick="switchLang('zh')" aria-label="切换到中文">中文</button>
 </div>
 </nav>
 
@@ -224,10 +231,10 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 <div class="hero-tagline lang-zh">跨学科复杂系统研究的统一理论框架。</div>
 
 <div class="hero-desc lang-en">
-The <strong>Factor Hierarchy System</strong> comprises <strong>four core components</strong>: the <strong>Factor Hierarchy Law</strong> (ontology: regime vs execution factors, three axioms), the <strong>Information Isomorphism Law</strong> (epistemological foundation: statistical structures carry regime-structure information), the <strong>Testability Principle</strong> (epistemological standard: beyond falsifiability), and the <strong>Testability Norms</strong> (methodology: six functional dimensions). Supported by three mathematical series (15 papers) and verified across six independent disciplines. Documented in <strong>48 preprints (2026)</strong>.
+The <strong>Factor Hierarchy System</strong> comprises <strong>four core components</strong>: the <strong>Information Isomorphism Law</strong> (epistemological foundation: statistical structures carry regime-structure information), the <strong>Factor Hierarchy Law</strong> (ontology: regime vs execution factors, three axioms), the <strong>Testability Principle</strong> (epistemological standard: beyond falsifiability), and the <strong>Testability Norms</strong> (methodology: six functional dimensions). Supported by three mathematical series (15 papers) and verified across six independent disciplines. Documented in <strong>48 preprints (2026)</strong>.
 </div>
 <div class="hero-desc lang-zh">
-<strong>因子层级体系</strong>由<strong>四项核心组件</strong>构成：<strong>因子层级定律</strong>（本体论：规则因子与执行因子，三条公理）、<strong>信息同构定律</strong>（认识论根基：统计结构承载体制结构信息）、<strong>可检验性原则</strong>（认识论标准：超越可证伪性）、<strong>可检验性规范</strong>（方法论：六个功能维度）。由三个数学系列（15篇）支撑，已在六大独立学科中验证。成果记录于<strong>48篇预印本（2026）</strong>。
+<strong>因子层级体系</strong>由<strong>四项核心组件</strong>构成：<strong>信息同构定律</strong>（认识论根基：统计结构承载体制结构信息）、<strong>因子层级定律</strong>（本体论：规则因子与执行因子，三条公理）、<strong>可检验性原则</strong>（认识论标准：超越可证伪性）、<strong>可检验性规范</strong>（方法论：六个功能维度）。由三个数学系列（15篇）支撑，已在六大独立学科中验证。成果记录于<strong>48篇预印本（2026）</strong>。
 </div>
 
 <div class="kpi-row">
@@ -310,8 +317,8 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <!-- ==================== 3. SYSTEM ENTRY ==================== -->
 <div class="card" id="system">
 <div class="section-title">📖 <span class="lang-en">Where to Start · System Entry Points</span><span class="lang-zh">从哪里开始读 · 体系入口</span></div>
-<p class="section-sub lang-en">Four entry papers. The master framework provides a complete overview; each mathematical survey provides a series-level overview covering all theorems and open problems.</p>
-<p class="section-sub lang-zh">四篇入口论文。总纲提供体系全览；三篇数学综述分别统览一个系列的全部定理与开放问题。</p>
+<p class="section-sub lang-en">Five entry papers: the master framework, three mathematical surveys (one per series), and one philosophical treatise. The three surveys together cover <strong>81 open problems</strong>, forming the roadmap for the system's expansion to more general model classes.</p>
+<p class="section-sub lang-zh">五篇入口论文：总纲一篇、数学综述三篇（每个系列一篇）、哲学专题一篇。三篇综述共覆盖 <strong>81 条开放问题</strong>，构成体系向更一般模型类扩展的路线图。</p>
 
 <div class="entry-grid">
 <!-- MASTER -->
@@ -334,8 +341,8 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="entry-type">Mathematical Survey I · 数学综述一 · 2026al</div>
 <div class="entry-title-zh">切换度量论：定义、定理体系与数学根基评估</div>
 <div class="entry-title-en">Switch Measure Theory: Definitions, Theorem System, and Assessment of Mathematical Foundations</div>
-<div class="entry-desc lang-en">A series-level survey covering all 7 papers of Switch Measure Theory: Unified Shape Function · Switching Degree · Spectral Weighting Family · Information Lower Bound (c = 1/8) · 36 open problems.</div>
-<div class="entry-desc lang-zh">统览切换度量论全部7篇论文：统一形状函数 · 切换度 · 谱加权家族 · 信息下界（c = 1/8）· 36条开放问题。</div>
+<div class="entry-desc lang-en">A series-level survey covering all 7 papers of Switch Measure Theory: Unified Shape Function · Switching Degree · Spectral Weighting Family · Information Lower Bound (c = 1/8) · <strong>36 open problems</strong>.</div>
+<div class="entry-desc lang-zh">统览切换度量论全部7篇论文：统一形状函数 · 切换度 · 谱加权家族 · 信息下界（c = 1/8）· <strong>36条开放问题</strong>。</div>
 <div class="entry-doi">DOI: 10.5281/zenodo.22220804 →</div>
 </div>
 </a>
@@ -347,8 +354,8 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="entry-type">Mathematical Survey II · 数学综述二 · 2026ap</div>
 <div class="entry-title-zh">因子层级定律数学化综述：三条公理的形式化、跨学科验证矩阵与初步建立声明</div>
 <div class="entry-title-en">A Survey of the Mathematization of the Factor Hierarchy Law: Formalization of the Three Axioms, the Cross-Disciplinary Verification Matrix, and a Preliminary Establishment Statement</div>
-<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Factor Hierarchy Law Mathematization: Switching Type Classification · Six-Class Hierarchical Structure Exhaustiveness · Geometric Necessity of Structural Breaks · η Divergence Theorem · 23 open problems.</div>
-<div class="entry-desc lang-zh">统览因子层级定律数学化全部4篇论文：切换类型分类 · 六类层级结构穷尽性 · 结构断裂几何必然性 · η发散定理 · 23条开放问题。</div>
+<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Factor Hierarchy Law Mathematization: Switching Type Classification · Six-Class Hierarchical Structure Exhaustiveness · Geometric Necessity of Structural Breaks · η Divergence Theorem · <strong>23 open problems</strong>.</div>
+<div class="entry-desc lang-zh">统览因子层级定律数学化全部4篇论文：切换类型分类 · 六类层级结构穷尽性 · 结构断裂几何必然性 · η发散定理 · <strong>23条开放问题</strong>。</div>
 <div class="entry-doi">DOI: 10.5281/zenodo.22652253 →</div>
 </div>
 </a>
@@ -360,9 +367,22 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="entry-type">Mathematical Survey III · 数学综述三 · 2026at</div>
 <div class="entry-title-zh">信息同构定律的数学根基：三个本体论层次、检测充分性与置换精确控制的完整形式化</div>
 <div class="entry-title-en">Mathematical Foundations of the Information Isomorphism Law: A Complete Formalization of the Three Ontological Levels, Detection Sufficiency, and Exact Permutation Control</div>
-<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Information Isomorphism Law Mathematization: L² Sufficiency Theorem · No-False-Peak Theorem · Extreme Value Limit · Locally Weighted One-to-One Correspondence · 22 open problems.</div>
-<div class="entry-desc lang-zh">统览信息同构定律数学化全部4篇论文：L²充分性定理 · 无假峰定理 · 极值极限 · 局部加权一一对应 · 22条开放问题。</div>
+<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Information Isomorphism Law Mathematization: L² Sufficiency Theorem · No-False-Peak Theorem · Extreme Value Limit · Locally Weighted One-to-One Correspondence · <strong>22 open problems</strong>.</div>
+<div class="entry-desc lang-zh">统览信息同构定律数学化全部4篇论文：L²充分性定理 · 无假峰定理 · 极值极限 · 局部加权一一对应 · <strong>22条开放问题</strong>。</div>
 <div class="entry-doi">DOI: 10.5281/zenodo.22702855 →</div>
+</div>
+</a>
+
+<!-- PHILOSOPHICAL TREATISE -->
+<a class="entry-card phil-entry" href="https://doi.org/10.5281/zenodo.22704136" target="_blank" rel="noopener">
+<div class="entry-icon">⚙️</div>
+<div class="entry-body">
+<div class="entry-type">Philosophical Treatise · 哲学专题 · 2026au</div>
+<div class="entry-title-zh">同构读取：客观数据系统认识通道的唯一性——从因子层级定律与信息同构定律到条件化唯一性定理</div>
+<div class="entry-title-en">Isomorphic Reading: The Uniqueness of the Epistemic Channel for Objective Data Systems—From the Factor Hierarchy Law and the Information Isomorphism Law to the Conditional Uniqueness Theorem</div>
+<div class="entry-desc lang-en">Renames "fitting" as isomorphic reading — the unique epistemic channel for objective data systems. Includes the conditional uniqueness theorem and five independent argument chains.</div>
+<div class="entry-desc lang-zh">将"拟合"重新定位为同构读取——客观数据系统的唯一认识通道。包含条件化唯一性定理与五条独立论证链。</div>
+<div class="entry-doi">DOI: 10.5281/zenodo.22704136 →</div>
 </div>
 </a>
 </div>
@@ -419,6 +439,13 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="os-card layer-3"><span class="layer-badge">L3</span><strong>⚖️ Testability Principle<br>可检验性原则</strong><span class="sub lang-en">What counts as reliable</span><span class="sub lang-zh">怎样才算可靠</span></div>
 <div class="os-card layer-4"><span class="layer-badge">L4</span><strong>🔬 Testability Norms<br>可检验性规范</strong><span class="sub lang-en">How to verify</span><span class="sub lang-zh">怎样操作才能实现</span></div>
 </div>
+</div>
+
+<!-- MRSD -->
+<div class="engine-card">
+<strong>⚙️ MRSD Algorithm · Computational Core of the Operating System<br>MRSD 算法 · 操作系统的计算实现核心</strong>
+<span class="lang-en">The Multi-Regime State Decoupling Algorithm is a tool-layer implementation instance, not a constituent component. Three-step logic: (1) input any complex high-dimensional dataset; (2) execute structural optimization operator; (3) output dynamic regime division matrix. Validated on 2D Ising exact solution, 3D Ising NP-complete system, and across six disciplines.</span>
+<span class="lang-zh">多体制状态解耦算法是工具层实现实例，非体系构成部件。三步逻辑：（1）输入任意复杂高维数据集；（2）执行结构寻优算子；（3）输出动态体制分工矩阵。已在 2D Ising 精确解、3D Ising NP完全系统及六大独立学科中验证。</span>
 </div>
 </div>
 
@@ -490,8 +517,8 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <ul style="margin:.4rem 0 0 1.1rem">
 <li class="lang-en"><strong>Popper's falsifiability</strong> → extended into a dual-threshold framework (entrance + exit standard)</li>
 <li class="lang-zh"><strong>波普尔可证伪性</strong> → 扩展为双重门槛框架（入口标准 + 出口标准）</li>
-<li class="lang-en"><strong>Kant's "thing-in-itself"</strong> → functionally replaced by the Information Isomorphism Law in scientific practice</li>
-<li class="lang-zh"><strong>康德"物自身"</strong> → 在科学实践中被信息同构定律功能性替代</li>
+<li class="lang-en"><strong>Kant's "thing-in-itself"</strong> → functionally replaced by the <strong>Information Isomorphism Epistemology</strong> in scientific practice</li>
+<li class="lang-zh"><strong>康德"物自身"</strong> → 在科学实践中被<strong>信息同构认识论</strong>功能性替代</li>
 <li class="lang-en"><strong>"Fitting"</strong> → renamed as "Isomorphic Reading" — the unique epistemic channel for objective data systems</li>
 <li class="lang-zh"><strong>"拟合"</strong> → 重新命名为"同构读取"——客观数据系统的唯一认识通道</li>
 </ul>
@@ -633,7 +660,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-category lang-zh">💹 金融与资产定价（6篇）</div>
 
 <div class="pub-item">
-<div class="pub-item-header"><span class="pub-id">2026a</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.21091486" target="_blank" rel="noopener">Zenodo →</a><span class="status-tag reviewed">✓ <span class="lang-en">External Review Passed</span><span class="lang-zh">外审通过</span></span><span class="status-tag pending"><span class="lang-en">Awaiting Editorial Board</span><span class="lang-zh">等待编委会</span></span></div>
+<div class="pub-item-header"><span class="pub-id">2026a</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.21091486" target="_blank" rel="noopener">Zenodo →</a><span class="status-tag reviewed">✓ <span class="lang-en">External Review Passed · Awaiting Board</span><span class="lang-zh">外审通过 · 等待编委会</span></span></div>
 <div class="pub-title-zh">双锚：中美因子共同决定全球黄金与原油定价——基于VIF约束下穷举测试的系统性证据</div>
 <div class="pub-title-en">Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing—Systematic Evidence Based on Exhaustive Testing with VIF Constraints</div>
 </div>
@@ -664,7 +691,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 
 <div class="pub-item">
 <div class="pub-item-header"><span class="pub-id">2026f</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.21100341" target="_blank" rel="noopener">Zenodo →</a></div>
-<div class="pub-titlezh">资本流动的体制切换：中美利差如何分层驱动全球资本再配置——基于TIC面板、ETF资金流与中国跨境数据的穷举证据</div>
+<div class="pub-title-zh">资本流动的体制切换：中美利差如何分层驱动全球资本再配置——基于TIC面板、ETF资金流与中国跨境数据的穷举证据</div>
 <div class="pub-title-en">The Regime Switch of Capital Flows: How the China-U.S. Yield Spread Drives Global Capital Reallocation in a Tiered Manner—Exhaustive Evidence Based on TIC Panel Data, ETF Flows, and China's Cross-Border Data</div>
 </div>
 
@@ -690,9 +717,9 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">Technical Specification for the Scientific Discovery Operating System: Mathematical Formalization and Engineering Architecture—A Proceduralized Knowledge Discovery Protocol Based on the Factor Hierarchy Law and Testability Norms</div>
 </div>
 
-<!-- 3. ASTRONOMY & STATISTICAL PHYSICS -->
-<div class="pub-category lang-en">🔭 Astronomy &amp; 📊 Statistical Physics (6 papers)</div>
-<div class="pub-category lang-zh">🔭 天文学 &amp; 📊 统计物理（6篇）</div>
+<!-- 3. ASTRONOMY -->
+<div class="pub-category lang-en">🔭 Astronomy (3 papers)</div>
+<div class="pub-category lang-zh">🔭 天文学（3篇）</div>
 
 <div class="pub-item">
 <div class="pub-item-header"><span class="pub-id">2026h</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.21105475" target="_blank" rel="noopener">Zenodo →</a></div>
@@ -712,6 +739,10 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">The Stellar Main-Sequence Regime Boundary: Five-Dimensional Independent Verification Across the K/G Transition Zone and the Systematic Establishment of the Factor Hierarchy Law—Cross-Dimensional Integrated Evidence Based on the Testability Norms and Physical Root Tracing</div>
 </div>
 
+<!-- 4. STATISTICAL PHYSICS -->
+<div class="pub-category lang-en">📊 Statistical Physics (3 papers)</div>
+<div class="pub-category lang-zh">📊 统计物理（3篇）</div>
+
 <div class="pub-item">
 <div class="pub-item-header"><span class="pub-id">2026k</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.21154577" target="_blank" rel="noopener">Zenodo →</a></div>
 <div class="pub-title-zh">回归拓扑与统计力学的信息理论对偶——因子层级定律对Ehrenfest相变分类的数据驱动等价性证明及其在2D Ising模型上的系统性验证</div>
@@ -730,7 +761,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">The Reduction of Universality: A Regime Boundary Theory for Finite-System Phase Transitions—Cross-Model Evidence for Bimodal Splitting, the Precursor Regime Boundary, and the Tool-Dependence Theorem</div>
 </div>
 
-<!-- 4. PARTICLE PHYSICS -->
+<!-- 5. PARTICLE PHYSICS -->
 <div class="pub-category lang-en">🧲 Particle Physics (4 papers)</div>
 <div class="pub-category lang-zh">🧲 粒子物理（4篇）</div>
 
@@ -758,7 +789,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">The Demotion of Gauge Field Theory, the Theoretical Reconstruction of the Standard Model, and the Five-Layer Axiomatization Structure: Precursor Cascade Asymmetry, the Regime Function of the Higgs Mechanism, the Statistical Correspondence of Virtual States, and the Final Formalization of the Factor Hierarchy Law (IV)</div>
 </div>
 
-<!-- 5. CHEMISTRY -->
+<!-- 6. CHEMISTRY -->
 <div class="pub-category lang-en">🧪 Chemistry (3 papers)</div>
 <div class="pub-category lang-zh">🧪 化学（3篇）</div>
 
@@ -780,7 +811,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">From Regime Boundaries to Chemical Gauge Group: The Inevitable Emergence of the Periodic Law and the Cross-Disciplinary Unification of the Factor Hierarchy Law—Derivation of the Chemical Gauge Group Theorem, the Chemical Counterpart of the Higgs Mechanism, and the Establishment of the Five-Layer Axiomatic Structure (III)</div>
 </div>
 
-<!-- 6. NUCLEAR PHYSICS -->
+<!-- 7. NUCLEAR PHYSICS -->
 <div class="pub-category lang-en">⚛️ Nuclear Physics (6 papers)</div>
 <div class="pub-category lang-zh">⚛️ 核物理（6篇）</div>
 
@@ -820,7 +851,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">The Regime Nuclide Map (II): Statistical Localization of Shell Correction Energy, Multidimensional Response Theorem, and Methodological Contributions—Empirical Test Based on the Nuclear Shell Regime-Switching Theory and the .ssr Trap Correction</div>
 </div>
 
-<!-- 7. PHILOSOPHY -->
+<!-- 8. PHILOSOPHY -->
 <div class="pub-category lang-en">📚 Philosophy of Science &amp; Epistemology (4 papers)</div>
 <div class="pub-category lang-zh">📚 科学哲学与认识论（4篇）</div>
 
@@ -848,7 +879,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="pub-title-en">Isomorphic Reading: The Uniqueness of the Epistemic Channel for Objective Data Systems: From the Factor Hierarchy Law and the Information Isomorphism Law to the Conditional Uniqueness Theorem</div>
 </div>
 
-<!-- 8. MATH -->
+<!-- 9. MATH -->
 <div class="pub-category lang-en">📐 Mathematical Statistics &amp; Statistical Theory (15 papers)</div>
 <div class="pub-category lang-zh">📐 数理统计与统计理论（15篇）</div>
 
@@ -892,7 +923,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 
 <div class="pub-item">
-<div class="pub-item-header"><span class="pub-id">2026al</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22220804" target="_blank" rel="noopener">Zenodo →</a></div>
+<div class="pub-item-header"><span class="pub-id">2026al</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22220804" target="_blank" rel="noopener">Zenodo →</a><span class="status-tag survey"><span class="lang-en">Survey</span><span class="lang-zh">综述</span></span></div>
 <div class="pub-title-zh">切换度量论：定义、定理体系与数学根基评估——统一形状函数、切换度、谱加权家族与信息下界综述</div>
 <div class="pub-title-en">Switch Measure Theory: Definitions, Theorem System, and Assessment of Mathematical Foundations—A Survey of the Unified Shape Function, Switching Degree, Spectral Weighting Family, and Information Lower Bound</div>
 </div>
@@ -919,7 +950,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 
 <div class="pub-item">
-<div class="pub-item-header"><span class="pub-id">2026ap</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22652253" target="_blank" rel="noopener">Zenodo →</a></div>
+<div class="pub-item-header"><span class="pub-id">2026ap</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22652253" target="_blank" rel="noopener">Zenodo →</a><span class="status-tag survey"><span class="lang-en">Survey</span><span class="lang-zh">综述</span></span></div>
 <div class="pub-title-zh">因子层级定律数学化综述：三条公理的形式化、跨学科验证矩阵与初步建立声明</div>
 <div class="pub-title-en">A Survey of the Mathematization of the Factor Hierarchy Law: Formalization of the Three Axioms, the Cross-Disciplinary Verification Matrix, and a Preliminary Establishment Statement</div>
 </div>
@@ -946,12 +977,12 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 
 <div class="pub-item">
-<div class="pub-item-header"><span class="pub-id">2026at</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22702855" target="_blank" rel="noopener">Zenodo →</a></div>
+<div class="pub-item-header"><span class="pub-id">2026at</span><a class="pub-link" href="https://doi.org/10.5281/zenodo.22702855" target="_blank" rel="noopener">Zenodo →</a><span class="status-tag survey"><span class="lang-en">Survey</span><span class="lang-zh">综述</span></span></div>
 <div class="pub-title-zh">信息同构定律的数学根基：三个本体论层次、检测充分性与置换精确控制的完整形式化</div>
 <div class="pub-title-en">Mathematical Foundations of the Information Isomorphism Law: A Complete Formalization of the Three Ontological Levels, Detection Sufficiency, and Exact Permutation Control</div>
 </div>
 
-<!-- 9. MASTER -->
+<!-- 10. MASTER -->
 <div class="pub-category lang-en">🏛️ Master Framework (1 paper)</div>
 <div class="pub-category lang-zh">🏛️ 体系总纲（1篇）</div>
 
@@ -986,8 +1017,8 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <a href="mailto:tangshuiping@qq.com">Email</a>
 </div>
 <div class="footer-copyright">
-<div class="lang-en">© 2026 Shuiping Tang (汤水平) — Chinese Independent Researcher · Factor Hierarchy System<br>48 Preprints · 6 Disciplines · 4 Core Components · 1 System, 3 Names</div>
-<div class="lang-zh">© 2026 汤水平 — 中国独立研究者 · 因子层级体系<br>48篇预印本 · 六大独立学科 · 四项核心组件 · 一个体系，三个名称</div>
+<div class="lang-en">© 2026 Shuiping Tang (汤水平) — Chinese Independent Researcher · Factor Hierarchy System<br>48 Preprints · 6 Disciplines · 15 Mathematical Papers · 4 Core Components · 1 System, 3 Names</div>
+<div class="lang-zh">© 2026 汤水平 — 中国独立研究者 · 因子层级体系<br>48篇预印本 · 六大独立学科 · 15篇数学论文 · 四项核心组件 · 一个体系，三个名称</div>
 </div>
 </footer>
 
@@ -996,7 +1027,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <script>
 function switchLang(lang){
     document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : 'en';
-    document.querySelectorAll('.lang-bar a').forEach(function(a){
+    document.querySelectorAll('.lang-bar button').forEach(function(a){
         if(a.dataset.lang === lang) a.classList.add('active');
         else a.classList.remove('active');
     });
@@ -1029,6 +1060,10 @@ document.addEventListener('DOMContentLoaded', function(){
   "email": "tangshuiping@qq.com",
   "nationality": "Chinese",
   "jobTitle": "Independent Researcher",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Independent Researcher"
+  },
   "knowsAbout": [
     "Factor Hierarchy System",
     "Factor Hierarchy Law",
