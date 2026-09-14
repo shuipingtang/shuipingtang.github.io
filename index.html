@@ -4,172 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuiping Tang | Scientific Discovery Operating System · Factor Hierarchy Law</title>
-    <meta name="description" content="Shuiping Tang (汤水平), Chinese Independent Researcher. Established the Scientific Discovery Operating System, comprising the Factor Hierarchy Law, Testability Principle, Testability Norms, and MRSD Algorithm. Verified across finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics. 26 preprints (2026).">
-    <meta name="keywords" content="Shuiping Tang, 汤水平, Chinese Independent Researcher, Scientific Discovery Operating System, Factor Hierarchy Law, Testability Principle, Testability Norms, MRSD Algorithm, regime switching, regime factors, execution factors, cross-disciplinary, Tang Break, demotion of universality, shell model demotion, gauge field theory demotion, periodic law demotion, quantum-classical hybrid, magic number shift, Ca-La singularity, precursor cascade, double-peak fission, information-theoretic duality, regime periodic table, exhaustive testing, structural break detection, nuclear shell model, independent-particle-motion, transition-zone width, regime-factor purity spectrum">
+    <meta name="description" content="Shuiping Tang (汤水平), Chinese Independent Researcher. Established the Scientific Discovery Operating System: Information Isomorphism Law, Factor Hierarchy Law, Testability Principle, and Testability Norms. Deployed across finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics. 48 preprints (2026), archived on Zenodo and SSRN.">
+    <meta name="keywords" content="Shuiping Tang, 汤水平, Chinese Independent Researcher, Scientific Discovery Operating System, Information Isomorphism Law, Factor Hierarchy Law, Testability Principle, Testability Norms, MRSD Algorithm, regime switching, regime factors, execution factors, cross-disciplinary, Tang Break, demotion of universality, shell model demotion, gauge field theory demotion, periodic law demotion, quantum-classical hybrid, magic number shift, Ca-La singularity, precursor cascade, double-peak splitting, information-theoretic duality, regime periodic table, exhaustive testing, structural break detection, nuclear shell model, independent-particle-motion, transition-zone width, regime-factor purity spectrum, switch measure theory, isomorphic reading, third-person epistemology, regime nuclide map">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Shuiping Tang | Scientific Discovery Operating System">
+    <meta property="og:description" content="Chinese Independent Researcher. 48 preprints (2026) across six disciplines. Factor Hierarchy Law, Information Isomorphism Law, Testability Norms.">
+    <meta property="og:url" content="https://shuipingtang.github.io">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+        /* Language switching: CSS-driven, no flicker */
+        html[lang="zh-CN"] .lang-en { display: none !important; }
+        html:not([lang="zh-CN"]) .lang-zh { display: none !important; }
+
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(160deg, #f0f4fa 0%, #e8ecf4 30%, #f5f7fb 100%);
             color: #1a2a3f;
             line-height: 1.6;
-            padding: 2rem 1.5rem;
+            padding: 0 1.5rem 2rem;
             min-height: 100vh;
         }
         .container { max-width: 1200px; margin: 0 auto; }
 
-        .lang-bar {
-            text-align: right;
-            margin-bottom: 1.5rem;
+        .navbar {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+            margin: 0 -1.5rem 1.5rem;
+            padding: 0.7rem 1.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 0.5rem;
         }
+        .navbar-brand { font-weight: 700; color: #0f2b3d; font-size: 0.95rem; letter-spacing: -0.01em; }
+        .navbar-links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+        .navbar-links a {
+            font-size: 0.8rem; color: #2c6e9e; text-decoration: none;
+            padding: 0.35rem 0.75rem; border-radius: 16px; transition: all 0.2s;
+        }
+        .navbar-links a:hover { background: #eef4fc; color: #0f2b3d; }
+        .lang-bar { display: flex; gap: 0.4rem; }
         .lang-bar a {
-            display: inline-block;
-            padding: 0.45rem 1.2rem;
-            margin-left: 0.5rem;
-            border-radius: 24px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.25s;
-            background: white;
-            color: #2c6e9e;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: inline-block; padding: 0.35rem 0.9rem;
+            border-radius: 20px; text-decoration: none; font-size: 0.78rem;
+            font-weight: 500; transition: all 0.25s; background: #f0f4fa;
+            color: #2c6e9e; cursor: pointer;
         }
-        .lang-bar a.active {
-            background: #0f2b3d;
-            color: white;
-            box-shadow: 0 4px 16px rgba(15,43,61,0.3);
-        }
-        .lang-bar a:hover:not(.active) {
-            background: #f0f4fc;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-        }
+        .lang-bar a.active { background: #0f2b3d; color: white; }
+        .lang-bar a:hover:not(.active) { background: #e0ecf8; }
 
         .card {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem 2.2rem;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(0,0,0,0.04);
+            background: white; border-radius: 28px; padding: 2rem 2.2rem;
+            margin-bottom: 2rem; border: 1px solid rgba(0,0,0,0.04);
             box-shadow: 0 8px 32px rgba(0,0,0,0.05);
             transition: box-shadow 0.3s, transform 0.3s;
         }
-        .card:hover {
-            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-            transform: translateY(-2px);
-        }
+        .card:hover { box-shadow: 0 16px 48px rgba(0,0,0,0.08); transform: translateY(-2px); }
 
-        .name {
-            font-size: 2.6rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #0f2b3d;
-            margin-bottom: 0.3rem;
-        }
-        .name-zh-note {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #5b6e8c;
-            margin-bottom: 0.8rem;
-            display: block;
-        }
+        .name { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; color: #0f2b3d; margin-bottom: 0.3rem; }
+        .name-zh-note { font-size: 1rem; font-weight: 400; color: #5b6e8c; margin-bottom: 0.8rem; display: block; }
         .affiliation {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #2c6e9e;
+            font-size: 1rem; font-weight: 500; color: #2c6e9e;
             background: linear-gradient(135deg, #eef4fc, #e0ecf8);
-            display: inline-block;
-            padding: 0.3rem 1.3rem;
-            border-radius: 30px;
-            margin-bottom: 1.2rem;
-            letter-spacing: 0.3px;
+            display: inline-block; padding: 0.3rem 1.3rem; border-radius: 30px;
+            margin-bottom: 1.2rem; letter-spacing: 0.3px;
         }
-        .bio {
-            font-size: 0.95rem;
-            color: #2c3e50;
-            max-width: 850px;
-            margin-bottom: 1.2rem;
-            line-height: 1.7;
-        }
+        .bio { font-size: 0.95rem; color: #2c3e50; max-width: 900px; margin-bottom: 1.2rem; line-height: 1.7; }
 
-        .identity-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            margin: 1.5rem 0;
+        .kpi-row {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 1rem; margin: 1.5rem 0 0.5rem;
         }
-        @media (max-width: 900px) { .identity-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .identity-grid { grid-template-columns: 1fr; } }
-
-        .identity-card {
-            background: #f8faff;
-            border-radius: 20px;
-            padding: 1.2rem 1.5rem;
-            border: 1px solid rgba(0,0,0,0.04);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        @media (max-width: 700px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+        .kpi {
+            background: #f8faff; border-radius: 18px; padding: 1rem 1.2rem;
+            border-left: 4px solid #2c6e9e;
         }
-        .identity-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-        }
-        .identity-icon { font-size: 2rem; flex-shrink: 0; }
-        .identity-text strong { display: block; font-size: 0.95rem; color: #0f2b3d; margin-bottom: 0.2rem; }
-        .identity-text span { font-size: 0.8rem; color: #5b6e8c; }
+        .kpi-num { font-size: 1.8rem; font-weight: 700; color: #0f2b3d; line-height: 1.1; }
+        .kpi-label { font-size: 0.78rem; color: #5b6e8c; margin-top: 0.2rem; }
 
         .section-title {
             font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 1rem 0;
             letter-spacing: -0.3px; color: #0f2b3d;
         }
         .section-title:first-child { margin-top: 0; }
+        .section-sub { font-size: 0.86rem; color: #5b6e8c; margin-bottom: 1.2rem; }
 
-        .dashboards-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; margin-bottom: 1.5rem;
+        /* External review card */
+        .review-card {
+            background: linear-gradient(135deg, #f0faf4 0%, #e8f6ee 100%);
+            border-radius: 24px; padding: 1.5rem 1.8rem;
+            border-left: 5px solid #2e9e6b; margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(46,158,107,0.08);
         }
-        @media (max-width: 1000px) { .dashboards-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 500px) { .dashboards-grid { grid-template-columns: 1fr; } }
-        .dash-card {
-            background: white; border-radius: 18px; padding: 1rem 1.2rem;
-            border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-            display: flex; flex-direction: column;
+        .review-card .badge {
+            display: inline-block; background: #2e9e6b; color: white;
+            font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.6rem;
+            border-radius: 12px; letter-spacing: 0.5px; margin-bottom: 0.6rem;
         }
-        .dash-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 28px rgba(0,0,0,0.09);
-            border-color: rgba(44,110,158,0.25);
+        .review-card strong { color: #0f2b3d; display: block; margin-bottom: 0.4rem; font-size: 1.05rem; }
+        .review-card ul { margin: 0.5rem 0 0 1.1rem; font-size: 0.88rem; color: #2c3e50; line-height: 1.7; }
+        .review-card .meta { font-size: 0.8rem; color: #5b6e8c; margin-top: 0.6rem; }
+        .review-card .status-pending {
+            display: inline-block; font-size: 0.75rem; font-weight: 600;
+            color: #8a6d00; background: #fff8e6; padding: 0.2rem 0.6rem;
+            border-radius: 10px; margin-top: 0.5rem;
         }
-        .dash-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
-        .dash-name { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; color: #0f2b3d; }
-        .dash-meta { font-size: 0.75rem; color: #5b6e8c; margin-bottom: 0.6rem; line-height: 1.3; }
-        .dash-links-group { display: flex; gap: 0.6rem; align-items: center; margin-top: auto; }
-        .dash-link {
-            font-size: 0.8rem; font-weight: 500; color: #2c6e9e; text-decoration: none;
-            border-bottom: 1px solid #d0dae8; transition: color 0.2s, border-color 0.2s;
-        }
-        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
 
-        .os-components {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem;
+        /* Four-layer progression */
+        .layer-path {
+            display: flex; align-items: center; gap: 0.5rem;
+            margin: 0.5rem 0 1.2rem; flex-wrap: wrap;
+            font-size: 0.82rem; color: #2c6e9e; font-weight: 500;
         }
+        .layer-path .step {
+            background: #eef4fc; padding: 0.3rem 0.8rem; border-radius: 14px;
+        }
+        .layer-path .arrow { color: #a0b4cc; font-size: 0.9rem; }
+
+        .os-components { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem; }
         @media (max-width: 900px) { .os-components { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .os-components { grid-template-columns: 1fr; } }
         .os-card {
-            background: #f8faff; border-radius: 20px; padding: 1.2rem 1.3rem;
-            border-left: 4px solid #2c6e9e; font-size: 0.88rem; line-height: 1.55;
+            border-radius: 20px; padding: 1.2rem 1.3rem;
+            font-size: 0.88rem; line-height: 1.55;
+            position: relative;
+            border-left: 4px solid;
+        }
+        .os-card.layer-1 { background: #eef6ff; border-left-color: #1f5f9e; }
+        .os-card.layer-2 { background: #f0f5fc; border-left-color: #2c6e9e; }
+        .os-card.layer-3 { background: #f3f6fb; border-left-color: #4a8ec2; }
+        .os-card.layer-4 { background: #f6f8fb; border-left-color: #6ba3cd; }
+        .os-card .layer-badge {
+            position: absolute; top: 0.8rem; right: 1rem;
+            font-size: 0.65rem; font-weight: 700; color: #2c6e9e;
+            background: rgba(255,255,255,0.7); padding: 0.1rem 0.45rem;
+            border-radius: 10px; letter-spacing: 0.5px;
         }
         .os-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .os-card .sub { font-size: 0.78rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
 
-        .norms-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 1.5rem;
+        /* Engine card (MRSD) */
+        .engine-card {
+            background: linear-gradient(135deg, #f8faff 0%, #eef4fc 100%);
+            border-radius: 20px; padding: 1.2rem 1.5rem;
+            border-left: 5px solid #0f2b3d;
+            font-size: 0.88rem; line-height: 1.55;
+            margin-top: 0.5rem;
         }
+        .engine-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .engine-card .sub { font-size: 0.78rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
+
+        .norms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 1.5rem; }
         @media (max-width: 900px) { .norms-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .norms-grid { grid-template-columns: 1fr; } }
         .norm-card {
@@ -179,113 +171,464 @@
         .norm-card strong { color: #0f2b3d; display: block; margin-bottom: 0.2rem; font-size: 0.9rem; }
         .norm-card .sub { font-size: 0.75rem; color: #5b6e8c; display: block; margin-top: 0.1rem; }
 
-        .discipline-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem;
+        .demotion-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem; }
+        @media (max-width: 900px) { .demotion-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .demotion-grid { grid-template-columns: 1fr; } }
+        .demotion-card {
+            background: linear-gradient(135deg, #f8faff 0%, #eef4fc 100%);
+            border-radius: 20px; padding: 1.3rem 1.5rem;
+            border-left: 5px solid #2c6e9e; font-size: 0.88rem; line-height: 1.6;
         }
+        .demotion-card strong { color: #0f2b3d; display: block; margin-bottom: 0.4rem; font-size: 1rem; }
+        .demotion-card .arrow { font-size: 0.8rem; color: #5b6e8c; margin: 0.3rem 0; }
+
+        .discipline-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1rem 0 1.5rem; }
         @media (max-width: 900px) { .discipline-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 500px) { .discipline-grid { grid-template-columns: 1fr; } }
         .disc-card {
             background: #f8faff; border-radius: 20px; padding: 1.2rem 1.3rem;
             border-left: 4px solid #2c6e9e; font-size: 0.88rem; line-height: 1.55;
-            position: relative;
         }
         .disc-card strong { color: #0f2b3d; display: block; margin-bottom: 0.3rem; font-size: 0.95rem; }
         .disc-card .sub { font-size: 0.8rem; color: #5b6e8c; display: block; margin-top: 0.2rem; }
-        .disc-card .doi-links {
-            margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.3rem;
-        }
+        .disc-card .doi-links { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
         .disc-card .doi-links a {
             font-size: 0.7rem; background: #e8f0f8; padding: 0.15rem 0.5rem;
             border-radius: 12px; text-decoration: none; color: #1f4a6e;
             font-weight: 500; transition: background 0.2s;
         }
         .disc-card .doi-links a:hover { background: #d0e0f0; }
-
-        .highlight-box {
-            background: #f8faff; border-left: 4px solid #2c6e9e; padding: 0.9rem 1.2rem;
-            border-radius: 16px; font-size: 0.86rem; margin-top: 1rem;
-            color: #1e3a5f; line-height: 1.6;
+        .disc-card .doi-links a.reviewed {
+            background: #2e9e6b; color: white;
         }
 
-        .publication-list { font-size: 0.85rem; line-height: 1.8; color: #2c3e50; }
-        .publication-list strong { color: #0f2b3d; }
-        .publication-list a {
-            color: #2c6e9e; text-decoration: none; font-weight: 500;
-            border-bottom: 1px solid transparent; transition: border 0.2s, color 0.2s;
+        .identity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.5rem 0; }
+        @media (max-width: 900px) { .identity-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .identity-grid { grid-template-columns: 1fr; } }
+        .identity-card {
+            background: #f8faff; border-radius: 20px; padding: 1.2rem 1.5rem;
+            border: 1px solid rgba(0,0,0,0.04); text-decoration: none;
+            color: inherit; transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; align-items: center; gap: 1rem;
         }
-        .publication-list a:hover { border-bottom-color: #2c6e9e; color: #1f4a6e; }
+        .identity-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .identity-icon { font-size: 2rem; flex-shrink: 0; }
+        .identity-text strong { display: block; font-size: 0.95rem; color: #0f2b3d; margin-bottom: 0.2rem; }
+        .identity-text span { font-size: 0.8rem; color: #5b6e8c; }
+
+        .dashboards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.9rem; margin-bottom: 1.5rem; }
+        @media (max-width: 1000px) { .dashboards-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 500px) { .dashboards-grid { grid-template-columns: 1fr; } }
+        .dash-card {
+            background: white; border-radius: 18px; padding: 1rem 1.2rem;
+            border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+            display: flex; flex-direction: column;
+        }
+        .dash-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.09); border-color: rgba(44,110,158,0.25); }
+        .dash-icon { font-size: 1.6rem; margin-bottom: 0.4rem; }
+        .dash-name { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; color: #0f2b3d; }
+        .dash-meta { font-size: 0.75rem; color: #5b6e8c; margin-bottom: 0.6rem; line-height: 1.3; }
+        .dash-links-group { display: flex; gap: 0.6rem; align-items: center; margin-top: auto; }
+        .dash-link { font-size: 0.8rem; font-weight: 500; color: #2c6e9e; text-decoration: none; border-bottom: 1px solid #d0dae8; transition: color 0.2s, border-color 0.2s; }
+        .dash-link:hover { color: #0f2b3d; border-color: #2c6e9e; }
+
         .pub-category {
-            font-weight: 600; color: #0f2b3d; margin-top: 1rem;
-            margin-bottom: 0.3rem; font-size: 0.9rem;
+            font-weight: 600; color: #0f2b3d; margin-top: 1.4rem;
+            margin-bottom: 0.4rem; font-size: 0.95rem;
+            padding-bottom: 0.3rem; border-bottom: 1px solid #e2e8f0;
         }
+        .pub-category:first-child { margin-top: 0; }
+        .pub-subcategory {
+            font-weight: 600; color: #2c6e9e; margin-top: 1rem;
+            margin-bottom: 0.3rem; font-size: 0.85rem;
+            padding-left: 0.3rem;
+        }
+        .pub-items { font-size: 0.85rem; line-height: 1.75; color: #2c3e50; }
+        .pub-items div { margin-bottom: 0.5rem; padding-left: 0.2rem; }
+        .pub-items em { color: #1a2a3f; }
+        .pub-items a { color: #2c6e9e; text-decoration: none; font-weight: 500; border-bottom: 1px solid transparent; transition: border 0.2s; }
+        .pub-items a:hover { border-bottom-color: #2c6e9e; }
+        .status-tag {
+            display: inline-block; font-size: 0.65rem; font-weight: 700;
+            padding: 0.1rem 0.45rem; border-radius: 10px;
+            margin-left: 0.35rem; letter-spacing: 0.3px;
+            vertical-align: middle;
+        }
+        .status-tag.reviewed { background: #2e9e6b; color: white; }
+        .status-tag.pending { background: #fff3cd; color: #8a6d00; }
+        .status-tag.preprint { background: #e8f0f8; color: #5b6e8c; }
 
-        footer {
-            text-align: center; font-size: 0.78rem; color: #6c7a91;
-            margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;
-        }
+        footer { text-align: center; font-size: 0.78rem; color: #6c7a91; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; }
     </style>
 </head>
 <body>
+
+<nav class="navbar">
+    <div class="navbar-brand">Shuiping Tang</div>
+    <div class="navbar-links">
+        <a href="#about"><span class="lang-en">About</span><span class="lang-zh">简介</span></a>
+        <a href="#components"><span class="lang-en">Components</span><span class="lang-zh">组件</span></a>
+        <a href="#demotion"><span class="lang-en">Demotion</span><span class="lang-zh">范式降维</span></a>
+        <a href="#evidence"><span class="lang-en">Evidence</span><span class="lang-zh">证据</span></a>
+        <a href="#dashboards"><span class="lang-en">Dashboards</span><span class="lang-zh">看板</span></a>
+        <a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文</span></a>
+        <a href="#links"><span class="lang-en">Links</span><span class="lang-zh">链接</span></a>
+    </div>
+    <div class="lang-bar">
+        <a data-lang="en" class="active" onclick="switchLang('en')">English</a>
+        <a data-lang="zh" onclick="switchLang('zh')">中文</a>
+    </div>
+</nav>
+
 <div class="container">
 
-    <div class="lang-bar">
-        <a class="active" onclick="switchLang('en')">English</a>
-        <a onclick="switchLang('zh')">中文</a>
-    </div>
-
-    <!-- 个人简介 -->
-    <div class="card">
+    <div class="card" id="about">
         <div class="name lang-en">Shuiping Tang</div>
         <div class="name lang-zh">汤水平 (Shuiping Tang)</div>
         <div class="name-zh-note lang-en">(汤水平)</div>
         <div class="affiliation lang-en">Chinese Independent Researcher · Scientific Discovery Operating System</div>
         <div class="affiliation lang-zh">中国独立研究者 · 科学发现操作系统</div>
+
         <div class="bio lang-en">
-            My research has established a <strong>Scientific Discovery Operating System</strong>—a proceduralized, cross-disciplinary, impersonal framework for extracting reliable laws from objective data. This system comprises four components: the <strong>Factor Hierarchy Law</strong> (ontology: regime factors vs execution factors, 3 axioms), the <strong>Testability Principle</strong> (epistemology: beyond falsifiability, independent standard), the <strong>Testability Norms</strong> (procedure: 6 functional dimensions, eternal with replaceable tools), and the <strong>MRSD Algorithm</strong> (implementation: input data → output regime matrices). Independently verified across <strong>six independent disciplines</strong>—finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics—documented in <strong>26 preprints (2026)</strong>, all permanently archived on Zenodo with full open data and code, and indexed on SSRN. The system has completed paradigm demotion of century-old axioms across four disciplines: universality (statistical physics), gauge field theory (particle physics), periodic law (chemistry), and the nuclear shell model (nuclear physics).
+            My research has established a <strong>Scientific Discovery Operating System</strong>—a proceduralized, cross-disciplinary, impersonal framework for extracting reliable laws from objective data. Comprises four components: the <strong>Information Isomorphism Law</strong> (epistemological foundation), the <strong>Factor Hierarchy Law</strong> (ontology: regime vs execution factors, 3 axioms), the <strong>Testability Principle</strong> (epistemological standard: beyond falsifiability), and the <strong>Testability Norms</strong> (methodology: 6 functional dimensions, stable with replaceable tools). Deployed across <strong>six disciplines</strong>—finance, astronomy, statistical physics, particle physics, chemistry, and nuclear physics. Documented in <strong>48 preprints (2026)</strong>, all permanently archived on Zenodo with full open data and code, and indexed on SSRN. The system has achieved paradigm demotion of foundational axioms across six disciplines: universality (statistical physics), gauge field theory (particle physics), periodic law (chemistry), the nuclear shell model (nuclear physics), the standard planetary-radius assumption (astronomy), and interest rate parity (finance).
         </div>
         <div class="bio lang-zh">
-            我的研究构建了一套<strong>科学发现操作系统</strong>——一个程序化的、跨学科普适的、非人格化的框架，用于从客观数据中提取可靠规律。该系统包含四个组件：<strong>因子层级定律</strong>（本体论：规则因子 vs 执行因子，三条公理）、<strong>可检验性原则</strong>（认识论：超越可证伪性，独立标准）、<strong>可检验性规范</strong>（操作程序：六个功能维度，功能永恒工具可变）和<strong>MRSD算法</strong>（实现引擎：输入数据→输出体制矩阵）。已在<strong>六大独立学科</strong>中获得独立验证——金融学、天文学、统计物理、粒子物理、化学与核物理，成果记录于<strong>26篇预印本（2026）</strong>，全部永久存档于Zenodo并附带完整开放数据和代码，同时收录于SSRN。该操作系统已在四个学科中完成了对百年公理的范式降维：普适性（统计物理）、规范场论（粒子物理）、元素周期律（化学）、核壳层模型（核物理）。
+            我的研究构建了一套<strong>科学发现操作系统</strong>——一个程序化的、跨学科普适的、非人格化的框架，用于从客观数据中提取可靠规律。该系统包含四个组件：<strong>信息同构定律</strong>（认识论根基）、<strong>因子层级定律</strong>（本体论：规则因子与执行因子，三条公理）、<strong>可检验性原则</strong>（认识论标准：超越可证伪性）和<strong>可检验性规范</strong>（方法论：六个功能维度，功能稳定工具可变）。已在<strong>六大独立学科</strong>中部署——金融学、天文学、统计物理、粒子物理、化学与核物理。成果记录于<strong>48篇预印本（2026）</strong>，全部永久存档于Zenodo并附带完整开放数据和代码，同时收录于SSRN。该操作系统已在六个学科中完成了对基础公理的范式降维：普适性（统计物理）、规范场论（粒子物理）、元素周期律（化学）、核壳层模型（核物理）、标准行星半径假设（天文学）、利率平价（金融学）。
+        </div>
+
+        <div class="kpi-row">
+            <div class="kpi">
+                <div class="kpi-num">48</div>
+                <div class="kpi-label lang-en">Preprints (2026)</div>
+                <div class="kpi-label lang-zh">预印本（2026）</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-num">6</div>
+                <div class="kpi-label lang-en">Disciplines Deployed</div>
+                <div class="kpi-label lang-zh">已部署学科</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-num">6</div>
+                <div class="kpi-label lang-en">Axiom Demotions</div>
+                <div class="kpi-label lang-zh">公理范式降维</div>
+            </div>
+            <div class="kpi">
+                <div class="kpi-num">9</div>
+                <div class="kpi-label lang-en">Research Categories</div>
+                <div class="kpi-label lang-zh">研究类别</div>
+            </div>
         </div>
     </div>
 
-    <!-- 学术身份标识 -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">🔗 <span class="lang-en">Academic Identity &amp; Verified Links</span><span class="lang-zh">学术身份与认证链接</span></div>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">These links serve as the authoritative source for my academic identity and published works.</p>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-zh">以下链接是我学术身份和已发表作品的核心认证来源。</p>
-        <div class="identity-grid">
-            <a href="https://orcid.org/0009-0007-1209-981X" target="_blank" rel="me" class="identity-card">
-                <div class="identity-icon">🔗</div>
-                <div class="identity-text"><strong>ORCID</strong><span>0009-0007-1209-981X</span></div>
-            </a>
-            <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="me" class="identity-card">
-                <div class="identity-icon">📦</div>
-                <div class="identity-text"><strong>Zenodo</strong><span>All 26 Preprints</span></div>
-            </a>
-            <a href="https://ssrn.com/author=11510488" target="_blank" rel="me" class="identity-card">
-                <div class="identity-icon">📄</div>
-                <div class="identity-text"><strong>SSRN</strong><span>Author 11510488</span></div>
-            </a>
-            <a href="https://github.com/shuipingtang" target="_blank" rel="me" class="identity-card">
-                <div class="identity-icon">🐙</div>
-                <div class="identity-text"><strong>GitHub</strong><span>shuipingtang</span></div>
-            </a>
-            <a href="https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ" target="_blank" rel="me" class="identity-card">
-                <div class="identity-icon">🎓</div>
-                <div class="identity-text"><strong>Google Scholar</strong><span>6vpOvwMAAAAJ</span></div>
-            </a>
-            <a href="mailto:tangshuiping@qq.com" class="identity-card">
-                <div class="identity-icon">📧</div>
-                <div class="identity-text"><strong>Email</strong><span>tangshuiping@qq.com</span></div>
-            </a>
+    <!-- External Peer Review Status -->
+    <div class="review-card">
+        <span class="badge lang-en">EXTERNAL PEER REVIEW · PASSED</span>
+        <span class="badge lang-zh">外部同行评审 · 已通过</span>
+        <strong class="lang-en">Paper #1 (Dual Anchors, 2026a) — invited by a finance journal</strong>
+        <strong class="lang-zh">第1篇论文（双锚定价，2026a）—— 受金融学期刊邀请投稿</strong>
+        <ul class="lang-en">
+            <li>External peer review returned: <strong>July 22, 2026</strong></li>
+            <li>Reviewer conclusion: <strong>"Acceptable for publication with technical editing only"</strong></li>
+            <li>Current status: awaiting editorial board / committee decision</li>
+        </ul>
+        <ul class="lang-zh">
+            <li>外部同行评审返回日期：<strong>2026年7月22日</strong></li>
+            <li>审稿人结论：<strong>“除技术加工外，无须修改即可刊登”</strong></li>
+            <li>当前状态：等待编委会最终决定</li>
+        </ul>
+        <div class="status-pending lang-en">⏳ Formal acceptance pending editorial board decision</div>
+        <div class="status-pending lang-zh">⏳ 正式录用尚待编委会决定</div>
+        <div class="meta lang-en">This is the first external validation of the framework. Journal name withheld pending formal publication. Independent replication of the remaining findings is invited.</div>
+        <div class="meta lang-zh">这是该框架的首次外部验证。期刊名称待正式发表后披露。诚邀对剩余发现进行独立复现。</div>
+    </div>
+
+    <!-- Core Components -->
+    <div class="card" id="components">
+        <div class="section-title">🧩 <span class="lang-en">Core Components · Scientific Discovery Operating System</span><span class="lang-zh">核心组件 · 科学发现操作系统</span></div>
+        <p class="section-sub lang-en">Four components in a four-layer progression: <strong>epistemological foundation → ontology → epistemological standard → methodology</strong>. The minimal core is two laws, one principle, and one norm.</p>
+        <p class="section-sub lang-zh">四个组件呈四层递进：<strong>认识论根基 → 本体论 → 认识论标准 → 方法论</strong>。最小核心为两律一原则一规范。</p>
+
+        <div class="layer-path">
+            <span class="step lang-en">Epistemological Foundation</span><span class="step lang-zh">认识论根基</span>
+            <span class="arrow">→</span>
+            <span class="step lang-en">Ontology</span><span class="step lang-zh">本体论</span>
+            <span class="arrow">→</span>
+            <span class="step lang-en">Epistemological Standard</span><span class="step lang-zh">认识论标准</span>
+            <span class="arrow">→</span>
+            <span class="step lang-en">Methodology</span><span class="step lang-zh">方法论</span>
+        </div>
+
+        <div class="os-components">
+            <div class="os-card layer-1">
+                <span class="layer-badge">L1</span>
+                <strong>📡 <span class="lang-en">Information Isomorphism Law</span><span class="lang-zh">信息同构定律</span></strong>
+                <span class="lang-en">Epistemological foundation · Statistical structures carry information about regime structures</span>
+                <span class="lang-zh">认识论根基 · 统计结构承载体制结构信息</span>
+                <span class="sub lang-en">Why knowable</span><span class="sub lang-zh">为什么可知</span>
+            </div>
+            <div class="os-card layer-2">
+                <span class="layer-badge">L2</span>
+                <strong>📐 <span class="lang-en">Factor Hierarchy Law</span><span class="lang-zh">因子层级定律</span></strong>
+                <span class="lang-en">Ontology · Regime vs execution factors · 3 axioms</span>
+                <span class="lang-zh">本体论 · 规则因子与执行因子 · 三条公理</span>
+                <span class="sub lang-en">What the world is</span><span class="sub lang-zh">世界如何组织</span>
+            </div>
+            <div class="os-card layer-3">
+                <span class="layer-badge">L3</span>
+                <strong>⚖️ <span class="lang-en">Testability Principle</span><span class="lang-zh">可检验性原则</span></strong>
+                <span class="lang-en">Epistemological standard · Beyond falsifiability · Independent standard</span>
+                <span class="lang-zh">认识论标准 · 超越可证伪性 · 独立标准</span>
+                <span class="sub lang-en">What counts as reliable</span><span class="sub lang-zh">怎样才算可靠</span>
+            </div>
+            <div class="os-card layer-4">
+                <span class="layer-badge">L4</span>
+                <strong>🔬 <span class="lang-en">Testability Norms</span><span class="lang-zh">可检验性规范</span></strong>
+                <span class="lang-en">Methodology · 6 functional dimensions · Stable, tools replaceable</span>
+                <span class="lang-zh">方法论 · 六功能维度 · 功能稳定，工具可变</span>
+                <span class="sub lang-en">How to verify</span><span class="sub lang-zh">怎样操作才能实现</span>
+            </div>
+        </div>
+
+        <div class="engine-card">
+            <strong>⚙️ <span class="lang-en">MRSD Algorithm · Engineering Implementation Engine</span><span class="lang-zh">MRSD算法 · 工程实现引擎</span></strong>
+            <span class="lang-en">Tool-layer implementation instance · Input data → Output regime matrices. Validated on 2D Ising exact solution (bias strictly zero), 3D Ising NP-complete system, and across six disciplines. It is not a constituent component of the system but a replaceable implementation of the Testability Norms.</span>
+            <span class="lang-zh">工具层实现实例 · 输入数据 → 输出体制矩阵。已在 2D Ising 精确解（偏差严格为零）、3D Ising NP完全系统及六大独立学科中验证。非体系构成部件——它是可检验性规范的一种可替换实现。</span>
         </div>
     </div>
 
-    <!-- 每日资产估值看板 -->
     <div class="card">
-        <div class="section-title" style="margin-top:0;">📊 <span class="lang-en">Daily Asset Valuation Dashboards</span><span class="lang-zh">每日资产估值看板</span></div>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-en">Generated by dual-anchor models and updated <strong>daily</strong>.</p>
-        <p style="font-size:0.88rem;color:#5b6e8c;margin-bottom:1.2rem;" class="lang-zh">由双锚模型生成，<strong>每日自动更新</strong>。</p>
+        <div class="section-title">🔬 <span class="lang-en">Testability Norms · Six Functional Dimensions</span><span class="lang-zh">可检验性规范 · 六个功能维度</span></div>
+        <p class="section-sub lang-en"><strong>Core commitment:</strong> Functional dimensions are stable; implementation tools are replaceable. (The earlier formulation "eternal" was revised to "stable" to reflect the open possibility that the number of functional dimensions may itself be expanded or streamlined.)</p>
+        <p class="section-sub lang-zh"><strong>核心承诺：</strong>功能维度稳定，实现工具可变。（早期表述“永恒”已修订为“稳定”，以反映功能维度的数量本身也可能在未来被扩展或精简的开放性。）</p>
+        <div class="norms-grid">
+            <div class="norm-card">
+                <strong>🔍 <span class="lang-en">1. Search Completeness</span><span class="lang-zh">搜索完整性</span></strong>
+                <span class="lang-en">All candidate factors must be systematically traversed.</span>
+                <span class="lang-zh">所有候选因子必须被系统性遍历。</span>
+                <span class="sub lang-en">Core · C1</span><span class="sub lang-zh">核心 · C1</span>
+            </div>
+            <div class="norm-card">
+                <strong>⚡ <span class="lang-en">2. Modulation Relationship</span><span class="lang-zh">调节关系</span></strong>
+                <span class="lang-en">Test whether regime factors modulate execution factor coefficients.</span>
+                <span class="lang-zh">检验规则因子是否调节执行因子暴露系数。</span>
+                <span class="sub lang-en">Core · C2</span><span class="sub lang-zh">核心 · C2</span>
+            </div>
+            <div class="norm-card">
+                <strong>📐 <span class="lang-en">3. Structural Break</span><span class="lang-zh">结构断点</span></strong>
+                <span class="lang-en">At least two independent tools must confirm structural differences.</span>
+                <span class="lang-zh">至少两种独立工具确认结构性差异。</span>
+                <span class="sub lang-en">Core · C3</span><span class="sub lang-zh">核心 · C3</span>
+            </div>
+            <div class="norm-card">
+                <strong>⏱️ <span class="lang-en">4. Causal Direction</span><span class="lang-zh">因果方向</span></strong>
+                <span class="lang-en">Test whether regime factors lead execution factors.</span>
+                <span class="lang-zh">检验规则因子是否领先于执行因子。</span>
+                <span class="sub lang-en">Core · C4</span><span class="sub lang-zh">核心 · C4</span>
+            </div>
+            <div class="norm-card">
+                <strong>📋 <span class="lang-en">5. Problem Completeness</span><span class="lang-zh">问题完整性</span></strong>
+                <span class="lang-en">Research questions fully covered across all dimensions.</span>
+                <span class="lang-zh">研究问题在全部维度上被完整覆盖。</span>
+                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
+            </div>
+            <div class="norm-card">
+                <strong>🔄 <span class="lang-en">6. Process Closure</span><span class="lang-zh">流程闭环性</span></strong>
+                <span class="lang-en">Complete Plan-Do-Check-Act cycle with negative controls.</span>
+                <span class="lang-zh">完整闭环，强制执行阴性对照。</span>
+                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="demotion">
+        <div class="section-title">⚡ <span class="lang-en">Paradigm Demotion of Foundational Axioms</span><span class="lang-zh">基础公理的范式降维</span></div>
+        <p class="section-sub lang-en">Six disciplines where the Factor Hierarchy Law identifies the deeper regime structure underlying established foundational laws.</p>
+        <p class="section-sub lang-zh">因子层级定律在六个学科中揭示出既有基础定律背后的更深层体制结构。</p>
+        <div class="demotion-grid">
+            <div class="demotion-card">
+                <strong>📊 <span class="lang-en">Statistical Physics</span><span class="lang-zh">统计物理</span></strong>
+                <div class="arrow lang-en">Universality → Regime Boundaries</div>
+                <div class="arrow lang-zh">普适性 → 体制边界</div>
+                <span class="lang-en">2D Ising exact duality (bias strictly zero); 3D Ising double-peak splitting on NP-complete system; tool-dependence theorem; χ-blindness. Regime boundaries are more fundamental than universality classes.</span>
+                <span class="lang-zh">2D Ising 精确对偶（偏差严格为零）；3D Ising NP完全系统上的双峰分裂；工具依赖定理；χ盲区。体制边界比普适类更基本。</span>
+                <span class="sub">Tang (2026k–2026m)</span>
+            </div>
+            <div class="demotion-card">
+                <strong>🧲 <span class="lang-en">Particle Physics</span><span class="lang-zh">粒子物理</span></strong>
+                <div class="arrow lang-en">Gauge Field Theory → Regime Boundaries</div>
+                <div class="arrow lang-zh">规范场论 → 体制边界</div>
+                <span class="lang-en">Charm/bottom thresholds locked (10⁻⁴ GeV); strange region and precursor cascade discovered; SU(3)×SU(2)×U(1) derived; transition-zone width theorem. Gauge field theory is the group-theoretic expression of regime boundaries.</span>
+                <span class="lang-zh">粲/底夸克阈值锁定（10⁻⁴ GeV）；奇异区与前导体级联发现；SU(3)×SU(2)×U(1) 推导；过渡带宽度定理。规范场论是体制边界的群论表达。</span>
+                <span class="sub">Tang (2026n–2026q)</span>
+            </div>
+            <div class="demotion-card">
+                <strong>🧪 <span class="lang-en">Chemistry</span><span class="lang-zh">化学</span></strong>
+                <div class="arrow lang-en">Periodic Law → Regime Switching</div>
+                <div class="arrow lang-zh">周期律 → 体制切换</div>
+                <span class="lang-en">Ca-La Singularity Theorem (F_f/F_d ≈ (3/2)², F(l) ∝ l²); Regime Periodic Table (118 elements, 0 exceptions); s, p, d, f inevitability via SO(3); predictions for elements 119/120.</span>
+                <span class="lang-zh">钙-镧奇异性定理（F_f/F_d ≈ (3/2)²，F(l) ∝ l²）；体制周期表（118元素，0例外）；通过SO(3)推导s、p、d、f必然性；119/120号元素预测。</span>
+                <span class="sub">Tang (2026s–2026u)</span>
+            </div>
+            <div class="demotion-card">
+                <strong>⚛️ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
+                <div class="arrow lang-en">Shell Model + Liquid Drop + Independent-Particle Axiom → Regime-Switch Network</div>
+                <div class="arrow lang-zh">壳模型 + 液滴模型 + 独立粒子公理 → 体制切换网络</div>
+                <span class="lang-en">η > 10⁶ criterion; Magic Number Shift Theorem; N=14 rupture; transition-zone width theorem; cascade skeleton; shell model coverage 15%; QCTI ρ = −0.95; triple demotion of nuclear shell.</span>
+                <span class="lang-zh">η > 10⁶ 判据；幻数偏移定理；N=14 断裂；过渡带宽度定理；级联骨架；壳模型覆盖率15%；QCTI ρ = −0.95；核壳层三重降维。</span>
+                <span class="sub">Tang (2026v–2026y, 2026aa–2026ab)</span>
+            </div>
+            <div class="demotion-card">
+                <strong>🔭 <span class="lang-en">Astronomy</span><span class="lang-zh">天文学</span></strong>
+                <div class="arrow lang-en">Standard Planetary Radius → Regime-Dependent Relational Quantity</div>
+                <div class="arrow lang-zh">标准行星半径 → 体制依赖的关系量</div>
+                <span class="lang-en">Transit depth is a relational quantity, not an intrinsic planetary property; the facility is a proxy regime factor; Tang Break at 4762 K verified across five independent dimensions.</span>
+                <span class="lang-zh">凌星深度是关系量，而非行星内禀属性；设施是代理规则因子；Tang Break (4762 K) 经五个独立维度验证。</span>
+                <span class="sub">Tang (2026h–2026j)</span>
+            </div>
+            <div class="demotion-card">
+                <strong>💹 <span class="lang-en">Finance</span><span class="lang-zh">金融学</span></strong>
+                <div class="arrow lang-en">Interest Rate Parity + Mundell-Fleming + Triffin → Conditional Approximations</div>
+                <div class="arrow lang-zh">利率平价 + 蒙代尔-弗莱明 + 特里芬 → 条件性近似</div>
+                <span class="lang-en">China-U.S. spread explains R² = 0.315 of bond valuation gap but only R² = 0.0001 of monthly RMB movements; capital controls do not block spread transmission; the spread is a thermometer of reserve currency competition.</span>
+                <span class="lang-zh">中美利差对国债估值差异的解释力 R² = 0.315，但对月度人民币变动的解释力仅 R² = 0.0001；资本管制未阻断利差传导；利差是储备货币竞争的定量温度计。</span>
+                <span class="sub">Tang (2026a–2026f)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="evidence">
+        <div class="section-title">🔬 <span class="lang-en">Cross-Disciplinary Evidence Matrix</span><span class="lang-zh">跨学科证据矩阵</span></div>
+        <p class="section-sub lang-en">48 preprints organized into 9 research categories. Click any DOI badge to open the archived version on Zenodo. A green badge indicates the paper has passed external peer review.</p>
+        <p class="section-sub lang-zh">48篇预印本按9个研究类别组织。点击任意 DOI 徽章即可打开 Zenodo 存档版本。绿色徽章表示该论文已通过外部同行评审。</p>
+        <div class="discipline-grid">
+            <div class="disc-card">
+                <strong>💹 <span class="lang-en">Finance &amp; Asset Pricing</span><span class="lang-zh">金融与资产定价</span></strong>
+                <span class="lang-en">6 papers · China-U.S. yield spread as cross-market regime factor; dual-anchor pricing; regime switch of capital flows</span>
+                <span class="lang-zh">6篇 · 中美利差作为跨市场规则因子；双锚定价；资本流动体制切换</span>
+                <span class="sub">Tang (2026a–2026f)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21091486" target="_blank" class="reviewed">2026a ✓</a>
+                    <a href="https://doi.org/10.5281/zenodo.21096496" target="_blank">2026b</a>
+                    <a href="https://doi.org/10.5281/zenodo.21096549" target="_blank">2026c</a>
+                    <a href="https://doi.org/10.5281/zenodo.21098055" target="_blank">2026d</a>
+                    <a href="https://doi.org/10.5281/zenodo.21099589" target="_blank">2026e</a>
+                    <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">2026f</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>🔭 <span class="lang-en">Astronomy</span><span class="lang-zh">天文学</span></strong>
+                <span class="lang-en">3 papers · Tang Break (4762 K); five-dimensional verification; proxy regime factor; stellar atmosphere self-consistency rupture</span>
+                <span class="lang-zh">3篇 · Tang Break (4762 K)；五个维度验证；代理规则因子；恒星大气自洽性破裂</span>
+                <span class="sub">Tang (2026h–2026j)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21105475" target="_blank">2026h</a>
+                    <a href="https://doi.org/10.5281/zenodo.21127665" target="_blank">2026i</a>
+                    <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">2026j</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>📊 <span class="lang-en">Statistical Physics</span><span class="lang-zh">统计物理</span></strong>
+                <span class="lang-en">3 papers · 2D Ising duality; 3D double-peak splitting; reduction of universality</span>
+                <span class="lang-zh">3篇 · 2D Ising 对偶；3D 双峰分裂；普适性降维</span>
+                <span class="sub">Tang (2026k–2026m)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21154577" target="_blank">2026k</a>
+                    <a href="https://doi.org/10.5281/zenodo.21257777" target="_blank">2026l</a>
+                    <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">2026m</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>🧲 <span class="lang-en">Particle Physics</span><span class="lang-zh">粒子物理</span></strong>
+                <span class="lang-en">4 papers · Charm/bottom thresholds; precursor cascade; gauge group structure theorem; gauge field theory demotion</span>
+                <span class="lang-zh">4篇 · 粲/底夸克阈值；前导体级联；规范群结构定理；规范场论降维</span>
+                <span class="sub">Tang (2026n–2026q)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21276887" target="_blank">2026n</a>
+                    <a href="https://doi.org/10.5281/zenodo.21277300" target="_blank">2026o</a>
+                    <a href="https://doi.org/10.5281/zenodo.21291670" target="_blank">2026p</a>
+                    <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">2026q</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>🧪 <span class="lang-en">Chemistry</span><span class="lang-zh">化学</span></strong>
+                <span class="lang-en">3 papers · Ca-La Singularity Theorem; Regime Periodic Table; predictions for elements 119/120; periodic law demotion</span>
+                <span class="lang-zh">3篇 · 钙-镧奇异性定理；体制周期表；119/120号元素预测；周期律降维</span>
+                <span class="sub">Tang (2026s–2026u)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21403322" target="_blank">2026s</a>
+                    <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">2026t</a>
+                    <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">2026u</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>⚛️ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
+                <span class="lang-en">6 papers · η>10⁶ criterion; Magic Number Shift Theorem; N=14 rupture; transition-zone width theorem; cascade skeleton; triple demotion; Regime Nuclide Map I &amp; II</span>
+                <span class="lang-zh">6篇 · η>10⁶ 判据；幻数偏移定理；N=14 断裂；过渡带宽度定理；级联骨架；三重降维；体制核素图 I &amp; II</span>
+                <span class="sub">Tang (2026v–2026y, 2026aa–2026ab)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">2026v</a>
+                    <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">2026w</a>
+                    <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">2026x</a>
+                    <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">2026y</a>
+                    <a href="https://doi.org/10.5281/zenodo.21896164" target="_blank">2026aa</a>
+                    <a href="https://doi.org/10.5281/zenodo.21898979" target="_blank">2026ab</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>📚 <span class="lang-en">Philosophy of Science &amp; Epistemology</span><span class="lang-zh">科学哲学与认识论</span></strong>
+                <span class="lang-en">6 papers · Law of Meta-Laws; Information Isomorphism Law; Information Isomorphism Epistemology; Third-Person Epistemology; Isomorphic Reading; Factor Hierarchy System</span>
+                <span class="lang-zh">6篇 · 元规律的规律；信息同构定律；信息同构认识论；第三人称认识论；同构读取；因子层级体系</span>
+                <span class="sub">Tang (2026r, 2026ac–2026ae, 2026au, 2026av)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
+                    <a href="https://doi.org/10.5281/zenodo.21899364" target="_blank">2026ac</a>
+                    <a href="https://doi.org/10.5281/zenodo.21899673" target="_blank">2026ad</a>
+                    <a href="https://doi.org/10.5281/zenodo.21900178" target="_blank">2026ae</a>
+                    <a href="https://doi.org/10.5281/zenodo.22704136" target="_blank">2026au</a>
+                    <a href="https://doi.org/10.5281/zenodo.22705479" target="_blank">2026av</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>📐 <span class="lang-en">Methodology, Mathematical Statistics &amp; Statistical Theory</span><span class="lang-zh">方法论、数理统计与统计理论</span></strong>
+                <span class="lang-en">16 papers · Testability framework (2026g) + three mathematical series: Switch Measure Theory; Factor Hierarchy Law mathematization; Information Isomorphism Law mathematization</span>
+                <span class="lang-zh">16篇 · 可检验性框架（2026g）+ 三个数学系列：切换测度理论；因子层级定律数学化；信息同构定律数学化</span>
+                <span class="sub">Tang (2026g, 2026af–2026at)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
+                    <a href="https://doi.org/10.5281/zenodo.22141579" target="_blank">2026af</a>
+                    <a href="https://doi.org/10.5281/zenodo.22198026" target="_blank">2026ag</a>
+                    <a href="https://doi.org/10.5281/zenodo.22201821" target="_blank">2026ah</a>
+                    <a href="https://doi.org/10.5281/zenodo.22204349" target="_blank">2026ai</a>
+                    <a href="https://doi.org/10.5281/zenodo.22218602" target="_blank">2026aj</a>
+                    <a href="https://doi.org/10.5281/zenodo.22219575" target="_blank">2026ak</a>
+                    <a href="https://doi.org/10.5281/zenodo.22220804" target="_blank">2026al</a>
+                    <a href="https://doi.org/10.5281/zenodo.22636066" target="_blank">2026am</a>
+                    <a href="https://doi.org/10.5281/zenodo.22640487" target="_blank">2026an</a>
+                    <a href="https://doi.org/10.5281/zenodo.22641112" target="_blank">2026ao</a>
+                    <a href="https://doi.org/10.5281/zenodo.22652253" target="_blank">2026ap</a>
+                    <a href="https://doi.org/10.5281/zenodo.22699463" target="_blank">2026aq</a>
+                    <a href="https://doi.org/10.5281/zenodo.22700244" target="_blank">2026ar</a>
+                    <a href="https://doi.org/10.5281/zenodo.22700677" target="_blank">2026as</a>
+                    <a href="https://doi.org/10.5281/zenodo.22702855" target="_blank">2026at</a>
+                </div>
+            </div>
+            <div class="disc-card">
+                <strong>⚙️ <span class="lang-en">Engineering Specification</span><span class="lang-zh">工程规范</span></strong>
+                <span class="lang-en">1 paper · Technical specification with MRSD formalization, audit engine architecture, and tool-layer replaceability principle</span>
+                <span class="lang-zh">1篇 · 技术规范，含MRSD形式化、审计引擎架构、工具层可替换性原则</span>
+                <span class="sub">Tang (2026z)</span>
+                <div class="doi-links">
+                    <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">2026z</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id="dashboards">
+        <div class="section-title">📊 <span class="lang-en">Daily Asset Valuation Dashboards</span><span class="lang-zh">每日资产估值看板</span></div>
+        <p class="section-sub lang-en">Generated by dual-anchor models and updated <strong>daily</strong>.</p>
+        <p class="section-sub lang-zh">由双锚模型生成，<strong>每日自动更新</strong>。</p>
         <div class="dashboards-grid">
             <div class="dash-card">
                 <div class="dash-icon">🥇</div>
@@ -311,264 +654,180 @@
             <div class="dash-card">
                 <div class="dash-icon">💵</div>
                 <div class="dash-name lang-en">U.S. Treasury</div><div class="dash-name lang-zh">美国国债</div>
-                <div class="dash-meta lang-en">10Y · 30Y · Term Structure & Spreads</div>
+                <div class="dash-meta lang-en">10Y · 30Y · Term Structure &amp; Spreads</div>
                 <div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构与利差</div>
                 <div class="dash-links-group"><a href="bonds-us_en.html" class="dash-link">EN →</a><a href="bonds-us_cn.html" class="dash-link">中文 →</a></div>
             </div>
         </div>
     </div>
 
-    <!-- 核心组件 -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">🧩 <span class="lang-en">Core Components · Scientific Discovery Operating System</span><span class="lang-zh">核心组件 · 科学发现操作系统</span></div>
-        <div class="os-components">
-            <div class="os-card">
-                <strong>📐 <span class="lang-en">Factor Hierarchy Law</span><span class="lang-zh">因子层级定律</span></strong>
-                <span class="lang-en">Ontology · Regime vs execution factors · 3 axioms</span>
-                <span class="lang-zh">本体论 · 规则因子 vs 执行因子 · 三条公理</span>
-                <span class="sub lang-en">What the world is</span><span class="sub lang-zh">世界如何组织</span>
-            </div>
-            <div class="os-card">
-                <strong>⚖️ <span class="lang-en">Testability Principle</span><span class="lang-zh">可检验性原则</span></strong>
-                <span class="lang-en">Epistemology · Beyond falsifiability · Independent standard</span>
-                <span class="lang-zh">认识论 · 超越可证伪性 · 独立标准</span>
-                <span class="sub lang-en">What counts as reliable</span><span class="sub lang-zh">怎样才算可靠</span>
-            </div>
-            <div class="os-card">
-                <strong>🔬 <span class="lang-en">Testability Norms</span><span class="lang-zh">可检验性规范</span></strong>
-                <span class="lang-en">Procedure · 6 functional dimensions · Eternal, tools replaceable</span>
-                <span class="lang-zh">操作程序 · 六功能维度 · 功能永恒，工具可变</span>
-                <span class="sub lang-en">How to verify</span><span class="sub lang-zh">怎样操作才能实现</span>
-            </div>
-            <div class="os-card">
-                <strong>⚙️ <span class="lang-en">MRSD Algorithm</span><span class="lang-zh">MRSD算法</span></strong>
-                <span class="lang-en">Implementation · Input data → Output regime matrices</span>
-                <span class="lang-zh">实现引擎 · 输入数据 → 输出体制矩阵</span>
-                <span class="sub lang-en">Execution engine</span><span class="sub lang-zh">执行引擎</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 可检验性规范 -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Testability Norms · Six Functional Dimensions</span><span class="lang-zh">可检验性规范 · 六个功能维度</span></div>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en"><strong>Core commitment:</strong> Functional dimensions are eternal; implementation tools are replaceable.</p>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh"><strong>核心承诺：</strong>功能维度永恒，实现工具可变。</p>
-        <div class="norms-grid">
-            <div class="norm-card">
-                <strong>🔍 <span class="lang-en">1. Search Completeness</span><span class="lang-zh">搜索完整性</span></strong>
-                <span class="lang-en">All candidate factors must be systematically traversed.</span>
-                <span class="lang-zh">所有候选因子必须被系统性遍历。</span>
-                <span class="sub lang-en">Core · C1</span><span class="sub lang-zh">核心 · C1</span>
-            </div>
-            <div class="norm-card">
-                <strong>⚡ <span class="lang-en">2. Modulation Relationship</span><span class="lang-zh">调节关系</span></strong>
-                <span class="lang-en">Must test whether regime factors modulate execution factor coefficients.</span>
-                <span class="lang-zh">检验规则因子是否调节执行因子暴露系数。</span>
-                <span class="sub lang-en">Core · C2</span><span class="sub lang-zh">核心 · C2</span>
-            </div>
-            <div class="norm-card">
-                <strong>📐 <span class="lang-en">3. Structural Break</span><span class="lang-zh">结构断点</span></strong>
-                <span class="lang-en">At least two independent tools must confirm structural differences.</span>
-                <span class="lang-zh">至少两种独立工具确认结构性差异。</span>
-                <span class="sub lang-en">Core · C3</span><span class="sub lang-zh">核心 · C3</span>
-            </div>
-            <div class="norm-card">
-                <strong>⏱️ <span class="lang-en">4. Causal Direction</span><span class="lang-zh">因果方向</span></strong>
-                <span class="lang-en">Must test whether regime factors lead execution factors.</span>
-                <span class="lang-zh">检验规则因子是否领先于执行因子。</span>
-                <span class="sub lang-en">Core · C4</span><span class="sub lang-zh">核心 · C4</span>
-            </div>
-            <div class="norm-card">
-                <strong>📋 <span class="lang-en">5. Problem Completeness</span><span class="lang-zh">问题完整性</span></strong>
-                <span class="lang-en">Research questions fully covered across all dimensions.</span>
-                <span class="lang-zh">研究问题在全部维度上被完整覆盖。</span>
-                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
-            </div>
-            <div class="norm-card">
-                <strong>🔄 <span class="lang-en">6. Process Closure</span><span class="lang-zh">流程闭环性</span></strong>
-                <span class="lang-en">Complete Plan-Do-Check-Act cycle with negative controls.</span>
-                <span class="lang-zh">完整闭环，强制执行阴性对照。</span>
-                <span class="sub lang-en">Meta-program · Tool layer</span><span class="sub lang-zh">完整性元程序 · 工具层</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跨学科证据矩阵 -->
-    <div class="card">
-        <div class="section-title" style="margin-top:0;">🔬 <span class="lang-en">Cross-Disciplinary Evidence Matrix</span><span class="lang-zh">跨学科证据矩阵</span></div>
-        <div class="discipline-grid">
-            <div class="disc-card">
-                <strong>💹 <span class="lang-en">Finance</span><span class="lang-zh">金融学</span></strong>
-                <span class="lang-en">6 papers · China-U.S. yield spread as regime factor</span>
-                <span class="lang-zh">6篇 · 中美利差作为规则因子</span>
-                <span class="sub">Tang (2026a–2026f)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21091486" target="_blank">2026a</a>
-                    <a href="https://doi.org/10.5281/zenodo.21096496" target="_blank">2026b</a>
-                    <a href="https://doi.org/10.5281/zenodo.21096549" target="_blank">2026c</a>
-                    <a href="https://doi.org/10.5281/zenodo.21098055" target="_blank">2026d</a>
-                    <a href="https://doi.org/10.5281/zenodo.21099589" target="_blank">2026e</a>
-                    <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">2026f</a>
-                </div>
-            </div>
-            <div class="disc-card">
-                <strong>🔭 <span class="lang-en">Astronomy</span><span class="lang-zh">天文学</span></strong>
-                <span class="lang-en">3 papers · Tang Break (4762 K) · 5 dimensions</span>
-                <span class="lang-zh">3篇 · Tang Break (4762 K) · 五个维度</span>
-                <span class="sub">Tang (2026h–2026j)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21105475" target="_blank">2026h</a>
-                    <a href="https://doi.org/10.5281/zenodo.21127665" target="_blank">2026i</a>
-                    <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">2026j</a>
-                </div>
-            </div>
-            <div class="disc-card">
-                <strong>📊 <span class="lang-en">Statistical Physics</span><span class="lang-zh">统计物理</span></strong>
-                <span class="lang-en">3 papers · Ising duality · Double-peak fission · Universality demotion</span>
-                <span class="lang-zh">3篇 · Ising信息对偶 · 双峰裂变 · 普适性降维</span>
-                <span class="sub">Tang (2026k–2026m)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21154577" target="_blank">2026k</a>
-                    <a href="https://doi.org/10.5281/zenodo.21257777" target="_blank">2026l</a>
-                    <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">2026m</a>
-                </div>
-            </div>
-            <div class="disc-card">
-                <strong>🧲 <span class="lang-en">Particle Physics</span><span class="lang-zh">粒子物理</span></strong>
-                <span class="lang-en">4 papers · Charm/bottom thresholds · Gauge field theory demotion</span>
-                <span class="lang-zh">4篇 · 粲/底夸克阈值 · 规范场论降维</span>
-                <span class="sub">Tang (2026n–2026q)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21276887" target="_blank">2026n</a>
-                    <a href="https://doi.org/10.5281/zenodo.21277300" target="_blank">2026o</a>
-                    <a href="https://doi.org/10.5281/zenodo.21291670" target="_blank">2026p</a>
-                    <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">2026q</a>
-                </div>
-            </div>
-            <div class="disc-card">
-                <strong>🧪 <span class="lang-en">Chemistry</span><span class="lang-zh">化学</span></strong>
-                <span class="lang-en">3 papers · Ca-La Singularity · Regime Periodic Table · Periodic law demotion</span>
-                <span class="lang-zh">3篇 · 钙-镧奇异性定理 · 体制周期表 · 周期律降维</span>
-                <span class="sub">Tang (2026s–2026u)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21403322" target="_blank">2026s</a>
-                    <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">2026t</a>
-                    <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">2026u</a>
-                </div>
-            </div>
-            <div class="disc-card">
-                <strong>⚡ <span class="lang-en">Nuclear Physics</span><span class="lang-zh">核物理</span></strong>
-                <span class="lang-en">4 papers · η>10⁶ criterion · Magic Number Shift · Triple demotion (shell model, liquid drop model, independent-particle-motion axiom) · Quantum-classical hybrid · QCTI index · Regime-factor purity spectrum</span>
-                <span class="lang-zh">4篇 · η>10⁶判据 · 幻数偏移定理 · 三重降维（壳模型、液滴模型、独立粒子运动公理） · 量子-经典混合体 · QCTI指数 · 规则因子纯度谱</span>
-                <span class="sub">Tang (2026v–2026y)</span>
-                <div class="doi-links">
-                    <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">2026v</a>
-                    <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">2026w</a>
-                    <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">2026x</a>
-                    <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">2026y</a>
-                </div>
-            </div>
-        </div>
-        <div class="highlight-box lang-en">
-            📐 <strong>Methodology &amp; System</strong> (3 papers): Tang (2026g) established the Factor Hierarchy Law, Testability Principle, and Testability Norms—the theoretical foundation and epistemological standard of the operating system. Tang (2026r) positioned the system as the first emergent <em>law of meta-laws</em>, unified the four components into a Scientific Discovery Operating System, and established it as the fourth cornerstone of scientific methodology (after Bacon's experimental method, Popper's falsifiability, and the Testability Principle). Tang (2026z) provides the complete mathematical formalization and engineering architecture as a technical specification—defining the MRSD algorithm's input-output protocol, the audit engine's four core modules, and the tool-layer replaceability principle. <span class="sub">Tang (2026g, 2026r, 2026z)</span>
-            <div class="doi-links" style="margin-top:0.4rem;">
-                <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
-                <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
-                <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">2026z</a>
-            </div>
-        </div>
-        <div class="highlight-box lang-zh">
-            📐 <strong>方法论与系统</strong>（3篇）：Tang (2026g) 建立了因子层级定律、可检验性原则与可检验性规范——操作系统的理论基础与认识论标准。Tang (2026r) 将因子层级定律定位为首个涌现型<em>元规律的规律</em>，将四组件统一为科学发现操作系统，确立了科学方法论的第四次奠基（继培根的实验方法、波普尔的可证伪性、可检验性原则之后）。Tang (2026z) 提供了操作系统的完整数学形式化与工程架构技术规范——定义了MRSD算法的输入输出协议、审计引擎的四个核心检验模块、以及工具层可替换性原则。 <span class="sub">Tang (2026g, 2026r, 2026z)</span>
-            <div class="doi-links" style="margin-top:0.4rem;">
-                <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">2026g</a>
-                <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">2026r</a>
-                <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">2026z</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- 完整论文列表 -->
     <div class="card" id="publications">
-        <div class="section-title" style="margin-top:0;">📚 <span class="lang-en">Complete List of Preprints</span><span class="lang-zh">完整预印本列表</span></div>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-en">All 26 preprints (2026) permanently archived on Zenodo with full open data and code. This list is provided for search engine indexing and verification.</p>
-        <p style="font-size:0.86rem;color:#5b6e8c;margin-bottom:1rem;" class="lang-zh">全部26篇预印本（2026）永久存档于Zenodo，附带完整开放数据和代码。此列表供搜索引擎索引和验证使用。</p>
+        <div class="section-title">📚 <span class="lang-en">Complete List of Preprints (48)</span><span class="lang-zh">完整预印本列表（48篇）</span></div>
+        <p class="section-sub lang-en">All 48 preprints (2026) permanently archived on Zenodo with full open data and code; indexed on SSRN. <strong>Paper 2026a has passed external peer review (July 22, 2026)</strong>, awaiting editorial board decision; the remaining 47 are preprints awaiting formal peer review.</p>
+        <p class="section-sub lang-zh">全部48篇预印本（2026）永久存档于Zenodo，附完整开放数据和代码；已收录于SSRN。<strong>其中2026a已通过外部同行评审（2026年7月22日）</strong>，等待编委会决定；其余47篇为预印本，等待正式同行评审。</p>
 
-        <div class="publication-list">
-            <div class="pub-category lang-en">💹 Finance (6 papers)</div>
-            <div class="pub-category lang-zh">💹 金融学（6篇）</div>
-            <div>Tang, S. (2026a). <em>Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing.</em> <a href="https://doi.org/10.5281/zenodo.21091486" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026b). <em>Interest Rates Without an Anchor: Multi-Window Percentiles and the Pricing Logic of the China-U.S. Yield Spread.</em> <a href="https://doi.org/10.5281/zenodo.21096496" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026c). <em>The Unified Field of Spreads: The China-U.S. Yield Spread as a Regime Variable in Global Asset Pricing.</em> <a href="https://doi.org/10.5281/zenodo.21096549" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026d). <em>The Anchor Shift: Reconstructing Global Exchange Rate Determination.</em> <a href="https://doi.org/10.5281/zenodo.21098055" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026e). <em>The Hierarchy of Factors: How Regime Variables Reset Market Pricing (15 Global Equity Markets).</em> <a href="https://doi.org/10.5281/zenodo.21099589" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026f). <em>The Regime Switch of Capital Flows: How the China-U.S. Yield Spread Drives Global Capital Reallocation.</em> <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">💹 Finance &amp; Asset Pricing (6 papers)</div>
+        <div class="pub-category lang-zh">💹 金融与资产定价（6篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026a). <em>Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing—Systematic Evidence Based on Exhaustive Testing with VIF Constraints.</em> <a href="https://doi.org/10.5281/zenodo.21091486" target="_blank">Zenodo</a><span class="status-tag reviewed"><span class="lang-en">✓ EXTERNAL REVIEW PASSED</span><span class="lang-zh">✓ 外部同行评审通过</span></span></div>
+            <div>Tang, S. (2026b). <em>Interest Rates Without an Anchor: Multi-Window Percentiles, Exhaustive Testing, and the Pricing Logic of the China-U.S. Yield Spread.</em> <a href="https://doi.org/10.5281/zenodo.21096496" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026c). <em>The Unified Field of Spreads: The China-U.S. Yield Spread as a Regime Variable in Global Asset Pricing.</em> <a href="https://doi.org/10.5281/zenodo.21096549" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026d). <em>The Anchor Shift: Reconstructing Global Exchange Rate Determination—The China-U.S. Yield Spread as a Regime Variable.</em> <a href="https://doi.org/10.5281/zenodo.21098055" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026e). <em>The Hierarchy of Factors: How Regime Variables Reset Market Pricing—Evidence from Exhaustive Testing Across 15 Global Equity Markets.</em> <a href="https://doi.org/10.5281/zenodo.21099589" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026f). <em>The Regime Switch of Capital Flows: How the China-U.S. Yield Spread Drives Global Capital Reallocation in a Tiered Manner.</em> <a href="https://doi.org/10.5281/zenodo.21100341" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">🔭 Astronomy (3 papers)</div>
-            <div class="pub-category lang-zh">🔭 天文学（3篇）</div>
-            <div>Tang, S. (2026h). <em>Planetary Radius as a Regime-Dependent Relational Quantity.</em> <a href="https://doi.org/10.5281/zenodo.21105475" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026i). <em>Self-Consistency Rupture in Stellar Atmosphere Models.</em> <a href="https://doi.org/10.5281/zenodo.21127665" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026j). <em>The Stellar Main-Sequence Regime Boundary: Five-Dimensional Verification of the 4762 K Critical Point.</em> <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">🔭 Astronomy (3 papers)</div>
+        <div class="pub-category lang-zh">🔭 天文学（3篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026h). <em>Planetary Radius as a Regime-Dependent Relational Quantity: Evidence for a Paradigm Defect in Exoplanet Radius Measurement.</em> <a href="https://doi.org/10.5281/zenodo.21105475" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026i). <em>Self-Consistency Rupture in Stellar Atmosphere Models: The Second Astronomical Empirical Case for the Factor Hierarchy Law.</em> <a href="https://doi.org/10.5281/zenodo.21127665" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026j). <em>The Stellar Main-Sequence Regime Boundary: Five-Dimensional Independent Verification Across the K/G Transition Zone and the Systematic Establishment of the Factor Hierarchy Law.</em> <a href="https://doi.org/10.5281/zenodo.21128329" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">📊 Statistical Physics (3 papers)</div>
-            <div class="pub-category lang-zh">📊 统计物理（3篇）</div>
-            <div>Tang, S. (2026k). <em>Information-Theoretic Duality Between Regression Topology and Statistical Mechanics (2D Ising Model).</em> <a href="https://doi.org/10.5281/zenodo.21154577" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026l). <em>Double-Peak Fission: The Hidden Structure of Finite-Lattice Phase Transitions in the 3D Ising Model.</em> <a href="https://doi.org/10.5281/zenodo.21257777" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026m). <em>The Reduction of Universality: A Regime Boundary Theory for Finite-System Phase Transitions.</em> <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">📊 Statistical Physics (3 papers)</div>
+        <div class="pub-category lang-zh">📊 统计物理（3篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026k). <em>Information-Theoretic Duality Between Regression Topology and Statistical Mechanics—A Data-Driven Equivalence of the Ehrenfest Classification Validated on the 2D Ising Model.</em> <a href="https://doi.org/10.5281/zenodo.21154577" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026l). <em>Double-Peak Splitting: The Hidden Structure of Finite-Lattice Phase Transitions in the 3D Ising Model—Verification of the Factor Hierarchy Law on an NP-Complete System.</em> <a href="https://doi.org/10.5281/zenodo.21257777" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026m). <em>The Reduction of Universality: A Regime Boundary Theory for Finite-System Phase Transitions.</em> <a href="https://doi.org/10.5281/zenodo.21258474" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">🧲 Particle Physics (4 papers)</div>
-            <div class="pub-category lang-zh">🧲 粒子物理（4篇）</div>
-            <div>Tang, S. (2026n). <em>Regime Audit of the Standard Model (I): Activation Operators and Precision Locking of Charm/Bottom Quark Thresholds.</em> <a href="https://doi.org/10.5281/zenodo.21276887" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026o). <em>Regime Audit of the Standard Model (II): Strange Region Discovery and Precursor Cascade.</em> <a href="https://doi.org/10.5281/zenodo.21277300" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026p). <em>Regime Audit of the Standard Model (III): Gauge Group Structure Theorem and the Three-Generation Proposition.</em> <a href="https://doi.org/10.5281/zenodo.21291670" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026q). <em>Regime Audit of the Standard Model (IV): The Demotion of Gauge Field Theory.</em> <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">🧲 Particle Physics (4 papers)</div>
+        <div class="pub-category lang-zh">🧲 粒子物理（4篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026n). <em>Regime Audit of the Standard Model of Particle Physics by the Factor Hierarchy Law—Activation Operators, Dual-Center Regimes, and Precision Locking of Charm/Bottom Quark Thresholds (I).</em> <a href="https://doi.org/10.5281/zenodo.21276887" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026o). <em>Strange Region Discovery, Precursor Cascade, and the Transition Zone Width Theorem (II).</em> <a href="https://doi.org/10.5281/zenodo.21277300" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026p). <em>Gauge Group Structure Theorem, Direct Product Theorem, and the Three-Generation Proposition (III).</em> <a href="https://doi.org/10.5281/zenodo.21291670" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026q). <em>The Demotion of Gauge Field Theory, the Theoretical Reconstruction of the Standard Model, and the Five-Layer Axiomatization Structure (IV).</em> <a href="https://doi.org/10.5281/zenodo.21292223" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">🧪 Chemistry (3 papers)</div>
-            <div class="pub-category lang-zh">🧪 化学（3篇）</div>
-            <div>Tang, S. (2026s). <em>The Calcium-Lanthanum Singularity Theorem (I): First Deployment of the Factor Hierarchy Law in Chemistry.</em> <a href="https://doi.org/10.5281/zenodo.21403322" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026t). <em>The Regime Periodic Table (II): Regime Identity Cards for 118 Elements.</em> <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026u). <em>From Regime Boundaries to Chemical Gauge Group (III): The Inevitable Emergence of Periodic Law.</em> <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">🧪 Chemistry (3 papers)</div>
+        <div class="pub-category lang-zh">🧪 化学（3篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026s). <em>The Calcium-Lanthanum Singularity Theorem (I).</em> <a href="https://doi.org/10.5281/zenodo.21403322" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026t). <em>The Regime Periodic Table: Regime Identity Cards for 118 Elements and the Reduction of Universality of the Periodic Law (II).</em> <a href="https://doi.org/10.5281/zenodo.21403594" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026u). <em>From Regime Boundaries to Chemical Gauge Group (III).</em> <a href="https://doi.org/10.5281/zenodo.21403811" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">⚡ Nuclear Physics (4 papers)</div>
-            <div class="pub-category lang-zh">⚡ 核物理（4篇）</div>
-            <div>Tang, S. (2026v). <em>Nuclear Shell Regime Audit (I): The η Hierarchy Structure, Magic Number Shift Theorem, and the Discovery of the N=14 Statistical Rupture.</em> <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026w). <em>Nuclear Shell Regime Audit (II): Regime-Switch Network, Transition-Zone Width Theorem, and Shell Model Completeness Audit.</em> <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026x). <em>Nuclear Shell Regime Audit (III): The Triple Demotion of the Nuclear Shell.</em> <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026y). <em>Nuclear Shell Regime Audit (IV): Theoretical Extensions, Regime-Factor Purity Spectrum, and Cross-Disciplinary Predictions.</em> <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">⚛️ Nuclear Physics (6 papers)</div>
+        <div class="pub-category lang-zh">⚛️ 核物理（6篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026v). <em>Nuclear Shell Regime Audit: The Magic-Number Shift Theorem and the Discovery of the N=14 Statistical Rupture (I).</em> <a href="https://doi.org/10.5281/zenodo.21621800" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026w). <em>Regime-Switch Network and the True Structure of the Nuclear Shell (II).</em> <a href="https://doi.org/10.5281/zenodo.21622347" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026x). <em>The Triple Demotion of the Nuclear Shell (III).</em> <a href="https://doi.org/10.5281/zenodo.21634385" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026y). <em>Theoretical Extensions and Methodological Output of the Quantum-Classical Hybrid.</em> <a href="https://doi.org/10.5281/zenodo.21635378" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026aa). <em>The Regime Nuclide Map (I): Cross-Property Verification, Two-Dimensional Structure, and Network Update of the Confirmed Breakpoint Network.</em> <a href="https://doi.org/10.5281/zenodo.21896164" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ab). <em>The Regime Nuclide Map (II): Statistical Localization of Shell Correction Energy, Multidimensional Response Theorem, and Methodological Contributions.</em> <a href="https://doi.org/10.5281/zenodo.21898979" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
 
-            <div class="pub-category lang-en">📐 Methodology &amp; System (3 papers)</div>
-            <div class="pub-category lang-zh">📐 方法论与系统（3篇）</div>
-            <div>Tang, S. (2026g). <em>Testability: Factor Hierarchy Theory and Scientific Methodology for Multi-Factor Complex Systems.</em> <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026r). <em>From the Law of Meta-Laws to an Operating System for Scientific Discovery.</em> <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">Zenodo</a></div>
-            <div>Tang, S. (2026z). <em>Technical Specification for the Scientific Discovery Operating System: Mathematical Formalization and Engineering Architecture.</em> <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">Zenodo</a></div>
+        <div class="pub-category lang-en">📚 Philosophy of Science &amp; Epistemology (6 papers)</div>
+        <div class="pub-category lang-zh">📚 科学哲学与认识论（6篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026r). <em>From the Law of Meta-Laws to an Operating System for Scientific Discovery.</em> <a href="https://doi.org/10.5281/zenodo.21306949" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ac). <em>The Information Isomorphism Law: A Meta-Law Spanning Ontology and Epistemology.</em> <a href="https://doi.org/10.5281/zenodo.21899364" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ad). <em>Information Isomorphism Epistemology: From the Factor Hierarchy Law to the Reconstruction of Knowability.</em> <a href="https://doi.org/10.5281/zenodo.21899673" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ae). <em>Third-Person Epistemology: Information Isomorphism Epistemology and the Objective Foundation of Testability.</em> <a href="https://doi.org/10.5281/zenodo.21900178" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026au). <em>Isomorphic Reading: The Uniqueness of the Epistemic Channel for Objective Data Systems.</em> <a href="https://doi.org/10.5281/zenodo.22704136" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026av). <em>The Factor Hierarchy System: A Unified Theoretical Framework for Cross-Disciplinary Complex Systems Research.</em> <a href="https://doi.org/10.5281/zenodo.22705479" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+
+        <div class="pub-category lang-en">📐 Methodology, Mathematical Statistics &amp; Statistical Theory (16 papers)</div>
+        <div class="pub-category lang-zh">📐 方法论、数理统计与统计理论（16篇）</div>
+
+        <div class="pub-subcategory lang-en">Methodology framework (1 paper)</div>
+        <div class="pub-subcategory lang-zh">方法论框架（1篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026g). <em>Testability: The Factor Hierarchy Law and Scientific Methodology for Multi-Factor Complex Systems.</em> <a href="https://doi.org/10.5281/zenodo.21104307" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+
+        <div class="pub-subcategory lang-en">Switch Measure Theory (7 papers, incl. 1 survey)</div>
+        <div class="pub-subcategory lang-zh">切换测度理论（7篇，含1篇综述）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026af). <em>The Global Maximum Point Invariance Theorem: A Statistical Invariant Theory of Structural Break Detection.</em> <a href="https://doi.org/10.5281/zenodo.22141579" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ag). <em>Switching Degree: An Axiomatic Effect Size for Structural Break Detection.</em> <a href="https://doi.org/10.5281/zenodo.22198026" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ah). <em>The Switching Degree for Nonlinear Regime Switching: L² Influence Functions in a Series Estimation Framework.</em> <a href="https://doi.org/10.5281/zenodo.22201821" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ai). <em>Asymptotic Equivalence of the Switching Degree with Unknown Boundary.</em> <a href="https://doi.org/10.5281/zenodo.22204349" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026aj). <em>Information Lower Bound for Regime Boundary Estimation: Optimal Precision Limit at the n² Scale and Universal Constant c=1/8.</em> <a href="https://doi.org/10.5281/zenodo.22218602" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ak). <em>A General Asymptotic Normality Theorem for Switching Degree Inference under Weak Dependence.</em> <a href="https://doi.org/10.5281/zenodo.22219575" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026al). <em>Switch Measure Theory: Definitions, Theorem System, and Assessment of Mathematical Foundations (survey).</em> <a href="https://doi.org/10.5281/zenodo.22220804" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+
+        <div class="pub-subcategory lang-en">Factor Hierarchy Law Mathematization (4 papers, incl. 1 survey)</div>
+        <div class="pub-subcategory lang-zh">因子层级定律数学化（4篇，含1篇综述）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026am). <em>Mathematical Classification of Switching Types and Hierarchical Structures.</em> <a href="https://doi.org/10.5281/zenodo.22636066" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026an). <em>Geometric Necessity of Structural Breaks: Cusps, Slope Jumps, Cascade Transmission Efficiency, and Detection Power.</em> <a href="https://doi.org/10.5281/zenodo.22640487" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ao). <em>Interaction Effects and the η Divergence Theorem.</em> <a href="https://doi.org/10.5281/zenodo.22641112" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ap). <em>A Survey of the Mathematization of the Factor Hierarchy Law (survey).</em> <a href="https://doi.org/10.5281/zenodo.22652253" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+
+        <div class="pub-subcategory lang-en">Information Isomorphism Law Mathematization (4 papers, incl. 1 survey)</div>
+        <div class="pub-subcategory lang-zh">信息同构定律数学化（4篇，含1篇综述）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026aq). <em>L² Sufficiency Theorem under Functional Regime Switching.</em> <a href="https://doi.org/10.5281/zenodo.22699463" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026ar). <em>No-False-Peak Theorem and Extreme Value Limit under the Null Hypothesis of Regime Switching.</em> <a href="https://doi.org/10.5281/zenodo.22700244" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026as). <em>Locally Weighted Unified Shape Function and the One-to-One Correspondence with Regime Boundaries.</em> <a href="https://doi.org/10.5281/zenodo.22700677" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+            <div>Tang, S. (2026at). <em>Mathematical Foundations of the Information Isomorphism Law (survey).</em> <a href="https://doi.org/10.5281/zenodo.22702855" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+
+        <div class="pub-category lang-en">⚙️ Engineering Specification (1 paper)</div>
+        <div class="pub-category lang-zh">⚙️ 工程规范（1篇）</div>
+        <div class="pub-items">
+            <div>Tang, S. (2026z). <em>Technical Specification for the Scientific Discovery Operating System: Mathematical Formalization and Engineering Architecture.</em> <a href="https://doi.org/10.5281/zenodo.21638618" target="_blank">Zenodo</a><span class="status-tag preprint"><span class="lang-en">PREPRINT</span><span class="lang-zh">预印本</span></span></div>
+        </div>
+    </div>
+
+    <div class="card" id="links">
+        <div class="section-title">🔗 <span class="lang-en">Academic Identity &amp; Verified Links</span><span class="lang-zh">学术身份与认证链接</span></div>
+        <p class="section-sub lang-en">These links are the authoritative sources for my academic identity and published works.</p>
+        <p class="section-sub lang-zh">以下链接是我学术身份和已发表作品的核心认证来源。</p>
+        <div class="identity-grid">
+            <a href="https://orcid.org/0009-0007-1209-981X" target="_blank" rel="me" class="identity-card">
+                <div class="identity-icon">🔗</div>
+                <div class="identity-text"><strong>ORCID</strong><span>0009-0007-1209-981X</span></div>
+            </a>
+            <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=bestmatch" target="_blank" rel="me" class="identity-card">
+                <div class="identity-icon">📦</div>
+                <div class="identity-text"><strong>Zenodo</strong><span class="lang-en">All 48 Preprints</span><span class="lang-zh">全部48篇预印本</span></div>
+            </a>
+            <a href="https://ssrn.com/author=11510488" target="_blank" rel="me" class="identity-card">
+                <div class="identity-icon">📄</div>
+                <div class="identity-text"><strong>SSRN</strong><span>Author 11510488</span></div>
+            </a>
+            <a href="https://github.com/shuipingtang" target="_blank" rel="me" class="identity-card">
+                <div class="identity-icon">🐙</div>
+                <div class="identity-text"><strong>GitHub</strong><span>shuipingtang</span></div>
+            </a>
+            <a href="https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ" target="_blank" rel="me" class="identity-card">
+                <div class="identity-icon">🎓</div>
+                <div class="identity-text"><strong>Google Scholar</strong><span>6vpOvwMAAAAJ</span></div>
+            </a>
+            <a href="mailto:tangshuiping@qq.com" class="identity-card">
+                <div class="identity-icon">📧</div>
+                <div class="identity-text"><strong>Email</strong><span>tangshuiping@qq.com</span></div>
+            </a>
         </div>
     </div>
 
     <footer class="lang-en">
         © 2026 Shuiping Tang — Chinese Independent Researcher · Scientific Discovery Operating System<br>
-        26 Preprints · 6 Disciplines · Contact: tangshuiping@qq.com
+        48 Preprints · 6 Disciplines · 6 Foundational Axiom Demotions · Contact: tangshuiping@qq.com
     </footer>
     <footer class="lang-zh">
         © 2026 汤水平 — 中国独立研究者 · 科学发现操作系统<br>
-        26篇预印本 · 六大独立学科 · 联系方式：tangshuiping@qq.com
+        48篇预印本 · 六大独立学科 · 六次基础公理范式降维 · 联系方式：tangshuiping@qq.com
     </footer>
 </div>
 
 <script>
 function switchLang(lang) {
-    var enElems = document.querySelectorAll('.lang-en');
-    var zhElems = document.querySelectorAll('.lang-zh');
-    if (lang === 'en') {
-        enElems.forEach(function(el) { el.style.display = ''; });
-        zhElems.forEach(function(el) { el.style.display = 'none'; });
-    } else {
-        enElems.forEach(function(el) { el.style.display = 'none'; });
-        zhElems.forEach(function(el) { el.style.display = ''; });
-    }
-    document.querySelectorAll('.lang-bar a').forEach(function(a) { a.classList.remove('active'); });
+    document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : 'en';
     document.querySelectorAll('.lang-bar a').forEach(function(a) {
-        if ((lang === 'en' && a.innerText.includes('English')) || (lang === 'zh' && a.innerText.includes('中文'))) {
+        if (a.dataset.lang === lang) {
             a.classList.add('active');
+        } else {
+            a.classList.remove('active');
         }
     });
     if (history.pushState) {
@@ -602,7 +861,7 @@ document.addEventListener('DOMContentLoaded', function() {
   "nationality": "Chinese",
   "jobTitle": "Independent Researcher",
   "worksFor": { "@type": "Organization", "name": "Independent" },
-  "knowsAbout": ["Scientific Discovery Operating System", "Factor Hierarchy Law", "Testability Principle", "Testability Norms", "MRSD Algorithm", "Regime Switching", "Regime Factors", "Execution Factors", "Structural Break Detection", "Exhaustive Testing", "Interaction Effect Testing", "Asset Pricing", "Phase Transitions", "Gauge Field Theory", "Periodic Law", "Nuclear Shell Model", "Statistical Physics", "Particle Physics", "Chemistry", "Nuclear Physics", "Astronomy", "Finance", "Quantum-Classical Hybrid", "Magic Number Shift", "Ca-La Singularity", "Precursor Cascade", "Double-Peak Fission", "Information-Theoretic Duality", "Regime Periodic Table", "Transition-Zone Width", "Regime-Factor Purity Spectrum"]
+  "knowsAbout": ["Scientific Discovery Operating System", "Information Isomorphism Law", "Factor Hierarchy Law", "Testability Principle", "Testability Norms", "MRSD Algorithm", "Regime Switching", "Regime Factors", "Execution Factors", "Structural Break Detection", "Exhaustive Testing", "Interaction Effect Testing", "Asset Pricing", "Phase Transitions", "Gauge Field Theory", "Periodic Law", "Nuclear Shell Model", "Statistical Physics", "Particle Physics", "Chemistry", "Nuclear Physics", "Astronomy", "Finance", "Quantum-Classical Hybrid", "Magic Number Shift", "Ca-La Singularity", "Precursor Cascade", "Double-Peak Splitting", "Information-Theoretic Duality", "Regime Periodic Table", "Transition-Zone Width", "Regime-Factor Purity Spectrum", "Switch Measure Theory", "Isomorphic Reading", "Third-Person Epistemology", "Regime Nuclide Map", "Global Maximum Point Invariance", "Switching Degree", "Information Lower Bound", "No-False-Peak Theorem", "Locally Weighted Unified Shape Function", "Theoretical Demotion"]
 }
 </script>
 </body>
