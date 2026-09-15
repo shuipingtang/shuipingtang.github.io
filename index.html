@@ -3,13 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shuiping Tang | Factor Hierarchy System 因子层级体系</title>
+<title>Shuiping Tang (汤水平) | Factor Hierarchy System 因子层级体系</title>
 <meta name="description" content="Shuiping Tang (汤水平), Chinese independent researcher. The Factor Hierarchy System (因子层级体系) — a unified theoretical framework for cross-disciplinary complex systems research. 48 preprints (2026), six disciplines. Paper #1 passed external peer review.">
 <meta name="keywords" content="Shuiping Tang, 汤水平, Factor Hierarchy System, 因子层级体系, Factor Hierarchy Law, 因子层级定律, Information Isomorphism Law, 信息同构定律, Testability Principle, 可检验性原则, Testability Norms, 可检验性规范, Switch Measure Theory, 切换度量论, regime switching, structural break detection, Tang Break, regime nuclide map, isomorphic reading, third-person epistemology">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Shuiping Tang | Factor Hierarchy System 因子层级体系">
+<meta property="og:title" content="Shuiping Tang (汤水平) | Factor Hierarchy System 因子层级体系">
 <meta property="og:description" content="48 preprints (2026) across six disciplines. Four core components: Factor Hierarchy Law, Information Isomorphism Law, Testability Principle, Testability Norms. Paper #1 passed external peer review.">
 <meta property="og:url" content="https://shuipingtang.github.io">
+<script>
+(function(){
+  try{
+    if(new URLSearchParams(location.search).get('lang')==='zh'){
+      document.documentElement.lang='zh-CN';
+    }
+  }catch(e){}
+})();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -240,7 +249,7 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 
 <div class="peer-badge">
 <span class="dot"></span>
-<span class="lang-en">Paper #1 (2026a) passed external peer review on July 22, 2026 — "Acceptable for publication with technical editing only". Awaiting editorial board decision.</span>
+<span class="lang-en">Paper #1 (2026a) passed external peer review on July 22, 2026 — "Acceptable for publication subject only to technical editing". Awaiting editorial board decision.</span>
 <span class="lang-zh">第1篇论文（2026a）于2026年7月22日通过外部同行评审——"除技术加工外，无须修改即可刊登"。等待编委会最终决定。</span>
 </div>
 
@@ -384,7 +393,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="entry-type">Mathematical Survey II · 数学综述二 · 2026ap</div>
 <div class="entry-title-zh">因子层级定律数学化综述：三条公理的形式化、跨学科验证矩阵与初步建立声明</div>
 <div class="entry-title-en">A Survey of the Mathematization of the Factor Hierarchy Law: Formalization of the Three Axioms, the Cross-Disciplinary Verification Matrix, and a Preliminary Establishment Statement</div>
-<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Factor Hierarchy Law Mathematization: Switching Type Classification · Six-Class Hierarchical Structure Exhaustiveness · Geometric Necessity of Structural Breaks · η Divergence Theorem · <strong>23 open problems</strong>.</div>
+<div class="entry-desc lang-en">A series-level survey covering all 4 papers of Factor Hierarchy Law Mathematization: Switching Type Classification · Exhaustiveness of Six Hierarchical Structures · Geometric Necessity of Structural Breaks · η Divergence Theorem · <strong>23 open problems</strong>.</div>
 <div class="entry-desc lang-zh">统览因子层级定律数学化全部4篇论文：切换类型分类 · 六类层级结构穷尽性 · 结构断裂几何必然性 · η发散定理 · <strong>23条开放问题</strong>。</div>
 <div class="entry-doi">DOI: 10.5281/zenodo.22652253 →</div>
 </div>
@@ -584,7 +593,7 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <span class="serves lang-zh">服务对象：因子层级定律的公理形式化</span>
 <ul class="lang-en">
 <li>Switching Type Classification Theorem</li>
-<li>Six-Class Hierarchical Structure Exhaustiveness</li>
+<li>Exhaustiveness of Six Hierarchical Structures</li>
 <li>Geometric Necessity of Structural Breaks</li>
 <li>η Divergence Theorem (η* = tan²φ)</li>
 </ul>
@@ -1104,7 +1113,7 @@ function switchLang(lang){
 }
 document.addEventListener('DOMContentLoaded', function(){
     var urlParams = new URLSearchParams(window.location.search);
-    switchLang(urlParams.get('zh') === 'zh' ? 'zh' : 'en');
+    switchLang(urlParams.get('lang') === 'zh' ? 'zh' : 'en');
 });
 </script>
 
