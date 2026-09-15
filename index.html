@@ -25,6 +25,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .navbar-links{display:flex;gap:.15rem;flex-wrap:wrap}
 .navbar-links a{font-size:.74rem;color:#2c6e9e;text-decoration:none;padding:.3rem .55rem;border-radius:14px;transition:all .2s}
 .navbar-links a:hover{background:#eef4fc;color:#0f2b3d}
+.navbar-links a.dash-link-nav{background:linear-gradient(135deg,#fffbf0,#fdf5e0);color:#8a6d00;font-weight:600;border:1px solid rgba(212,160,23,.35)}
+.navbar-links a.dash-link-nav:hover{background:#fff6d6;color:#6a4f00}
 .lang-bar{display:flex;gap:.3rem}
 .lang-bar button{display:inline-block;padding:.32rem .85rem;border-radius:18px;font-size:.76rem;font-weight:500;background:#f0f4fa;color:#2c6e9e;cursor:pointer;border:none;font-family:inherit;transition:all .2s}
 .lang-bar button.active{background:#0f2b3d;color:#fff}
@@ -37,8 +39,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 
 /* HERO */
 .hero{padding:2.2rem 2.4rem 2rem}
-.name{font-size:2.5rem;font-weight:700;color:#0f2b3d;margin-bottom:.2rem;line-height:1.15}
-.name-zh{font-size:1.4rem;font-weight:500;color:#5b6e8c;margin-bottom:1rem;display:block}
+.name{font-size:2.5rem;font-weight:700;color:#0f2b3d;margin-bottom:.15rem;line-height:1.15}
+.name-alt{font-size:1.4rem;font-weight:500;color:#5b6e8c;margin-bottom:1rem;display:block;line-height:1.3}
 .affiliation{font-size:.95rem;font-weight:500;color:#2c6e9e;background:linear-gradient(135deg,#eef4fc,#e0ecf8);display:inline-block;padding:.3rem 1.2rem;border-radius:26px;margin-bottom:1rem}
 .hero-tagline{font-size:1.05rem;color:#1a2a3f;font-weight:500;margin-bottom:.6rem;line-height:1.5}
 .hero-desc{font-size:.92rem;color:#4a5b70;max-width:920px;margin-bottom:1.1rem;line-height:1.7}
@@ -55,6 +57,12 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .kpi{background:#f8faff;border-radius:16px;padding:.9rem 1.1rem;border-left:4px solid #2c6e9e}
 .kpi-num{font-size:1.7rem;font-weight:700;color:#0f2b3d;line-height:1.1}
 .kpi-label{font-size:.75rem;color:#5b6e8c;margin-top:.15rem;line-height:1.4}
+
+/* HERO LIVE LINKS */
+.hero-live-links{margin-top:1.2rem;padding:.7rem 1rem;background:linear-gradient(135deg,#fffbf0 0%,#fdf5e0 100%);border-left:4px solid #d4a017;border-radius:12px;font-size:.82rem;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.hero-live-label{font-weight:600;color:#6a4f00;margin-right:.3rem}
+.hero-live-links a{color:#8a6d00;text-decoration:none;font-weight:500;padding:.2rem .6rem;border-radius:10px;background:rgba(255,255,255,.75);border:1px solid rgba(212,160,23,.3);transition:all .2s}
+.hero-live-links a:hover{background:#fff;border-color:#d4a017;color:#6a4f00}
 
 /* THEORY BLOCKS */
 .theory-block{border-radius:22px;padding:1.7rem 1.9rem;margin-bottom:1.3rem;border-left:6px solid}
@@ -159,12 +167,14 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'PingFang SC','Microso
 .dashboards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
 @media(max-width:1000px){.dashboards-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.dashboards-grid{grid-template-columns:1fr}}
-.dash-card{background:#fff;border-radius:16px;padding:1rem 1.1rem;border:1px solid rgba(0,0,0,.05);display:flex;flex-direction:column}
+.dash-card{background:#fff;border-radius:16px;padding:1rem 1.1rem;border:1px solid rgba(0,0,0,.05);display:flex;flex-direction:column;transition:all .2s}
+.dash-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);border-color:rgba(212,160,23,.35)}
 .dash-icon{font-size:1.5rem;margin-bottom:.3rem}
 .dash-name{font-size:.95rem;font-weight:600;margin-bottom:.15rem;color:#0f2b3d}
 .dash-meta{font-size:.74rem;color:#5b6e8c;margin-bottom:.5rem;line-height:1.5}
 .dash-links-group{display:flex;gap:.55rem;margin-top:auto}
 .dash-link{font-size:.78rem;font-weight:500;color:#2c6e9e;text-decoration:none;border-bottom:1px solid #d0dae8}
+.dash-link:hover{color:#0f2b3d}
 
 /* PUBLICATIONS */
 .pub-category{font-weight:700;color:#0f2b3d;margin-top:1.5rem;margin-bottom:.55rem;font-size:.95rem;padding-bottom:.3rem;border-bottom:1.5px solid #e2e8f0}
@@ -197,6 +207,7 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 <div class="navbar-brand">Shuiping Tang · 因子层级体系</div>
 <div class="navbar-links">
 <a href="#about"><span class="lang-en">About</span><span class="lang-zh">简介</span></a>
+<a href="#dashboards" class="dash-link-nav"><span class="lang-en">📡 Dashboards</span><span class="lang-zh">📡 看板</span></a>
 <a href="#core"><span class="lang-en">Core</span><span class="lang-zh">核心组件</span></a>
 <a href="#system"><span class="lang-en">Entry</span><span class="lang-zh">体系入口</span></a>
 <a href="#structure"><span class="lang-en">Structure</span><span class="lang-zh">体系结构</span></a>
@@ -204,7 +215,6 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 <a href="#math"><span class="lang-en">Math</span><span class="lang-zh">数学</span></a>
 <a href="#philosophy"><span class="lang-en">Philosophy</span><span class="lang-zh">哲学</span></a>
 <a href="#publications"><span class="lang-en">Publications</span><span class="lang-zh">论文</span></a>
-<a href="#dashboards"><span class="lang-en">Live Apps</span><span class="lang-zh">实时应用</span></a>
 </div>
 <div class="lang-bar">
 <button data-lang="en" class="active" onclick="switchLang('en')" aria-label="Switch to English">EN</button>
@@ -216,8 +226,15 @@ footer{text-align:center;font-size:.76rem;color:#6c7a91;margin-top:2.5rem;paddin
 
 <!-- ==================== 1. HERO ==================== -->
 <div class="card hero" id="about">
-<div class="name lang-en">Shuiping Tang</div>
-<div class="name lang-zh">汤水平</div>
+<div class="lang-en">
+<div class="name">Shuiping Tang</div>
+<span class="name-alt">汤水平</span>
+</div>
+<div class="lang-zh">
+<div class="name">汤水平</div>
+<span class="name-alt">Shuiping Tang</span>
+</div>
+
 <div class="affiliation lang-en">Chinese Independent Researcher · Factor Hierarchy System</div>
 <div class="affiliation lang-zh">中国独立研究者 · 因子层级体系</div>
 
@@ -242,6 +259,22 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <div class="kpi"><div class="kpi-num">6</div><div class="kpi-label lang-en">Disciplines Verified</div><div class="kpi-label lang-zh">已验证学科</div></div>
 <div class="kpi"><div class="kpi-num">15</div><div class="kpi-label lang-en">Mathematical Papers</div><div class="kpi-label lang-zh">数学论文</div></div>
 <div class="kpi"><div class="kpi-num">4</div><div class="kpi-label lang-en">Core Components</div><div class="kpi-label lang-zh">核心组件</div></div>
+</div>
+
+<!-- LIVE LINKS -->
+<div class="hero-live-links">
+<span class="hero-live-label">
+<span class="lang-en">📡 Live Prediction Dashboards · updated daily:</span>
+<span class="lang-zh">📡 实时预测看板 · 每日更新：</span>
+</span>
+<a class="lang-en" href="gold_en.html" target="_blank" rel="noopener">Gold</a>
+<a class="lang-zh" href="gold_cn.html" target="_blank" rel="noopener">黄金</a>
+<a class="lang-en" href="crude-oil_en.html" target="_blank" rel="noopener">Crude Oil</a>
+<a class="lang-zh" href="crude-oil_cn.html" target="_blank" rel="noopener">原油</a>
+<a class="lang-en" href="bonds-cn_en.html" target="_blank" rel="noopener">China Bonds</a>
+<a class="lang-zh" href="bonds-cn_cn.html" target="_blank" rel="noopener">中国国债</a>
+<a class="lang-en" href="bonds-us_en.html" target="_blank" rel="noopener">US Bonds</a>
+<a class="lang-zh" href="bonds-us_cn.html" target="_blank" rel="noopener">美国国债</a>
 </div>
 </div>
 
@@ -321,7 +354,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <p class="section-sub lang-zh">五篇入口论文：总纲一篇、数学综述三篇（每个系列一篇）、哲学专题一篇。三篇综述共覆盖 <strong>81 条开放问题</strong>，构成体系向更一般模型类扩展的路线图。</p>
 
 <div class="entry-grid">
-<!-- MASTER -->
 <a class="entry-card main-entry" href="https://doi.org/10.5281/zenodo.22705479" target="_blank" rel="noopener">
 <div class="entry-icon">🏛️</div>
 <div class="entry-body">
@@ -334,7 +366,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </a>
 
-<!-- SURVEY 1 -->
 <a class="entry-card" href="https://doi.org/10.5281/zenodo.22220804" target="_blank" rel="noopener">
 <div class="entry-icon">📊</div>
 <div class="entry-body">
@@ -347,7 +378,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </a>
 
-<!-- SURVEY 2 -->
 <a class="entry-card" href="https://doi.org/10.5281/zenodo.22652253" target="_blank" rel="noopener">
 <div class="entry-icon">📐</div>
 <div class="entry-body">
@@ -360,7 +390,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </a>
 
-<!-- SURVEY 3 -->
 <a class="entry-card" href="https://doi.org/10.5281/zenodo.22702855" target="_blank" rel="noopener">
 <div class="entry-icon">📡</div>
 <div class="entry-body">
@@ -373,7 +402,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </a>
 
-<!-- PHILOSOPHICAL TREATISE -->
 <a class="entry-card phil-entry" href="https://doi.org/10.5281/zenodo.22704136" target="_blank" rel="noopener">
 <div class="entry-icon">⚙️</div>
 <div class="entry-body">
@@ -394,7 +422,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 <p class="section-sub lang-en">One system, three names. Four components in four-layer progression.</p>
 <p class="section-sub lang-zh">一个体系，三个名称。四组件，四层递进。</p>
 
-<!-- THREE NAMES -->
 <div style="margin-bottom:1.6rem">
 <div style="font-size:.9rem;font-weight:600;color:#0f2b3d;margin-bottom:.7rem" class="lang-en">① One System, Three Names</div>
 <div style="font-size:.9rem;font-weight:600;color:#0f2b3d;margin-bottom:.7rem" class="lang-zh">① 一个体系，三个名称</div>
@@ -420,7 +447,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </div>
 
-<!-- FOUR LAYERS -->
 <div>
 <div style="font-size:.9rem;font-weight:600;color:#0f2b3d;margin-bottom:.7rem" class="lang-en">② Four Components in Four-Layer Progression</div>
 <div style="font-size:.9rem;font-weight:600;color:#0f2b3d;margin-bottom:.7rem" class="lang-zh">② 四组件四层递进</div>
@@ -441,7 +467,6 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 </div>
 </div>
 
-<!-- MRSD -->
 <div class="engine-card">
 <strong>⚙️ MRSD Algorithm · Computational Core of the Operating System<br>MRSD 算法 · 操作系统的计算实现核心</strong>
 <span class="lang-en">The Multi-Regime State Decoupling Algorithm is a tool-layer implementation instance, not a constituent component. Three-step logic: (1) input any complex high-dimensional dataset; (2) execute structural optimization operator; (3) output dynamic regime division matrix. Validated on 2D Ising exact solution, 3D Ising NP-complete system, and across six disciplines.</span>
@@ -995,14 +1020,54 @@ The <strong>Factor Hierarchy System</strong> comprises <strong>four core compone
 
 <!-- ==================== 10. DASHBOARDS ==================== -->
 <div class="card" id="dashboards">
-<div class="section-title">📊 <span class="lang-en">Live Applications · Daily Asset Valuation Dashboards</span><span class="lang-zh">实时应用 · 每日资产估值看板</span></div>
-<p class="section-sub lang-en">Live applications of the framework — updated daily.</p>
-<p class="section-sub lang-zh">框架的实时应用——每日自动更新。</p>
+<div class="section-title">📡 <span class="lang-en">Live Prediction Dashboards</span><span class="lang-zh">实时预测看板</span></div>
+<p class="section-sub lang-en">Live applications of the framework — updated daily. All links open in a new tab.</p>
+<p class="section-sub lang-zh">框架的实时应用——每日自动更新。所有链接在新标签页中打开。</p>
 <div class="dashboards-grid">
-<div class="dash-card"><div class="dash-icon">🥇</div><div class="dash-name lang-en">Gold</div><div class="dash-name lang-zh">黄金</div><div class="dash-meta lang-en">TIPS + CN-US Spread + Gold-Oil Ratio</div><div class="dash-meta lang-zh">TIPS + 中美利差 + 金油比</div><div class="dash-links-group"><a href="gold_en.html" class="dash-link">EN →</a><a href="gold_cn.html" class="dash-link">中文 →</a></div></div>
-<div class="dash-card"><div class="dash-icon">🛢️</div><div class="dash-name lang-en">Crude Oil (WTI)</div><div class="dash-name lang-zh">原油 (WTI)</div><div class="dash-meta lang-en">SC + VIX + Synth. Spread + CN-US Spread</div><div class="dash-meta lang-zh">上海原油 + VIX + 合成月差 + 中美利差</div><div class="dash-links-group"><a href="crude-oil_en.html" class="dash-link">EN →</a><a href="crude-oil_cn.html" class="dash-link">中文 →</a></div></div>
-<div class="dash-card"><div class="dash-icon">🏦</div><div class="dash-name lang-en">China Govt Bond</div><div class="dash-name lang-zh">中国国债</div><div class="dash-meta lang-en">10Y · 30Y · Yield Curve</div><div class="dash-meta lang-zh">10年期 · 30年期 · 收益率曲线</div><div class="dash-links-group"><a href="bonds-cn_en.html" class="dash-link">EN →</a><a href="bonds-cn_cn.html" class="dash-link">中文 →</a></div></div>
-<div class="dash-card"><div class="dash-icon">💵</div><div class="dash-name lang-en">U.S. Treasury</div><div class="dash-name lang-zh">美国国债</div><div class="dash-meta lang-en">10Y · 30Y · Term Structure</div><div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构</div><div class="dash-links-group"><a href="bonds-us_en.html" class="dash-link">EN →</a><a href="bonds-us_cn.html" class="dash-link">中文 →</a></div></div>
+<div class="dash-card">
+<div class="dash-icon">🥇</div>
+<div class="dash-name lang-en">Gold</div>
+<div class="dash-name lang-zh">黄金</div>
+<div class="dash-meta lang-en">TIPS + CN-US Spread + Gold-Oil Ratio</div>
+<div class="dash-meta lang-zh">TIPS + 中美利差 + 金油比</div>
+<div class="dash-links-group">
+<a class="dash-link lang-en" href="gold_en.html" target="_blank" rel="noopener">Open EN →</a>
+<a class="dash-link lang-zh" href="gold_cn.html" target="_blank" rel="noopener">打开中文 →</a>
+</div>
+</div>
+<div class="dash-card">
+<div class="dash-icon">🛢️</div>
+<div class="dash-name lang-en">Crude Oil (WTI)</div>
+<div class="dash-name lang-zh">原油 (WTI)</div>
+<div class="dash-meta lang-en">SC + VIX + Synth. Spread + CN-US Spread</div>
+<div class="dash-meta lang-zh">上海原油 + VIX + 合成月差 + 中美利差</div>
+<div class="dash-links-group">
+<a class="dash-link lang-en" href="crude-oil_en.html" target="_blank" rel="noopener">Open EN →</a>
+<a class="dash-link lang-zh" href="crude-oil_cn.html" target="_blank" rel="noopener">打开中文 →</a>
+</div>
+</div>
+<div class="dash-card">
+<div class="dash-icon">🏦</div>
+<div class="dash-name lang-en">China Govt Bond</div>
+<div class="dash-name lang-zh">中国国债</div>
+<div class="dash-meta lang-en">10Y · 30Y · Yield Curve</div>
+<div class="dash-meta lang-zh">10年期 · 30年期 · 收益率曲线</div>
+<div class="dash-links-group">
+<a class="dash-link lang-en" href="bonds-cn_en.html" target="_blank" rel="noopener">Open EN →</a>
+<a class="dash-link lang-zh" href="bonds-cn_cn.html" target="_blank" rel="noopener">打开中文 →</a>
+</div>
+</div>
+<div class="dash-card">
+<div class="dash-icon">💵</div>
+<div class="dash-name lang-en">U.S. Treasury</div>
+<div class="dash-name lang-zh">美国国债</div>
+<div class="dash-meta lang-en">10Y · 30Y · Term Structure</div>
+<div class="dash-meta lang-zh">10年期 · 30年期 · 期限结构</div>
+<div class="dash-links-group">
+<a class="dash-link lang-en" href="bonds-us_en.html" target="_blank" rel="noopener">Open EN →</a>
+<a class="dash-link lang-zh" href="bonds-us_cn.html" target="_blank" rel="noopener">打开中文 →</a>
+</div>
+</div>
 </div>
 </div>
 
@@ -1039,7 +1104,7 @@ function switchLang(lang){
 }
 document.addEventListener('DOMContentLoaded', function(){
     var urlParams = new URLSearchParams(window.location.search);
-    switchLang(urlParams.get('lang') === 'zh' ? 'zh' : 'en');
+    switchLang(urlParams.get('zh') === 'zh' ? 'zh' : 'en');
 });
 </script>
 
