@@ -1,0 +1,33 @@
+# robots.txt for https://shuipingtang.github.io
+# Shuiping Tang · Factor Hierarchy System
+
+User-agent: *
+Allow: /
+
+# 允许所有主流搜索引擎完整抓取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# 屏蔽无意义的爬虫访问（可选）
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://shuipingtang.github.io/sitemap.xml
