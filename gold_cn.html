@@ -142,8 +142,16 @@ th { background:#f1f5f9; }
 <h3 id="section-valuation">📈 多窗口估值分位表<small>（数据自2016年起）</small></h3>
 <table><thead><tr><th>尺度</th><th>分位</th><th>状态</th></tr></thead><tbody><tr><td>近1年</td><td>54.0%</td><td style="color:#95a5a6">合理</td></tr><tr><td>近3年</td><td>84.7%</td><td style="color:#e67e22">高估</td></tr><tr><td>近5年</td><td>89.9%</td><td style="color:#e67e22">高估</td></tr><tr><td>近10年</td><td>94.5%</td><td style="color:#e74c3c">极度高估</td></tr><tr><td>全部历史</td><td>94.2%</td><td style="color:#e74c3c">极度高估</td></tr><tr><td colspan="3" style="background:#f8f9fa; font-size:0.72rem; color:#666; padding:0.3rem;">以下为探索性信号（非标准分位，仅作对照）</td></tr><tr style="background:#fff8e1;"><td>双乘积</td><td>50.9%</td><td style="font-size:0.72rem; color:#c0392b;">非标准分位</td></tr></tbody></table>
 
+<p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">💡 怎么看：分位数值越大代表当前金价相对于模型隐含均衡水平越"贵"。<br>
+- <strong>近1年分位</strong>：短期情绪（快变量）<br>
+- <strong>近3年分位</strong>：中期估值位置（图表中展示）<br>
+- <strong>10年分位</strong>：策略使用的核心窗口<br>
+- <strong>全部历史分位</strong>：大周期冷暖（慢变量）<br>
+- <strong>双乘积</strong>：双乘积：近1年分位 × 全部历史分位，探索性信号。详见下方"什么是双乘积"<br>
+分位区间：>90%（极度高估）| 70%-90%（高估）| 30%-70%（合理）| 10%-30%（低估）| <10%（极度低估）。</p>
+
 <div class="explore-box" style="margin-top:1rem;">
-<details open>
+<details>
 <summary style="cursor:pointer; font-weight:600; color:#1e466e; padding:0.5rem 0;">🔬 什么是"双乘积"？（点击展开/折叠）</summary>
 
 <h6 style="margin-top:0.8rem;">① 定义</h6>
@@ -179,14 +187,6 @@ th { background:#f1f5f9; }
 <p style="font-weight:600; color:#c0392b;">双乘积作为<strong>方法论对照</strong>保留在看板中，展示"多时间尺度信号融合"这一思路的探索过程，但<strong>不推荐实盘使用</strong>。</p>
 </details>
 </div>
-
-<p style="font-size:0.9rem; color:#666; margin-top:0.5rem;">💡 怎么看：分位数值越大代表当前金价相对于模型隐含均衡水平越"贵"。<br>
-- <strong>近1年分位</strong>：短期情绪（快变量）<br>
-- <strong>近3年分位</strong>：中期估值位置（图表中展示）<br>
-- <strong>10年分位</strong>：策略使用的核心窗口<br>
-- <strong>全部历史分位</strong>：大周期冷暖（慢变量）<br>
-- <strong>双乘积</strong>：双乘积：近1年分位 × 全部历史分位，探索性信号。详见下方"什么是双乘积"<br>
-分位区间：>90%（极度高估）| 70%-90%（高估）| 30%-70%（合理）| 10%-30%（低估）| <10%（极度低估）。</p>
 
 <h3 id="section-strategy">📉 策略回测与收益表现</h3>
 <p style="font-size:0.9rem; color:#666;">回测区间为 SGE 上市后（2016-04-18 起）。所有策略均使用<strong>前一日估值分位</strong>决定当日仓位，避免未来信息。已扣除单边 0.1% 交易成本、4.5% 年化融资成本（仅对仓位 > 1 部分）。<strong>各策略采用其穷举最优调仓阈值</strong>（详见下方说明）。</p>
