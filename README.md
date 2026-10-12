@@ -1,320 +1,142 @@
 # Shuiping Tang (汤水平)
 
-**Chinese Independent Researcher · Factor Hierarchy System**
+**Independent Researcher · Structural–Regime Theory · Factor Hierarchies · Information Geometry · Scientific Testability**
 
-🌏 **中文版说明文档 → [README.zh.md](README.zh.md)**
+[English](README.md) · [简体中文](README.zh.md)
 
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--1209--981X-a6ce39?style=flat&logo=orcid)](https://orcid.org/0009-0007-1209-981X)
-[![Zenodo](https://img.shields.io/badge/Zenodo-All_48_Preprints-1a4b7c?style=flat&logo=zenodo)](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=bestmatch)
-[![SSRN](https://img.shields.io/badge/SSRN-Author_11510488-8b1c2e?style=flat&logo=ssrn)](https://ssrn.com/author=11510488)
-[![GitHub](https://img.shields.io/badge/GitHub-shuipingtang-181717?style=flat&logo=github)](https://github.com/shuipingtang)
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-6vpOvwMAAAAJ-4285F4?style=flat&logo=google-scholar)](https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ)
-[![Homepage](https://img.shields.io/badge/Homepage-shuipingtang.github.io-2c6e9e?style=flat&logo=google-chrome)](https://shuipingtang.github.io)
+[![Zenodo](https://img.shields.io/badge/Zenodo-Research_Records-1a4b7c?style=flat&logo=zenodo)](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=mostrecent)
+[![SSRN](https://img.shields.io/badge/SSRN-Author_11510488-8b1c2e?style=flat&logo=ssrn)](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11510488)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-Profile-4285F4?style=flat&logo=google-scholar)](https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ)
+[![Research website](https://img.shields.io/badge/Research_Website-shuipingtang.github.io-2c6e9e?style=flat&logo=google-chrome)](https://shuipingtang.github.io/)
 
----
+## Official research website
 
-> **✓ Paper #1 (2026a) passed external peer review on July 22, 2026 — "Acceptable for publication subject only to technical editing". Awaiting editorial board decision.**
+- **Main website (English):** <https://shuipingtang.github.io/>
+- **中文主页：** <https://shuipingtang.github.io/zh/>
+- **Complete research map and DOI catalogue:** [RESEARCH_PROGRAM.md](RESEARCH_PROGRAM.md) · [中文版](RESEARCH_PROGRAM.zh.md)
 
----
+This repository contains the public website for the research programme, including bilingual landing pages and asset-valuation dashboards. The website is the primary navigation point; Zenodo records provide persistent publication-level links. This README is a map of the programme, not a substitute for reading the individual papers.
 
-## The Factor Hierarchy System
+## Research programme
 
-A unified theoretical framework for cross-disciplinary complex systems research. Documented in **48 preprints (2026)**, supported by **three mathematical series (15 papers)**, and verified across **six independent disciplines**.
+I am an independent researcher developing theoretical and methodological work on factor roles, structural-regime transitions, statistical representations, information geometry, and scientific testability. The following names describe related parts of my research programme; they are proposed frameworks developed in my papers, not claims of institutional adoption or established disciplinary consensus.
 
-| 48 | 6 | 15 | 4 |
-|:---:|:---:|:---:|:---:|
-| Preprints (2026) | Disciplines Verified | Mathematical Papers | Core Components |
+### Main concepts
 
----
+- **Factor Hierarchy Law / Factor Hierarchy System.** Studies distinctions between *regime factors* and *execution factors*, including cases in which a variable's explanatory or modulating role changes across systems or regimes.
+- **Switch Measure Theory.** Develops a mathematical language for describing switching intensity, switching type, information, and regime-boundary localization.
+- **Information Isomorphism Law.** Investigates the conditions under which a statistical representation preserves information relevant to an underlying structural or regime distinction.
+- **Testability Principle and Testability Norms.** Propose an operational framework for specifying and auditing claims about factor importance, structural change, and mechanistic roles. The six functional dimensions described in the programme are search completeness, modulation relationships, structural breaks, causal direction, problem completeness, and process closure.
+- **Structural–Regime Theory.** Studies interfaces among geometric identifiability, mechanism reduction, dynamical criticality, statistical visibility, modular structure, and transformations of structural claims.
 
-## ① One System, Three Names
+The **Multi-Regime State Decoupling (MRSD) Algorithm** is an implementation-level tool within the broader programme, not a fifth core conceptual component. The programme is also presented under different framings—Factor Hierarchy System, Information Isomorphism Epistemology, and Scientific Discovery Operating System—depending on the problem being discussed.
 
-| Name | Discipline | Naming Focus |
-|:---|:---|:---|
-| **Factor Hierarchy System** | Natural Science | Ontology component · "How is the world organized?" |
-| **Information Isomorphism Epistemology** | Philosophy | Epistemological foundation · "How can we know the world?" |
-| **Scientific Discovery Operating System** | Engineering | Methodology component · "How can I discover laws in my field?" |
+## A recent theoretical reading path: 2026ay–2026bf
 
-The three names are three modes of presentation of the same system to three audiences, sharing the same set of four components.
+The eight works below form a useful reading path titled **“Structural–Regime Foundations, Interfaces & Unified Metatheory.”** This is an editorial grouping for navigation; it should not be read as a claim that every paper was originally published under one formally declared series name. The most explicit synthesis relation is that **2026bf takes 2026ay–2026be as its seven inputs** and develops a metatheoretical treatment of transformation certificates, recoverability, and obstructions.
 
----
+| Record | Focus | Paper record |
+|:--|:--|:--|
+| **2026ay** | Relative-norm observations, geometry, identifiability, and cross-model rigidity | [Zenodo](https://doi.org/10.5281/zenodo.23226534) |
+| **2026az** | Conditional identifiability of multiscale mechanistic roles under finite observation | [Zenodo](https://doi.org/10.5281/zenodo.23235287) |
+| **2026ba** | Structural stability, bifurcation, and statistical regime transitions | [Zenodo](https://doi.org/10.5281/zenodo.23252528) |
+| **2026bb** | Hopf bifurcation, modal visibility, and statistical transfer | [Zenodo](https://doi.org/10.5281/zenodo.23252668) |
+| **2026bc** | Local information geometry of statistical representations | [Zenodo](https://doi.org/10.5281/zenodo.23252900) |
+| **2026bd** | Random statistical representations, noise-activated visibility, and Fisher–KL information transfer | [Zenodo](https://doi.org/10.5281/zenodo.23253238) |
+| **2026be** | Relative module basis and constructive irreducibility for structural–regime interfaces | [Zenodo](https://doi.org/10.5281/zenodo.23255877) |
+| **2026bf** | Transformation certificates, recoverability, semantic obstructions, and unified metatheory | [Zenodo](https://doi.org/10.5281/zenodo.23256372) |
 
-## ② Four Components in Four-Layer Progression
+Two related programme-level works precede this reading path:
 
-**Epistemological Foundation → Ontology → Epistemological Standard → Methodology**
+- **2026aw — Axiomatic foundations of Switch Measure Theory:** [Zenodo](https://doi.org/10.5281/zenodo.22806571)
+- **2026ax — Problem-generation framework for Switch Measure Theory:** [Zenodo](https://doi.org/10.5281/zenodo.22809598)
 
-| Layer | Component | Domain | Core Content |
-|:---:|:---|:---|:---|
-| **L1** | **Information Isomorphism Law** | Epistemological Foundation | In objective-data systems exhibiting regime switching, statistical structures carry information about regime structures. Three progressive levels: Existence → Correspondence → Precision. |
-| **L2** | **Factor Hierarchy Law** | Ontology | Factors divide into regime factors and execution factors. Three axioms: Factor Bifurcation, Regime Switch, Interaction Effect. |
-| **L3** | **Testability Principle** | Epistemological Standard | Beyond Popper's falsifiability — establishes a second threshold for science: reliable findings vs unverified hypotheses. |
-| **L4** | **Testability Norms** | Methodology | Six functional dimensions. Core commitment: functional dimensions are stable; implementation tools are replaceable. |
+For a broader introduction, see the [Factor Hierarchy System overview (2026av)](https://doi.org/10.5281/zenodo.22705479), the [Switch Measure Theory survey (2026al)](https://doi.org/10.5281/zenodo.22220804), the [Factor Hierarchy Law survey (2026ap)](https://doi.org/10.5281/zenodo.22652253), and the [Information Isomorphism Law survey (2026at)](https://doi.org/10.5281/zenodo.22702855).
 
-**Tool-layer implementation (not a constituent component):**
+## Core mathematical formalization series
 
-- **MRSD Algorithm** — Multi-Regime State Decoupling. Three-step logic: (1) input any complex high-dimensional dataset; (2) execute structural optimization operator; (3) output dynamic regime division matrix. Validated on the 2D Ising exact solution, the 3D Ising NP-complete system, and across six disciplines.
+The wider programme includes three mathematical formalization series. The paper counts below refer only to these numbered ranges and do not describe the total number of mathematical or theoretical works in the catalogue.
 
----
+| Series | Record range | Count | Main role |
+|:--|:--|--:|:--|
+| Switch Measure Theory | 2026af–2026al | 7 | Formal language for switching intensity, type, localization, and inference. |
+| Factor Hierarchy Law mathematization | 2026am–2026ap | 4 | Mathematical formulation of factor roles, switching types, structural breaks, and related questions. |
+| Information Isomorphism Law mathematization | 2026aq–2026at | 4 | Mathematical study of the relation between statistical representations and regime structure. |
 
-## ③ System Entry Points
+The three series contain **15 papers in total**. Their surveys list 81 open problems within their stated scopes (36, 23, and 22, respectively). A separate problem-generation work, 2026ax, describes a 137-item inventory with a different scope and organization; the two counts should not be added together as if they measured one common set.
 
-Five entry papers: the master framework, three mathematical surveys (one per series), and one philosophical treatise. The three surveys together cover **81 open problems**.
+## How the website, repository, and paper records relate
 
-| Type | Paper | DOI |
-|:---|:---|:---|
-| **Master Framework** | The Factor Hierarchy System: A Unified Theoretical Framework for Cross-Disciplinary Complex Systems Research (2026av) | [22705479](https://doi.org/10.5281/zenodo.22705479) |
-| **Mathematical Survey I** | Switch Measure Theory: Definitions, Theorem System, and Assessment of Mathematical Foundations (2026al) · 36 open problems | [22220804](https://doi.org/10.5281/zenodo.22220804) |
-| **Mathematical Survey II** | A Survey of the Mathematization of the Factor Hierarchy Law (2026ap) · 23 open problems | [22652253](https://doi.org/10.5281/zenodo.22652253) |
-| **Mathematical Survey III** | Mathematical Foundations of the Information Isomorphism Law (2026at) · 22 open problems | [22702855](https://doi.org/10.5281/zenodo.22702855) |
-| **Philosophical Treatise** | Isomorphic Reading: The Uniqueness of the Epistemic Channel for Objective Data Systems (2026au) | [22704136](https://doi.org/10.5281/zenodo.22704136) |
+Each resource has a distinct role:
 
----
+1. **The website** is the public navigation page for the research programme and the bilingual valuation dashboards.
+2. **This GitHub repository** contains the website files and provides a searchable, text-based overview of the work.
+3. **Zenodo DOI records** are the persistent links to individual deposited research records and their version metadata.
+4. **SSRN** is an additional working-paper and discovery channel. Its record count is not added to the Zenodo catalogue count.
+5. **Google Scholar and ORCID** provide additional author-discovery and identity links; they are not substitutes for checking the individual source record.
 
-## ④ The Discovery of Factor Hierarchy
+The supplied Zenodo catalogue count is date-stamped because repositories change as records are added, corrected, or versioned. When a count or publication status matters, consult the live record rather than relying only on this README.
 
-The Factor Hierarchy Law emerged from a cross-market anomaly: the **China-U.S. yield spread** was a **dual-identity factor** in gold, crude oil, bonds, FX, and capital flows — with high direct explanatory power *and* significant interaction effects. But when tested in **15 global equity markets** (Tang 2026e), it became a **pure regime factor**: direct R² ≈ 0, yet its interaction R² was 1.78× the direct R². The same variable played different roles in different markets. This cross-market variation revealed that factors are not inherently "important" or "unimportant" — their function depends on the market regime.
+## Reading and evaluating the research
 
----
+The programme contains different kinds of work: definitions and formal frameworks, mathematical propositions proved under stated assumptions, methodological proposals, and empirical or model-based studies. These categories should not be treated as interchangeable. For any specific result, the relevant paper is the authoritative place to check its definitions, assumptions, proof steps or data design, scope conditions, and limitations. A title using a term such as “law,” “theorem,” or “unified theory” records the author's formulation; it does not by itself establish that the claim is accepted as disciplinary consensus.
 
-## ⑤ Theoretical Demotion of Century-Old Axioms
+When reviewing a paper, useful questions include: What is the exact claim? Which assumptions are necessary? Is the conclusion a theorem, a conditional result, an empirical finding, or a conjecture? Which earlier results does it depend on? What is the scope of the stated evidence? Are there independent replications or external evaluations? Those distinctions are especially important when comparing results across different disciplines.
 
-| Discipline | Demoted Theory | Demotion Statement |
-|:---|:---|:---|
-| **Statistical Physics** | Universality | A mathematical convergence product under the thermodynamic limit. Regime boundaries are fundamental in finite systems. |
-| **Particle Physics** | Gauge Field Theory | The group-theoretic expression of regime boundaries. SU(3)×SU(2)×U(1) emerges inevitably from regime structure. |
-| **Chemistry** | Periodic Law | A statistical approximation under the Z→∞ limit. s, p, d, f orbitals emerge from 8 regime states via SO(3). |
-| **Nuclear Physics** | Shell Model + Liquid Drop + Independent-Particle Axiom | Triple demotion — each proven as a projection of a deeper quantum-classical hybrid in specific limits. |
-| **Astronomy** | Standard Planetary Radius | Transit depth is a relational quantity, not an intrinsic property. |
-| **Finance** | Interest Rate Parity + Mundell-Fleming + Triffin | Conditional approximations — the core function of the spread is asset valuation, not exchange-rate prediction. |
+## Research areas represented in the catalogue
 
-**Three tool replacements / extensions:**
+The public catalogue contains work spanning several areas. Examples of the topics studied in the linked papers include:
 
-- **Popper's falsifiability** → extended into a dual-threshold framework (entrance + exit standard)
-- **Kant's "thing-in-itself"** → functionally replaced by Information Isomorphism Epistemology in scientific practice
-- **"Fitting"** → renamed as "Isomorphic Reading" — the unique epistemic channel for objective data systems
+- **Finance and asset pricing:** China–U.S. yield-spread regimes, gold and crude-oil pricing, sovereign-bond valuation, exchange rates, and capital flows. An early entry point is [2026a, *Dual Anchors: China–U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing*](https://doi.org/10.5281/zenodo.21091486).
+- **Astronomy:** regime-dependent measurement and stellar-model consistency, including the proposed “Tang Break” near the K/G transition region.
+- **Statistical physics:** information-theoretic and structural-break analyses involving two- and three-dimensional Ising models. See [2026k](https://doi.org/10.5281/zenodo.21154577) as one entry point.
+- **Particle physics:** regime-boundary analyses of patterns in particle data.
+- **Chemistry:** regime-based analyses of periodic trends and proposed calcium–lanthanum singularity results.
+- **Nuclear physics:** regime-switching analyses of nuclear shell structure, magic numbers, and nuclide maps.
+- **Mathematical foundations and methodology:** switching measures, factor roles, information-preserving representations, testability, and structural-claim transformation.
 
----
+These are descriptions of research areas and hypotheses investigated in the author's papers. The evidence type, assumptions, and applicability limits differ by paper. Independent third-party replication across all listed fields has not been established; each claim should be assessed against the methods and limitations in its source paper.
 
-## ⑥ Quantitative Hallmarks
+## Public valuation dashboards
 
-All obtained through blind data-driven analysis without theoretical presuppositions.
+The website includes research dashboards for four asset groups. **Use the valuation date, source notes, sample window, and stated data lag shown on each dashboard.** Refresh timing may differ across inputs; this repository does not promise that every dashboard is updated daily.
 
-| Discipline | Key Finding | Quantitative Evidence |
-|:---|:---|:---|
-| **Finance** | Same yield spread is dual-identity in most markets, pure regime factor in equities | Gold R²=0.908; Equity direct R²≈0 vs interaction 1.78× |
-| **Astronomy** | Tang Break at 4762 K | 5 independent dimensions fracture; proxy regime factor discovered (Chow F 1597→0.05) |
-| **Statistical Physics** | 2D Ising exact information-theoretic duality | Chow F at Tc=118,074; detection bias analytically proven strictly zero |
-| **Particle Physics** | Charm/bottom quark thresholds locked blindly | Λc⁺ to 0.00004 GeV; Υ(1S) to 0.0001 GeV; W×M² activates 2569× |
-| **Chemistry** | Ca-La Singularity Theorem | F_f/F_d=2.20≈(3/2)²; F(l) ∝ l²; PRISMA coverage 100% |
-| **Nuclear Physics** | η>10⁶ criterion; Magic Number Shift | Bai-Perron blind test skips N=20, N=50; shell model coverage 15%; QCTI ρ=−0.95 |
+| Asset group | English | 中文 |
+|:--|:--|:--|
+| Gold | [Open dashboard](https://shuipingtang.github.io/gold_en.html) | [打开看板](https://shuipingtang.github.io/gold_cn.html) |
+| Crude oil (WTI) | [Open dashboard](https://shuipingtang.github.io/crude-oil_en.html) | [打开看板](https://shuipingtang.github.io/crude-oil_cn.html) |
+| China government bonds | [Open dashboard](https://shuipingtang.github.io/bonds-cn_en.html) | [打开看板](https://shuipingtang.github.io/bonds-cn_cn.html) |
+| U.S. Treasuries | [Open dashboard](https://shuipingtang.github.io/bonds-us_en.html) | [打开看板](https://shuipingtang.github.io/bonds-us_cn.html) |
 
----
+The dashboards present research-oriented estimates and historical analyses. Results depend on the data, sample, model specification, signal timing, and other assumptions stated on each page. Historical performance does not guarantee future results; the dashboards are for research and information, not investment advice.
 
-## ⑦ Mathematical Foundations (Three Series, 15 Papers)
+## Public catalogue and research identity
 
-| Series | Serves | Papers | Survey |
-|:---|:---|:---|:---|
-| **Switch Measure Theory** | Measurement language for the Factor Hierarchy Law | 7 papers (2026af–2026al) | 2026al |
-| **Factor Hierarchy Law Mathematization** | Axiom formalization of the Factor Hierarchy Law | 4 papers (2026am–2026ap) | 2026ap |
-| **Information Isomorphism Law Mathematization** | Mathematical foundation of the Information Isomorphism Law | 4 papers (2026aq–2026at) | 2026at |
+The supplied Zenodo catalogue contained **58 records as of 12 October 2026**. This is a dated count of repository records, **not** a count of peer-reviewed journal articles. Please use the live catalogue for the current record list and publication metadata.
 
-Key theorems:
-
-- Global Maximum Point Invariance Theorem (2026af)
-- Switching Degree axiomatic characterization (2026ag)
-- Information lower bound at n² scale, c = 1/8 (2026aj)
-- Switching Type Classification Theorem (2026am)
-- Geometric Necessity of Structural Breaks (2026an)
-- η Divergence Theorem (2026ao)
-- L² Sufficiency Theorem (2026aq)
-- No-False-Peak Theorem (2026ar)
-- Local Bijection Theorem (2026as)
-
----
-
-## ⑧ Philosophical Foundations (4 Papers)
-
-| Paper | Contribution | DOI |
-|:---|:---|:---|
-| **The Information Isomorphism Law** (2026ac) | Names the law; traces its necessary premise from the cross-disciplinary success of the OS | [21899364](https://doi.org/10.5281/zenodo.21899364) |
-| **Information Isomorphism Epistemology** (2026ad) | Renders Kant's "thing-in-itself" functionally unnecessary; reconstructs a new form of knowability | [21899673](https://doi.org/10.5281/zenodo.21899673) |
-| **Third-Person Epistemology** (2026ae) | From "I think" to "anyone running the code"; non-personal, reproducible verification | [21900178](https://doi.org/10.5281/zenodo.21900178) |
-| **Isomorphic Reading** (2026au) | Renames "fitting" as isomorphic reading; conditional uniqueness theorem; five argument chains | [22704136](https://doi.org/10.5281/zenodo.22704136) |
-
----
-
-## ⑨ Testability Norms (Six Functional Dimensions)
-
-**Core commitment:** Functional dimensions are stable; implementation tools are replaceable.
-
-| # | Dimension | Type | Requirement |
-|:---:|:---|:---|:---|
-| 1 | **Search Completeness** | Core | All candidate factors systematically traversed, not preselected |
-| 2 | **Modulation Relationship** | Core | Test whether regime factors modulate execution factor coefficients |
-| 3 | **Structural Break** | Core | At least two independent tools confirm structural differences |
-| 4 | **Causal Direction** | Core | Test whether regime factors lead execution factors |
-| 5 | **Problem Completeness** | Meta-program | Research questions fully covered (5W2H) |
-| 6 | **Process Closure** | Meta-program | Plan-Do-Check-Act with mandatory negative controls |
-
----
-
-## ⑩ Complete Preprint Collection (48 Papers, 2026)
-
-All preprints are permanently archived on **Zenodo** with full open data and code.
-
-### 💹 Finance & Asset Pricing (6 papers)
-
-The China-U.S. yield spread was discovered as the first cross-market systemic factor. Across gold, crude oil, bonds, and FX, it is a **dual-identity factor**. In equity markets, it becomes a **pure regime factor**.
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026a | **Dual Anchors: China-U.S. Factors Jointly Determining Global Gold and Crude Oil Pricing** | Exhaustive testing (462+141 combinations); dual-anchor models | [21091486](https://doi.org/10.5281/zenodo.21091486) |
-| 2026b | **Interest Rates Without an Anchor: Multi-Window Percentiles and the Pricing Logic of the China-U.S. Yield Spread** | Multi-window valuation framework; rates "wander" not revert | [21096496](https://doi.org/10.5281/zenodo.21096496) |
-| 2026c | **The Unified Field of Spreads: The China-U.S. Yield Spread as a Regime Variable in Global Asset Pricing** | Formal definition of "regime variable"; spread ≈ 0 universal switching threshold | [21096549](https://doi.org/10.5281/zenodo.21096549) |
-| 2026d | **The Anchor Shift: Reconstructing Global Exchange Rate Determination** | Interest rate parity systematically fails; dual-anchor exchange rate theory | [21098055](https://doi.org/10.5281/zenodo.21098055) |
-| 2026e | **The Hierarchy of Factors: How Regime Variables Reset Market Pricing (15 Global Equity Markets)** | **Key turning point:** yield spread becomes pure regime factor | [21099589](https://doi.org/10.5281/zenodo.21099589) |
-| 2026f | **The Regime Switch of Capital Flows: How the China-U.S. Yield Spread Drives Global Capital Reallocation** | Cross-dimensional replication; official vs private capital respond oppositely | [21100341](https://doi.org/10.5281/zenodo.21100341) |
-
-### 📚 Theory & Methodology (3 papers)
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026g | **Testability: The Factor Hierarchy Law and Scientific Methodology for Multi-Factor Complex Systems** | Factor Hierarchy Law, Testability Principle, Testability Norms formally established | [21104307](https://doi.org/10.5281/zenodo.21104307) |
-| 2026r | **From the Law of Meta-Laws to an Operating System for Scientific Discovery** | Law of meta-laws positioned; OS unified; fourth cornerstone of scientific methodology | [21306949](https://doi.org/10.5281/zenodo.21306949) |
-| 2026z | **Technical Specification for the Scientific Discovery Operating System** | MRSD algorithm formalized; audit engine architecture | [21638618](https://doi.org/10.5281/zenodo.21638618) |
-
-### 🔭 Astronomy (3 papers) — The Tang Break
-
-The **Tang Break** (4762 K) was discovered as a stellar main-sequence regime boundary. Five independent physical dimensions all fracture across the K/G transition zone.
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026h | **Planetary Radius as a Regime-Dependent Relational Quantity** | Transit depth is not an intrinsic property; proxy regime factor discovered | [21105475](https://doi.org/10.5281/zenodo.21105475) |
-| 2026i | **Self-Consistency Rupture in Stellar Atmosphere Models** | Density residual fractures at same 4762 K and log g=4.64 critical points | [21127665](https://doi.org/10.5281/zenodo.21127665) |
-| 2026j | **The Stellar Main-Sequence Regime Boundary: Five-Dimensional Verification of the 4762 K Critical Point** | Tang Break formally established; physical root: convective zone emergence | [21128329](https://doi.org/10.5281/zenodo.21128329) |
-
-### 📊 Statistical Physics (3 papers) — The mathematical cornerstone
-
-The **2D Ising exact solution** provided the calibration standard. On the **3D Ising NP-complete system**, the MRSD algorithm automatically discovered **double-peak splitting**.
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026k | **Information-Theoretic Duality Between Regression Topology and Statistical Mechanics (2D Ising)** | Exact duality proved analytically; Chow F is order-parameter information proxy | [21154577](https://doi.org/10.5281/zenodo.21154577) |
-| 2026l | **Double-Peak Splitting: The Hidden Structure of Finite-Lattice Phase Transitions in the 3D Ising Model** | Bai-Perron blind test: T₁=4.39, T₂=4.49; transition regime between them | [21257777](https://doi.org/10.5281/zenodo.21257777) |
-| 2026m | **The Reduction of Universality: A Regime Boundary Theory for Finite-System Phase Transitions** | Five models verified; MRSD three-classification framework; tool-dependence theorem | [21258474](https://doi.org/10.5281/zenodo.21258474) |
-
-### 🧲 Particle Physics (4 papers) — Gauge field theory demotion
-
-The **Standard Model was audited** without any particle physics presuppositions. The algorithm blindly locked Λc⁺, Υ(1S), and Υ(2S) to 10⁻⁴ GeV precision.
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026n | **Regime Audit of the Standard Model (I): Activation Operators and Precision Locking of Charm/Bottom Quark Thresholds** | 11 activation operators auto-stratify; W×M² activates 2569× | [21276887](https://doi.org/10.5281/zenodo.21276887) |
-| 2026o | **Regime Audit of the Standard Model (II): Strange Region Discovery and Precursor Cascade** | Precursor cascade: strange T₂≈charm T₁ (0.0052 GeV), charm T₂=bottom precursor (0.0000 GeV) | [21277300](https://doi.org/10.5281/zenodo.21277300) |
-| 2026p | **Regime Audit of the Standard Model (III): Gauge Group Structure Theorem and the Three-Generation Proposition** | SU(3) emerges inevitably from color charge's three regime states | [21291670](https://doi.org/10.5281/zenodo.21291670) |
-| 2026q | **Regime Audit of the Standard Model (IV): The Demotion of Gauge Field Theory** | Five-layer axiomatization; gauge field theory formally demoted | [21292223](https://doi.org/10.5281/zenodo.21292223) |
-
-### 🧪 Chemistry (3 papers) — Periodic law demotion
-
-The **Ca-La Singularity Theorem** established F(l) ∝ l². The **Regime Periodic Table** eliminated all 16 traditional exceptions (PRISMA coverage 100%).
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026s | **The Calcium-Lanthanum Singularity Theorem (I): First Deployment in Chemistry** | Ca-La singularity centers; F_f/F_d=2.20≈(3/2)²; chemical χ-blindness confirmed | [21403322](https://doi.org/10.5281/zenodo.21403322) |
-| 2026t | **The Regime Periodic Table (II): Regime Identity Cards for 118 Elements** | All 16 exceptions eliminated; numerical predictions for elements 119/120 | [21403594](https://doi.org/10.5281/zenodo.21403594) |
-| 2026u | **From Regime Boundaries to Chemical Gauge Group (III): The Inevitable Emergence of Periodic Law** | s, p, d, f emerge from SO(3) irreducible representations; periodic law demoted | [21403811](https://doi.org/10.5281/zenodo.21403811) |
-
-### ⚛️ Nuclear Physics (6 papers) — Triple demotion of the nuclear shell
-
-The **η>10⁶ rule-factor criterion** was discovered. The **Magic Number Shift Theorem** revealed Bai-Perron blind test skips N=20 and N=50. The **triple demotion** was completed.
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026v | **Nuclear Shell Regime Audit (I): The η Hierarchy, Magic Number Shift Theorem, and N=14 Rupture** | Bai-Perron optimal 10 breakpoints (BIC=13793.7); N=20 and N=50 skipped; η>10⁶ | [21621800](https://doi.org/10.5281/zenodo.21621800) |
-| 2026w | **Nuclear Shell Regime Audit (II): Regime-Switch Network, Transition-Zone Width Theorem** | Transition-zone width theorem (deviations zero; 1000 random sets never replicated, p<0.001) | [21622347](https://doi.org/10.5281/zenodo.21622347) |
-| 2026x | **Nuclear Shell Regime Audit (III): The Triple Demotion of the Nuclear Shell** | WLS five magic numbers amplified 3.68–9.68×; derivational demotion 8/8 conditions passed | [21634385](https://doi.org/10.5281/zenodo.21634385) |
-| 2026y | **Nuclear Shell Regime Audit (IV): Theoretical Extensions and Regime-Factor Purity Spectrum** | Purity spectrum formalized; confirmed-breakpoint binary structure; 7 testable predictions | [21635378](https://doi.org/10.5281/zenodo.21635378) |
-| 2026aa | **The Regime Nuclide Map (I): Cross-Property Verification, Two-Dimensional Structure, and Network Update** | Cross-property universality; two-dimensional (N,Z) structure | [21896164](https://doi.org/10.5281/zenodo.21896164) |
-| 2026ab | **The Regime Nuclide Map (II): Statistical Localization of Shell Correction Energy and Multidimensional Response Theorem** | Shell correction energy localization; .ssr trap correction | [21898979](https://doi.org/10.5281/zenodo.21898979) |
-
-### 📚 Philosophy of Science & Epistemology (4 papers)
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026ac | **The Information Isomorphism Law: A Meta-Law Spanning Ontology and Epistemology** | Names the law; traces its necessary premise from the cross-disciplinary success of the OS | [21899364](https://doi.org/10.5281/zenodo.21899364) |
-| 2026ad | **Information Isomorphism Epistemology: From the Factor Hierarchy Law to the Reconstruction of Knowability** | Renders Kant's "thing-in-itself" functionally unnecessary | [21899673](https://doi.org/10.5281/zenodo.21899673) |
-| 2026ae | **Third-Person Epistemology: Information Isomorphism Epistemology and the Objective Foundation of Testability** | From "I think" to "anyone running the code" | [21900178](https://doi.org/10.5281/zenodo.21900178) |
-| 2026au | **Isomorphic Reading: The Uniqueness of the Epistemic Channel for Objective Data Systems** | Renames "fitting" as isomorphic reading; conditional uniqueness theorem | [22704136](https://doi.org/10.5281/zenodo.22704136) |
-
-### 📐 Mathematical Statistics & Statistical Theory (15 papers)
-
-#### Switch Measure Theory (7 papers) · Survey: 2026al
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026af | **The Global Maximum Point Invariance Theorem: A Statistical Invariant Theory of Structural Break Detection** | Unified shape function; standardized limits; multi-regime generalization | [22141579](https://doi.org/10.5281/zenodo.22141579) |
-| 2026ag | **Switching Degree: An Axiomatic Effect Size for Structural Break Detection** | Axiomatic foundation, inference theory, power analysis, switching coupling decomposition | [22198026](https://doi.org/10.5281/zenodo.22198026) |
-| 2026ah | **The Switching Degree for Nonlinear Regime Switching** | L² influence functions; spectral weighting family; finite-sample inference | [22201821](https://doi.org/10.5281/zenodo.22201821) |
-| 2026ai | **Asymptotic Equivalence of the Switching Degree with Unknown Boundary** | √n-inference adaptivity; finite-sample correction; post-selection inference | [22204349](https://doi.org/10.5281/zenodo.22204349) |
-| 2026aj | **Information Lower Bound for Regime Boundary Estimation** | Optimal precision at n² scale; universal constant c=1/8 | [22218602](https://doi.org/10.5281/zenodo.22218602) |
-| 2026ak | **A General Asymptotic Normality Theorem for Switching Degree Inference under Weak Dependence** | Direction-dependent long-run variance; MBB consistency; structural invariance | [22219575](https://doi.org/10.5281/zenodo.22219575) |
-| 2026al | **Switch Measure Theory: Definitions, Theorem System, and Assessment of Mathematical Foundations** *(Survey)* | Series-level survey; 36 open problems | [22220804](https://doi.org/10.5281/zenodo.22220804) |
-
-#### Factor Hierarchy Law Mathematization (4 papers) · Survey: 2026ap
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026am | **Mathematical Classification of Switching Types and Hierarchical Structures** | Three switching types; six hierarchical structures; CV lower bound; discretization plateau | [22636066](https://doi.org/10.5281/zenodo.22636066) |
-| 2026an | **Geometric Necessity of Structural Breaks: Cusps, Slope Jumps, Cascade Transmission Efficiency** | Detection power of the unified shape function | [22640487](https://doi.org/10.5281/zenodo.22640487) |
-| 2026ao | **Interaction Effects and the η Divergence Theorem** | η limits of switching morphologies; η trajectories of processual variables | [22641112](https://doi.org/10.5281/zenodo.22641112) |
-| 2026ap | **A Survey of the Mathematization of the Factor Hierarchy Law** *(Survey)* | Formalization of the three axioms; cross-disciplinary verification matrix; 23 open problems | [22652253](https://doi.org/10.5281/zenodo.22652253) |
-
-#### Information Isomorphism Law Mathematization (4 papers) · Survey: 2026at
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026aq | **L² Sufficiency Theorem under Functional Regime Switching** | X-dependent convex combination; detection information loss; spectral weighted sufficiency | [22699463](https://doi.org/10.5281/zenodo.22699463) |
-| 2026ar | **No-False-Peak Theorem and Extreme Value Limit under the Null Hypothesis of Regime Switching** | Necessity direction; exact control of permutation tests; function-space generalization | [22700244](https://doi.org/10.5281/zenodo.22700244) |
-| 2026as | **Locally Weighted Unified Shape Function and the One-to-One Correspondence with Regime Boundaries** | Multi-regime local peak correspondence; pseudo-peak phenomenon of global splitting | [22700677](https://doi.org/10.5281/zenodo.22700677) |
-| 2026at | **Mathematical Foundations of the Information Isomorphism Law** *(Survey)* | Three ontological levels; detection sufficiency; exact permutation control; 22 open problems | [22702855](https://doi.org/10.5281/zenodo.22702855) |
-
-### 🏛️ Master Framework (1 paper)
-
-| # | Paper | Core Contribution | DOI |
-|:---|:---|:---|:---|
-| 2026av | **The Factor Hierarchy System: A Unified Theoretical Framework for Cross-Disciplinary Complex Systems Research** | Complete system overview: four components, minimal core, mathematical unification, cross-disciplinary evidence | [22705479](https://doi.org/10.5281/zenodo.22705479) |
-
----
-
-## ⑪ Daily Asset Valuation Dashboards
-
-Updated **daily** via automated scripts.
-
-| Asset | Key Factors | Dashboard |
-|:---|:---|:---|
-| Gold | TIPS + CN-US Spread + Gold-Oil Ratio | [EN](https://shuipingtang.github.io/gold_en.html) · [中文](https://shuipingtang.github.io/gold_cn.html) |
-| Crude Oil (WTI) | SC + VIX + Synth. Spread + CN-US Spread | [EN](https://shuipingtang.github.io/crude-oil_en.html) · [中文](https://shuipingtang.github.io/crude-oil_cn.html) |
-| China Govt Bond | 10Y · 30Y · Yield Curve · Spreads | [EN](https://shuipingtang.github.io/bonds-cn_en.html) · [中文](https://shuipingtang.github.io/bonds-cn_cn.html) |
-| U.S. Treasury | 10Y · 30Y · Term Structure & Spreads | [EN](https://shuipingtang.github.io/bonds-us_en.html) · [中文](https://shuipingtang.github.io/bonds-us_cn.html) |
-
----
-
-## ⑫ Methodological Toolkit
-
-`Exhaustive Testing` · `Interaction Effect Testing (η criterion)` · `Multi-Tool Structural Break Detection (Chow, Bai-Perron, SupF, CUSUM, MOSUM, PELT, Bayesian Change Point, Kernel CPD, HMM)` · `Activation Operators` · `Bayesian Model Averaging` · `Multi-Regime State Decoupling (MRSD)` · `5W2H` · `PDCA`
-
----
-
-## Academic Identity & Verified Links
-
+- **Zenodo author catalogue:** [Search records by creator](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=mostrecent)
+- **SSRN author page:** [Author 11510488](https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11510488)
 - **ORCID:** [0009-0007-1209-981X](https://orcid.org/0009-0007-1209-981X)
-- **Zenodo (All 48 Preprints):** [Full Collection](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Tang%2C%20Shuiping%22&l=list&p=1&s=10&sort=bestmatch)
-- **SSRN:** [Author 11510488](https://ssrn.com/author=11510488)
+- **Google Scholar:** [Author profile](https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ)
 - **GitHub:** [shuipingtang](https://github.com/shuipingtang)
-- **Google Scholar:** [6vpOvwMAAAAJ](https://scholar.google.com/citations?hl=en&user=6vpOvwMAAAAJ)
-- **Homepage:** [shuipingtang.github.io](https://shuipingtang.github.io)
-- **Email:** [tangshuiping@qq.com](mailto:tangshuiping@qq.com)
+- **Research website:** <https://shuipingtang.github.io/>
+- **Correspondence:** [tangshuiping@qq.com](mailto:tangshuiping@qq.com)
+
+## About this repository
+
+This repository is the source repository for the public GitHub Pages website. The main files include:
+
+- `index.html` — English research homepage.
+- `zh/index.html` — Chinese research homepage.
+- `gold_en.html` / `gold_cn.html` — gold dashboards.
+- `crude-oil_en.html` / `crude-oil_cn.html` — crude-oil dashboards.
+- `bonds-cn_en.html` / `bonds-cn_cn.html` — China government-bond dashboards.
+- `bonds-us_en.html` / `bonds-us_cn.html` — U.S. Treasury dashboards.
+- `sitemap.xml` and `robots.txt` — crawler-discovery files, where deployed in the repository.
+
+The research programme is independently maintained. Descriptions in this README summarize the author's own framing of the linked works and do not imply university affiliation, institutional endorsement, or universal acceptance. For technical details, read the corresponding paper and its explicit assumptions, definitions, proofs, data sources, and limitations.
 
 ---
 
-*© 2026 Shuiping Tang — Chinese Independent Researcher · Factor Hierarchy System · 48 Preprints · 6 Disciplines · 15 Mathematical Papers · 4 Core Components · 1 System, 3 Names*
+*Last README review: 12 October 2026.*
